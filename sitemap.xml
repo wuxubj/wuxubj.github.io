@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/guestbook/index.html</loc>
+    
+    <lastmod>2016-05-21T14:56:28.047Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/05/21/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E8%BF%9B%E9%98%B6%E7%AF%87/</loc>
     
     <lastmod>2016-05-21T12:53:39.916Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://yoursite.com//404.html</loc>
     
     <lastmod>2016-05-21T10:56:19.732Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/guestbook/index.html</loc>
-    
-    <lastmod>2016-05-21T10:51:25.834Z</lastmod>
     
   </url>
   
