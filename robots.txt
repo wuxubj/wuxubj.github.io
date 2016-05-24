@@ -13,3 +13,4 @@ Disallow: /vendors/
 Disallow: /fancybox/
 
 Sitemap: http://wuxubj.cn/sitemap.xml
+Sitemap: http://wuxubj.cn/baidusitemap.xml
