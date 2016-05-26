@@ -271,6 +271,130 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/26/matlab添加噪声和计算信号信噪比/" itemprop="url">
+                  matlab添加噪声和计算信号信噪比
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-26T20:49:23+08:00" content="2016-05-26">
+              2016-05-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/数据处理基础/" itemprop="url" rel="index">
+                    <span itemprop="name">数据处理基础</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/26/matlab添加噪声和计算信号信噪比/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/26/matlab添加噪声和计算信号信噪比/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>###计算信噪比(SNR)<br>1.计算信号功率<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sigPower = sum(<span class="built_in">abs</span>(sig(:)).^<span class="number">2</span>)/<span class="built_in">length</span>(sig(:))</span><br></pre></td></tr></table></figure></p>
+<p>2.计算信噪比（SNR）<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SNR(dB)=<span class="number">10</span>*<span class="built_in">log10</span>(Ps/Pn)</span><br></pre></td></tr></table></figure></p>
+<p>3.相关单位<br><br><strong>分贝(decibel, dB)：</strong>分贝（dB）是表示相对功率或幅度电平的标准单位，换句话说，就是我们用来表示两个能量之间的差别的一种表示单位，它不是一个绝对单位。例如，电子系统中将电压、电流、功率等物理量的强弱通称为电平，电平的单位通常就以分贝表示，即事先取一个电压或电流作为参考值（0dB），用待表示的量与参考值之比取对数，再乘以20作为电平的分贝数（功率的电平值改乘10）。<br><br><strong>分贝瓦(dBW, dB Watt)：</strong>指以1W的输出功率为基准时，用分贝来测量的功率放大器的功率值。<br><br><strong>dBm (dB-milliWatt)：</strong>即与1milliWatt（毫瓦）作比较得出的数字。<br><br>0 dBm = 1 mW<br><br>10 dBm = 10 mW<br><br>20 dBm = 100 mW<br></p>
+<p>###AWGN：在某一信号中加入高斯白噪声<br>y = awgn(x,SNR) 在信号x中加入高斯白噪声。信噪比SNR以dB为单位。x的强度假定为0dBW。如果x是复数，就加入复噪声。<br>y = awgn(x,SNR,SIGPOWER) 如果SIGPOWER是数值，则其代表以dBW为单位的信号强度；如果SIGPOWER为’measured’，则函数将在加入噪声之前测定信号强度。<br>y = awgn(x,SNR,SIGPOWER,STATE) 重置RANDN的状态。<br>y = awgn(…,POWERTYPE) 指定SNR和SIGPOWER的单位。POWERTYPE可以是’dB’或’linear’。如果POWERTYPE是’dB’，那么SNR以dB为单位，而SIGPOWER以dBW为单位。如果POWERTYPE是’linear’，那么SNR作为比值来度量，而SIGPOWER以瓦特为单位。<br>示例：<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">clear</span><br><span class="line">clc</span><br><span class="line">f=<span class="number">100</span>;</span><br><span class="line">fs=<span class="number">1000</span>;</span><br><span class="line">snr=<span class="number">5</span>;</span><br><span class="line">t=<span class="number">0</span>:<span class="number">1</span>/fs:<span class="number">1</span><span class="number">-1</span>/fs;</span><br><span class="line">x=<span class="built_in">sin</span>(<span class="number">2</span>*<span class="built_in">pi</span>*f.*t);</span><br><span class="line">Ps=sum(<span class="built_in">abs</span>(x(:)).^<span class="number">2</span>)/<span class="built_in">length</span>(x(:));<span class="comment">%计算信号功率</span></span><br><span class="line"></span><br><span class="line">y1=awgn(x,snr,<span class="string">'measured'</span>,<span class="string">'dB'</span>);<span class="comment">%以分布为单位，此时snr=10*log10(Ps/Pn)</span></span><br><span class="line">noise=y1-x;</span><br><span class="line">Pn=sum(<span class="built_in">abs</span>(noise(:)).^<span class="number">2</span>)/<span class="built_in">length</span>(noise(:));</span><br><span class="line">snr_out1=<span class="number">10</span>*<span class="built_in">log10</span>(Ps/Pn);</span><br><span class="line"></span><br><span class="line">y2=awgn(x,snr,<span class="string">'measured'</span>,<span class="string">'linear'</span>);<span class="comment">%用比值度量，此时snr=Ps/Pn</span></span><br><span class="line">noise=y2-x;</span><br><span class="line">Pn=sum(<span class="built_in">abs</span>(noise(:)).^<span class="number">2</span>)/<span class="built_in">length</span>(noise(:));</span><br><span class="line">snr_out2=Ps/Pn;</span><br></pre></td></tr></table></figure></p>
+<p>加入的高斯白噪声是随机的，所以<code>snr_out1</code>和<code>snr_out2</code>在<code>snr=5</code>上下波动。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/21/Hexo搭建个人博客-进阶篇/" itemprop="url">
                   Hexo搭建个人博客(进阶篇)
                 </a>
@@ -539,7 +663,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -547,7 +671,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -556,7 +680,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
