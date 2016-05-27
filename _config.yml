@@ -4,8 +4,8 @@
 
 # Site
 title: 务虚笔记
-subtitle:
-description: 李小伟的个人博客
+subtitle: 
+description: wuxubj,个人技术博客
 author: wuxubj
 language: zh-Hans
 timezone:
@@ -69,7 +69,9 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy: 
   type: git
-  repo: https://github.com/wuxubj/wuxubj.github.io.git
+  repo: 
+    github: git@github.com:wuxubj/wuxubj.github.io.git
+    coding: git@git.coding.net:wuxubj/wuxubj.git
   branch: master
 
 #add by wuxubj
@@ -78,7 +80,9 @@ duoshuo_shortname: wuxubj
 #hexo sitemap网站地图
 sitemap:
 path: sitemap.xml
+#baidusitemap:
+#path: baidusitemap.xml
 #本地搜索
-search:
-  path: search.xml
-  field: post
+#search:
+#  path: search.xml
+#  field: post

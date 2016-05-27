@@ -4,6 +4,7 @@ Allow: /archives/
 Allow: /categories/
 Allow: /tags/
 Allow: /guestbook/
+Allow: /2016/
 
 Disallow: /vendors/
 Disallow: /js/
