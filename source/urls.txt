@@ -1,8 +1,0 @@
-http://wuxubj.cn/index.html
-http://wuxubj.cn/categories/index.html
-http://wuxubj.cn/archives/index.html
-http://wuxubj.cn/tags/index.html
-http://wuxubj.cn/guestbook/index.html
-http://wuxubj.cn/2016/05/21/Hexo搭建个人博客-初级篇/index.html
-http://wuxubj.cn/2016/05/21/Hexo搭建个人博客-进阶篇/index.html
-http://wuxubj.cn/2016/05/26/matlab添加噪声和计算信号信噪比/index.html
