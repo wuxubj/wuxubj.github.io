@@ -11,10 +11,17 @@ a{ text-decoration:none}
 </head>
 
 <body>
-<script src="http://html5media.googlecode.com/svn/trunk/src/html5media.min.js"></script>
  
- <video src="http://7xthzp.com2.z0.glb.clouddn.com/IMG_5033.mp4" width="480" height="300" controls autobuffer></video>
 
+<video controls="controls" preload="auto" height="500" width="700">
+   <!-- Firefox --> 
+   <source src="http://7xthzp.com2.z0.glb.clouddn.com/IMG_5033.mp4" type="video/ogg" />  
+   <!-- Safari/Chrome-->   
+   <source src="http://7xthzp.com2.z0.glb.clouddn.com/IMG_5033.mp4" type="video/mp4" />  
+   <!-- 如果浏览器不支持video标签，则使用flash -->  
+   <embed src="mv.mp4" type="application/x-shockwave-flash"  
+width="1024" height="798" allowscriptaccess="always" allowfullscreen="true"> </embed>
+</video>
  
 <video controls="controls" preload="auto" height="500" width="700">
    <!-- Firefox --> 
@@ -24,9 +31,17 @@ a{ text-decoration:none}
    <!-- 如果浏览器不支持video标签，则使用flash -->  
    <embed src="mv.mp4" type="application/x-shockwave-flash"  
 width="1024" height="798" allowscriptaccess="always" allowfullscreen="true"> </embed>
-  
 </video>
- 
+
+<video controls="controls" preload="auto" height="500" width="700">
+   <!-- Firefox --> 
+   <source src="http://7xthzp.com2.z0.glb.clouddn.com/IMG_5033.mp4" type="video/ogg" />  
+   <!-- Safari/Chrome-->   
+   <source src="http://7xthzp.com2.z0.glb.clouddn.com/IMG_5033.mp4" type="video/mp4" />  
+   <!-- 如果浏览器不支持video标签，则使用flash -->  
+   <embed src="mv.mp4" type="application/x-shockwave-flash"  
+width="1024" height="798" allowscriptaccess="always" allowfullscreen="true"> </embed>
+</video>
 
 </body>
 </html>
