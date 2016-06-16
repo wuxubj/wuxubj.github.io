@@ -6,6 +6,7 @@ categories:
 tags:
 - matlab
 - 数据处理
+permalink: matlab-add-noise-calculating-signal-to-noise-ratio
 ---
 ### 计算信噪比(SNR)
 1.计算信号功率
