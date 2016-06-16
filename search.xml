@@ -4,6 +4,138 @@
   
     
     <entry>
+      <title><![CDATA[Matlab线型标记颜色]]></title>
+      <url>http://yoursite.com/2016/06/16/matlab-linestyle-marker-color/</url>
+      <content type="html"><![CDATA[<table>
+<thead>
+<tr>
+<th style="text-align:center">线型</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">标记符</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">颜色</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">线型</td>
+<td style="text-align:center">说明</td>
+<td style="text-align:center">标记符</td>
+<td style="text-align:center">说明</td>
+<td style="text-align:center">颜色</td>
+<td style="text-align:center">说明</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">实线(默认)</td>
+<td style="text-align:center">+</td>
+<td style="text-align:center">加号符</td>
+<td style="text-align:center">r</td>
+<td style="text-align:center">红色</td>
+</tr>
+<tr>
+<td style="text-align:center">–</td>
+<td style="text-align:center">双划线</td>
+<td style="text-align:center">o</td>
+<td style="text-align:center">空心圆</td>
+<td style="text-align:center">g</td>
+<td style="text-align:center">绿色</td>
+</tr>
+<tr>
+<td style="text-align:center">:</td>
+<td style="text-align:center">虚线</td>
+<td style="text-align:center">*</td>
+<td style="text-align:center">星号</td>
+<td style="text-align:center">b</td>
+<td style="text-align:center">蓝色</td>
+</tr>
+<tr>
+<td style="text-align:center">:.</td>
+<td style="text-align:center">点划线</td>
+<td style="text-align:center">.</td>
+<td style="text-align:center">实心圆</td>
+<td style="text-align:center">c</td>
+<td style="text-align:center">青绿色</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">叉号符</td>
+<td style="text-align:center">m</td>
+<td style="text-align:center">洋红色</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">s</td>
+<td style="text-align:center">正方形</td>
+<td style="text-align:center">y</td>
+<td style="text-align:center">黄色</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">d</td>
+<td style="text-align:center">菱形</td>
+<td style="text-align:center">k</td>
+<td style="text-align:center">黑色</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">^</td>
+<td style="text-align:center">上三角形</td>
+<td style="text-align:center">w</td>
+<td style="text-align:center">白色</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">v</td>
+<td style="text-align:center">下三角形</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&gt;</td>
+<td style="text-align:center">右三角形</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&lt;</td>
+<td style="text-align:center">左三角形</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">p</td>
+<td style="text-align:center">五角星</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">h</td>
+<td style="text-align:center">六边形</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[matlab添加噪声和计算信号信噪比]]></title>
       <url>http://yoursite.com/2016/05/26/matlab%E6%B7%BB%E5%8A%A0%E5%99%AA%E5%A3%B0%E5%92%8C%E8%AE%A1%E7%AE%97%E4%BF%A1%E5%8F%B7%E4%BF%A1%E5%99%AA%E6%AF%94/</url>
       <content type="html"><![CDATA[<h3 id="计算信噪比-SNR"><a href="#计算信噪比-SNR" class="headerlink" title="计算信噪比(SNR)"></a>计算信噪比(SNR)</h3><p>1.计算信号功率<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sigPower = sum(<span class="built_in">abs</span>(sig(:)).^<span class="number">2</span>)/<span class="built_in">length</span>(sig(:))</span><br></pre></td></tr></table></figure></p>
