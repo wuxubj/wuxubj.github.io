@@ -271,6 +271,128 @@
             
               
                 
+                <a class="post-title-link" href="/2016/06/28/binary-search/" itemprop="url">
+                  折半查找
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-28T21:57:52+08:00" content="2016-06-28">
+              2016-06-28
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/算法与数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">算法与数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/28/binary-search/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/28/binary-search/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><a href="https://book.douban.com/subject/1886174/">《数据结构(C语言版)》</a>学习笔记：折半查找(p5)<br>折半查找算法：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//折半查找算法</span></span><br><span class="line"><span class="comment">//特别注意switch中的break不能漏掉</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">binsearch</span><span class="params">(<span class="keyword">int</span> <span class="built_in">list</span>[], <span class="keyword">int</span> searchnum, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> midnum;</span><br><span class="line">	<span class="keyword">while</span> (left &lt;= right)</span><br><span class="line">	&#123;</span><br><span class="line">		midnum = (left + right) / <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">switch</span> (compare(<span class="built_in">list</span>[midnum], searchnum))</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">case</span> <span class="number">-1</span>:left = midnum + <span class="number">1</span>;</span><br><span class="line">				<span class="keyword">break</span>;<span class="comment">//注意：break不能掉</span></span><br><span class="line">			<span class="keyword">case</span> <span class="number">0</span>:<span class="keyword">return</span> midnum;</span><br><span class="line">			<span class="keyword">case</span> <span class="number">1</span>:right = midnum - <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">compare</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (a&gt;b) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (a == b) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/28/binary-search/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/06/28/select-sort-algorithm/" itemprop="url">
                   选择排序算法
                 </a>
@@ -1031,7 +1153,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1048,7 +1170,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
