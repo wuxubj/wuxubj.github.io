@@ -4,28 +4,8 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/06/16/matlab-linestyle-marker-color/</loc>
-    <lastmod>2016-06-28T12:45:54.855Z</lastmod>
-    <data>
-        <display>
-        <title>Matlab线型标记颜色</title>
-        <pubTime>2016-06-15T16:00:00.000Z</pubTime>
-        
-        <tag>matlab</tag>
-         
-         
-           
-             
-              <breadCrumb title="数据处理基础" url="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%9F%BA%E7%A1%80/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2016/06/28/select-sort-algorithm/</loc>
-    <lastmod>2016-06-28T12:44:08.074Z</lastmod>
+    <lastmod>2016-06-28T12:52:59.624Z</lastmod>
     <data>
         <display>
         <title>选择排序算法</title>
@@ -39,6 +19,26 @@
            
              
               <breadCrumb title="算法与数据结构" url="http://yoursite.com/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/06/16/matlab-linestyle-marker-color/</loc>
+    <lastmod>2016-06-28T12:45:54.855Z</lastmod>
+    <data>
+        <display>
+        <title>Matlab线型标记颜色</title>
+        <pubTime>2016-06-15T16:00:00.000Z</pubTime>
+        
+        <tag>matlab</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据处理基础" url="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%9F%BA%E7%A1%80/"/>
           
         </display>
     </data>
