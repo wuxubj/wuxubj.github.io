@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/06/30/magic-square-generate/</loc>
+    <lastmod>2016-06-30T05:11:01.371Z</lastmod>
+    <data>
+        <display>
+        <title>魔方构造问题</title>
+        <pubTime>2016-06-30T04:57:05.000Z</pubTime>
+        
+        <tag>算法</tag>
+         
+        <tag>魔方构造</tag>
+         
+         
+           
+             
+              <breadCrumb title="算法与数据结构" url="http://yoursite.com/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/06/28/binary-search/</loc>
     <lastmod>2016-06-29T04:00:49.766Z</lastmod>
     <data>
