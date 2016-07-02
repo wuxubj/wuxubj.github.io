@@ -84,37 +84,16 @@
 
 
 
-<meta name="description" content="window.onload = function(){
-    showTime();
-    countDay();
-  }
-  function countDay(){
-      var timer = setInterval(&apos;countDay()&apos;,500);
-      var nowtime = new Date();
-      var endtime = new Date(">
+<meta name="description" content="function getRTime(){        var EndTime= new Date(‘2016/05/1 10:00:00’); //截止时间 前端路上 http://www.51xuediannao.com/qd63/        var NowTime = new Date();        var t =NowTime.getTime() - EndTime.ge">
 <meta property="og:type" content="website">
 <meta property="og:title" content="mylove">
 <meta property="og:url" content="http://yoursite.com/mylove/index.html">
 <meta property="og:site_name" content="务虚笔记">
-<meta property="og:description" content="window.onload = function(){
-    showTime();
-    countDay();
-  }
-  function countDay(){
-      var timer = setInterval(&apos;countDay()&apos;,500);
-      var nowtime = new Date();
-      var endtime = new Date(">
-<meta property="og:updated_time" content="2016-07-02T14:55:08.438Z">
+<meta property="og:description" content="function getRTime(){        var EndTime= new Date(‘2016/05/1 10:00:00’); //截止时间 前端路上 http://www.51xuediannao.com/qd63/        var NowTime = new Date();        var t =NowTime.getTime() - EndTime.ge">
+<meta property="og:updated_time" content="2016-07-02T16:06:25.678Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mylove">
-<meta name="twitter:description" content="window.onload = function(){
-    showTime();
-    countDay();
-  }
-  function countDay(){
-      var timer = setInterval(&apos;countDay()&apos;,500);
-      var nowtime = new Date();
-      var endtime = new Date(">
+<meta name="twitter:description" content="function getRTime(){        var EndTime= new Date(‘2016/05/1 10:00:00’); //截止时间 前端路上 http://www.51xuediannao.com/qd63/        var NowTime = new Date();        var t =NowTime.getTime() - EndTime.ge">
 
 
 
@@ -292,65 +271,7 @@
   <div id="posts" class="posts-expand">
     
     
-      <script language="javascript" type="text/javascript">
-  window.onload = function(){
-    showTime();
-    countDay();
-  }
-  function countDay(){
-      var timer = setInterval('countDay()',500);
-      var nowtime = new Date();
-      var endtime = new Date("2016/6/1,11:11:11");//结束时间
-      var lefttime = parseInt((endtime.getTime()-nowtime.getTime())/1000);//换算为毫秒差，及最小单位的差值
-      if (lefttime<0) {
-          document.getElementById('leftTime').innerHTML = "活动已结束";
-          clearInterval(timer);
-      }else{
-          var d = parseInt(lefttime/(24*60*60));
-          var h = parseInt(lefttime/(60*60)%24);
-          var m = parseInt(lefttime/60%60);
-          var s = parseInt(lefttime%60);
-          document.getElementById('leftTime').innerHTML = " "+d+"天"+h+"小时"+m+"分钟"+s+"秒";
-      }
-  }
-  function checkTime(i){  //补位处理
-      if(i<10){
-          return '0'+i;
-      }else{
-          return i;
-      }
-  }
-  function showTime(){
-    var myDate=new Date();
-    var year = myDate.getFullYear();
-    var month = myDate.getMonth()+1;
-    var day = myDate.getDate();
-    var h = myDate.getHours();
-    var m = myDate.getMinutes();
-    var s = myDate.getSeconds();
-    m=checkTime(m)
-    s=checkTime(s)
-    var weekday=new Array(7)
-    weekday[0]="星期日"
-    weekday[1]="星期一"
-    weekday[2]="星期二"
-    weekday[3]="星期三"
-    weekday[4]="星期四"
-    weekday[5]="星期五"
-    weekday[6]="星期六"
-    var week = weekday[myDate.getDay()];
-    document.getElementById("show").innerHTML=""+year+"年"+month+"月"+day+"日 "+  week +h+":"+m+":"+s;
-    t=setTimeout('showTime()',500)
-  }
-</script>
-
-<div class="blockquote-center"><br>  <div>当前时间：</div><div id="show">显示当前时间的位置</div><br>  <div>剩余时间：</div><div id="leftTime">显示倒计时间</div><br></div>
-
-<p><br><embed src="http://music.163.com/style/swf/widget.swf?sid=413366845&type=2&auto=1&width=320&height=66" width="340" height="86" allownetworking="all"><br><br><br></p>
-<blockquote>
-<p>最近访客</p>
-<div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
-</blockquote>
+      <body><br><script type="text/javascript"><br>    function getRTime(){<br>        var EndTime= new Date(‘2016/05/1 10:00:00’); //截止时间 前端路上 <a href="http://www.51xuediannao.com/qd63/">http://www.51xuediannao.com/qd63/</a><br>        var NowTime = new Date();<br>        var t =NowTime.getTime() - EndTime.getTime();<br>        /<em>var d=Math.floor(t/1000/60/60/24);<br>        t-=d</em>(1000<em>60</em>60<em>24);<br>        var h=Math.floor(t/1000/60/60);<br>        t-=h</em>60<em>60</em>1000;<br>        var m=Math.floor(t/1000/60);<br>        t-=m<em>60</em>1000;<br>        var s=Math.floor(t/1000);*/<br><br>        var d=Math.floor(t/1000/60/60/24);<br>        var h=Math.floor(t/1000/60/60%24);<br>        var m=Math.floor(t/1000/60%60);<br>        var s=Math.floor(t/1000%60);<br>        var month=Math.ceil(d/30);<br>        var year=Math.ceil(d/365);<br><br>        document.getElementById(“t_d”).innerHTML = d + “天”;<br>        document.getElementById(“t_h”).innerHTML = h + “时”;<br>        document.getElementById(“t_m”).innerHTML = m + “分”;<br>        document.getElementById(“t_s”).innerHTML = s + “秒”;<br><br>        document.getElementById(“t_month”).innerHTML = month ;<br>        document.getElementById(“t_year”).innerHTML = year ;<br>    }<br>    setInterval(getRTime,1000);<br></script><br>  <div id="CountMsg" class="HotDate"><br><div id="countdown_prompt">过了：</div><br><div id="countdown"><br>    <span id="t_d">00天</span><br>    <span id="t_h">00时</span><br>    <span id="t_m">00分</span><br>    <span id="t_s">00秒</span><br></div><br><div id="countdown"><span id="loveYear">今天是第<span id="t_month">00</span>个月，第<span id="t_year">00</span>年 ！</span></div><br></div><br></body>
 
     
   </div>
@@ -456,11 +377,7 @@
 
         
         
-		<div id="lovewy">
-			<div id="countdown_prompt">猪头和丫头牵手走过了：</div>
-			<div id="countdown"><span id="loveTime"><span>1696</span>天<span>23</span>时<span>1</span>分<span>19</span>秒</span></div>
-			<div id="countdown"><span id="loveYear">今天是第<span>55</span>个月，第<span>4</span>年 ！</span></div>
-		</div>
+	
       </section>
 
       
