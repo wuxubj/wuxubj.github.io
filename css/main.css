@@ -1548,7 +1548,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3eab78;
+  background: #587eb6;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1596,6 +1596,20 @@ pre .javascript .function {
   display: none;
 }
 .sidebar-panel-active {
+  display: block;
+}
+#lovewy {
+  background: #ffe;
+  margin: 18px auto;
+  text-align: center;
+  padding: 5px;
+  font-size: 15px;
+  color: #9a8c8c;
+}
+#countdown {
+  display: block;
+}
+#countdown_prompt {
   display: block;
 }
 .post-toc-empty {
