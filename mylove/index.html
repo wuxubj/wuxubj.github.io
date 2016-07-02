@@ -84,15 +84,37 @@
 
 
 
-<meta name="description" content="wuxubj,个人技术博客">
+<meta name="description" content="window.onload = function(){
+    showTime();
+    countDay();
+  }
+  function countDay(){
+      var timer = setInterval(&apos;countDay()&apos;,500);
+      var nowtime = new Date();
+      var endtime = new Date(">
 <meta property="og:type" content="website">
-<meta property="og:title" content="务虚笔记">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+<meta property="og:title" content="mylove">
+<meta property="og:url" content="http://yoursite.com/mylove/index.html">
 <meta property="og:site_name" content="务虚笔记">
-<meta property="og:description" content="wuxubj,个人技术博客">
+<meta property="og:description" content="window.onload = function(){
+    showTime();
+    countDay();
+  }
+  function countDay(){
+      var timer = setInterval(&apos;countDay()&apos;,500);
+      var nowtime = new Date();
+      var endtime = new Date(">
+<meta property="og:updated_time" content="2016-07-02T14:55:08.438Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="务虚笔记">
-<meta name="twitter:description" content="wuxubj,个人技术博客">
+<meta name="twitter:title" content="mylove">
+<meta name="twitter:description" content="window.onload = function(){
+    showTime();
+    countDay();
+  }
+  function countDay(){
+      var timer = setInterval(&apos;countDay()&apos;,500);
+      var nowtime = new Date();
+      var endtime = new Date(">
 
 
 
@@ -110,7 +132,13 @@
   };
 </script>
 
-  <title> 归档 | 务虚笔记 </title>
+  <title>
+  
+
+  
+    mylove | 务虚笔记
+  
+</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -137,7 +165,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right  page-archive  ">
+  <div class="container one-collumn sidebar-position-right  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -261,325 +289,71 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
+    
+      <script language="javascript" type="text/javascript">
+  window.onload = function(){
+    showTime();
+    countDay();
+  }
+  function countDay(){
+      var timer = setInterval('countDay()',500);
+      var nowtime = new Date();
+      var endtime = new Date("2016/6/1,11:11:11");//结束时间
+      var lefttime = parseInt((endtime.getTime()-nowtime.getTime())/1000);//换算为毫秒差，及最小单位的差值
+      if (lefttime<0) {
+          document.getElementById('leftTime').innerHTML = "活动已结束";
+          clearInterval(timer);
+      }else{
+          var d = parseInt(lefttime/(24*60*60));
+          var h = parseInt(lefttime/(60*60)%24);
+          var m = parseInt(lefttime/60%60);
+          var s = parseInt(lefttime%60);
+          document.getElementById('leftTime').innerHTML = " "+d+"天"+h+"小时"+m+"分钟"+s+"秒";
+      }
+  }
+  function checkTime(i){  //补位处理
+      if(i<10){
+          return '0'+i;
+      }else{
+          return i;
+      }
+  }
+  function showTime(){
+    var myDate=new Date();
+    var year = myDate.getFullYear();
+    var month = myDate.getMonth()+1;
+    var day = myDate.getDate();
+    var h = myDate.getHours();
+    var m = myDate.getMinutes();
+    var s = myDate.getSeconds();
+    m=checkTime(m)
+    s=checkTime(s)
+    var weekday=new Array(7)
+    weekday[0]="星期日"
+    weekday[1]="星期一"
+    weekday[2]="星期二"
+    weekday[3]="星期三"
+    weekday[4]="星期四"
+    weekday[5]="星期五"
+    weekday[6]="星期六"
+    var week = weekday[myDate.getDay()];
+    document.getElementById("show").innerHTML=""+year+"年"+month+"月"+day+"日 "+  week +h+":"+m+":"+s;
+    t=setTimeout('showTime()',500)
+  }
+</script>
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 8 篇日志。 继续努力。
-    </span>
+<div class="blockquote-center"><br>  <div>当前时间：</div><div id="show">显示当前时间的位置</div><br>  <div>剩余时间：</div><div id="leftTime">显示倒计时间</div><br></div>
+
+<p><br><embed src="http://music.163.com/style/swf/widget.swf?sid=413366845&type=2&auto=1&width=320&height=66" width="340" height="86" allownetworking="all"><br><br><br></p>
+<blockquote>
+<p>最近访客</p>
+<div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
+</blockquote>
 
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/06/30/magic-square-generate/" itemprop="url">
-              
-                <span itemprop="name">魔方构造问题</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-06-30T12:57:05+08:00"
-              content="2016-06-30" >
-          06-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/06/29/recursive-permutations/" itemprop="url">
-              
-                <span itemprop="name">递归产生全排列</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-06-29T11:19:29+08:00"
-              content="2016-06-29" >
-          06-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/06/28/binary-search/" itemprop="url">
-              
-                <span itemprop="name">折半查找</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-06-28T21:57:52+08:00"
-              content="2016-06-28" >
-          06-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/06/28/select-sort-algorithm/" itemprop="url">
-              
-                <span itemprop="name">选择排序算法</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-06-28T20:35:56+08:00"
-              content="2016-06-28" >
-          06-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/06/16/matlab-linestyle-marker-color/" itemprop="url">
-              
-                <span itemprop="name">Matlab线型标记颜色</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-06-16T00:00:00+08:00"
-              content="2016-06-16" >
-          06-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/05/26/matlab-add-noise-calculating-signal-to-noise-ratio/" itemprop="url">
-              
-                <span itemprop="name">matlab添加噪声和计算信号信噪比</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-05-26T20:49:23+08:00"
-              content="2016-05-26" >
-          05-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/05/21/Hexo搭建个人博客-进阶篇/" itemprop="url">
-              
-                <span itemprop="name">Hexo搭建个人博客(进阶篇)</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-05-21T16:01:28+08:00"
-              content="2016-05-21" >
-          05-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/05/21/Hexo搭建个人博客-初级篇/" itemprop="url">
-              
-                <span itemprop="name">Hexo搭建个人博客(基础篇)</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-05-21T14:48:32+08:00"
-              content="2016-05-21" >
-          05-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
-
-  
-
+  </div>
 
 
           </div>
@@ -587,6 +361,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="mylove/index.html"
+           data-title="mylove" data-url="http://yoursite.com/mylove/index.html">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -800,12 +582,6 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
-
 
   
 
