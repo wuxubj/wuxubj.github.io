@@ -84,16 +84,25 @@
 
 
 
-<meta name="description" content="function getRTime(){        var EndTime= new Date(‘2014/02/6 19:46:00’); //截止时间 前端路上 http://www.51xuediannao.com/qd63/        var NowTime = new Date();        var t =NowTime.getTime() - EndTime.ge">
+<meta name="description" content="function getRTime(){
+        var EndTime= new Date(&apos;2014/02/6 19:46:00&apos;); //截止时间 前端路上 http://www.51xuediannao.com/qd63/
+        var NowTime = new Date();
+        var t =NowTime.getTime() - EndTim">
 <meta property="og:type" content="website">
 <meta property="og:title" content="mylove">
 <meta property="og:url" content="http://yoursite.com/mylove/index.html">
 <meta property="og:site_name" content="务虚笔记">
-<meta property="og:description" content="function getRTime(){        var EndTime= new Date(‘2014/02/6 19:46:00’); //截止时间 前端路上 http://www.51xuediannao.com/qd63/        var NowTime = new Date();        var t =NowTime.getTime() - EndTime.ge">
-<meta property="og:updated_time" content="2016-07-02T16:57:00.570Z">
+<meta property="og:description" content="function getRTime(){
+        var EndTime= new Date(&apos;2014/02/6 19:46:00&apos;); //截止时间 前端路上 http://www.51xuediannao.com/qd63/
+        var NowTime = new Date();
+        var t =NowTime.getTime() - EndTim">
+<meta property="og:updated_time" content="2016-07-02T17:06:26.054Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mylove">
-<meta name="twitter:description" content="function getRTime(){        var EndTime= new Date(‘2014/02/6 19:46:00’); //截止时间 前端路上 http://www.51xuediannao.com/qd63/        var NowTime = new Date();        var t =NowTime.getTime() - EndTime.ge">
+<meta name="twitter:description" content="function getRTime(){
+        var EndTime= new Date(&apos;2014/02/6 19:46:00&apos;); //截止时间 前端路上 http://www.51xuediannao.com/qd63/
+        var NowTime = new Date();
+        var t =NowTime.getTime() - EndTim">
 
 
 
@@ -271,30 +280,43 @@
   <div id="posts" class="posts-expand">
     
     
-      <p><script type="text/javascript"><br>    function getRTime(){<br>        var EndTime= new Date(‘2014/02/6 19:46:00’); //截止时间 前端路上 <a href="http://www.51xuediannao.com/qd63/">http://www.51xuediannao.com/qd63/</a><br>        var NowTime = new Date();<br>        var t =NowTime.getTime() - EndTime.getTime();<br>        /<em>var d=Math.floor(t/1000/60/60/24);<br>        t-=d</em>(1000<em>60</em>60<em>24);<br>        var h=Math.floor(t/1000/60/60);<br>        t-=h</em>60<em>60</em>1000;<br>        var m=Math.floor(t/1000/60);<br>        t-=m<em>60</em>1000;<br>        var s=Math.floor(t/1000);*/</p>
-<pre><code>    var d=Math.floor(t/1000/60/60/24);
-    var h=Math.floor(t/1000/60/60%24);
-    var m=Math.floor(t/1000/60%60);
-    var s=Math.floor(t/1000%60);
-    var month=Math.ceil(d/30);
-    var year=Math.ceil(d/365);
+      <script type="text/javascript">
+    function getRTime(){
+        var EndTime= new Date('2014/02/6 19:46:00'); //截止时间 前端路上 http://www.51xuediannao.com/qd63/
+        var NowTime = new Date();
+        var t =NowTime.getTime() - EndTime.getTime();
+        /*var d=Math.floor(t/1000/60/60/24);
+        t-=d*(1000*60*60*24);
+        var h=Math.floor(t/1000/60/60);
+        t-=h*60*60*1000;
+        var m=Math.floor(t/1000/60);
+        t-=m*60*1000;
+        var s=Math.floor(t/1000);*/
 
-    document.getElementById(&quot;t_d&quot;).innerHTML = d + &quot;天&quot;;
-    document.getElementById(&quot;t_h&quot;).innerHTML = h + &quot;时&quot;;
-    document.getElementById(&quot;t_m&quot;).innerHTML = m + &quot;分&quot;;
-    document.getElementById(&quot;t_s&quot;).innerHTML = s + &quot;秒&quot;;
+        var d=Math.floor(t/1000/60/60/24);
+        var h=Math.floor(t/1000/60/60%24);
+        var m=Math.floor(t/1000/60%60);
+        var s=Math.floor(t/1000%60);
+        var month=Math.ceil(d/30);
+        var year=Math.ceil(d/365);
 
-    document.getElementById(&quot;t_month&quot;).innerHTML = month ;
-    document.getElementById(&quot;t_year&quot;).innerHTML = year ;
-}
-setInterval(getRTime,1000);
-&lt;/script&gt;
-</code></pre><p><blockquote class="blockquote-center">猪头和丫头牵手走过了：<br><span id="t_d">00天</span><span id="t_h">00时</span><span id="t_m">00分<span><span id="t_s">00秒</span><br><span id="loveYear">今天是第<span id="t_month">00</span>个月，第<span id="t_year">00</span>年 ！</span></br><embed src="http://music.163.com/style/swf/widget.swf?sid=28018283&type=2&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all"></embed></blockquote><br><br/></p>
+        document.getElementById("t_d").innerHTML = d + "天";
+        document.getElementById("t_h").innerHTML = h + "时";
+        document.getElementById("t_m").innerHTML = m + "分";
+        document.getElementById("t_s").innerHTML = s + "秒";
+
+        document.getElementById("t_month").innerHTML = month ;
+        document.getElementById("t_year").innerHTML = year ;
+    }
+    setInterval(getRTime,1000);
+    </script>
+
+<p><blockquote class="blockquote-center"><br>猪头和丫头牵手走过了：<br>    <span id="t_d">00天</span><span id="t_h">00时</span><span id="t_m">00分</span><span id="t_s">00秒</span><br><span id="loveYear">今天是第<span id="t_month">00</span>个月，第<span id="t_year">00</span>年 ！</span><br><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=27836179&auto=1&height=66"></iframe></blockquote><br><br></p>
 <blockquote>
 <p>最近访客</p>
 <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
 </blockquote>
-</script></p>
+
     
   </div>
 
