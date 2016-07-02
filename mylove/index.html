@@ -84,16 +84,28 @@
 
 
 
-<meta name="description" content="function getRTime(){        var EndTime= new Date(‘2016/05/1 10:00:00’); //截止时间 前端路上 http://www.51xuediannao.com/qd63/        var NowTime = new Date();        var t =NowTime.getTime() - EndTime.ge">
+<meta name="description" content="生活不止眼前的苟且，还有诗和远方的田野，你赤手空拳来到人世间，为找到那片海不顾一切。
+
+    function getRTime(){
+        var EndTime= new Date(&apos;2016/05/1 10:00:00&apos;); //截止时间 前端路上 http://www.51xuediannao.com/qd63/
+        var NowTime = new Date()">
 <meta property="og:type" content="website">
 <meta property="og:title" content="mylove">
 <meta property="og:url" content="http://yoursite.com/mylove/index.html">
 <meta property="og:site_name" content="务虚笔记">
-<meta property="og:description" content="function getRTime(){        var EndTime= new Date(‘2016/05/1 10:00:00’); //截止时间 前端路上 http://www.51xuediannao.com/qd63/        var NowTime = new Date();        var t =NowTime.getTime() - EndTime.ge">
-<meta property="og:updated_time" content="2016-07-02T16:06:25.678Z">
+<meta property="og:description" content="生活不止眼前的苟且，还有诗和远方的田野，你赤手空拳来到人世间，为找到那片海不顾一切。
+
+    function getRTime(){
+        var EndTime= new Date(&apos;2016/05/1 10:00:00&apos;); //截止时间 前端路上 http://www.51xuediannao.com/qd63/
+        var NowTime = new Date()">
+<meta property="og:updated_time" content="2016-07-02T16:13:52.039Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mylove">
-<meta name="twitter:description" content="function getRTime(){        var EndTime= new Date(‘2016/05/1 10:00:00’); //截止时间 前端路上 http://www.51xuediannao.com/qd63/        var NowTime = new Date();        var t =NowTime.getTime() - EndTime.ge">
+<meta name="twitter:description" content="生活不止眼前的苟且，还有诗和远方的田野，你赤手空拳来到人世间，为找到那片海不顾一切。
+
+    function getRTime(){
+        var EndTime= new Date(&apos;2016/05/1 10:00:00&apos;); //截止时间 前端路上 http://www.51xuediannao.com/qd63/
+        var NowTime = new Date()">
 
 
 
@@ -271,7 +283,48 @@
   <div id="posts" class="posts-expand">
     
     
-      <body><br><script type="text/javascript"><br>    function getRTime(){<br>        var EndTime= new Date(‘2016/05/1 10:00:00’); //截止时间 前端路上 <a href="http://www.51xuediannao.com/qd63/">http://www.51xuediannao.com/qd63/</a><br>        var NowTime = new Date();<br>        var t =NowTime.getTime() - EndTime.getTime();<br>        /<em>var d=Math.floor(t/1000/60/60/24);<br>        t-=d</em>(1000<em>60</em>60<em>24);<br>        var h=Math.floor(t/1000/60/60);<br>        t-=h</em>60<em>60</em>1000;<br>        var m=Math.floor(t/1000/60);<br>        t-=m<em>60</em>1000;<br>        var s=Math.floor(t/1000);*/<br><br>        var d=Math.floor(t/1000/60/60/24);<br>        var h=Math.floor(t/1000/60/60%24);<br>        var m=Math.floor(t/1000/60%60);<br>        var s=Math.floor(t/1000%60);<br>        var month=Math.ceil(d/30);<br>        var year=Math.ceil(d/365);<br><br>        document.getElementById(“t_d”).innerHTML = d + “天”;<br>        document.getElementById(“t_h”).innerHTML = h + “时”;<br>        document.getElementById(“t_m”).innerHTML = m + “分”;<br>        document.getElementById(“t_s”).innerHTML = s + “秒”;<br><br>        document.getElementById(“t_month”).innerHTML = month ;<br>        document.getElementById(“t_year”).innerHTML = year ;<br>    }<br>    setInterval(getRTime,1000);<br></script><br>  <div id="CountMsg" class="HotDate"><br><div id="countdown_prompt">过了：</div><br><div id="countdown"><br>    <span id="t_d">00天</span><br>    <span id="t_h">00时</span><br>    <span id="t_m">00分</span><br>    <span id="t_s">00秒</span><br></div><br><div id="countdown"><span id="loveYear">今天是第<span id="t_month">00</span>个月，第<span id="t_year">00</span>年 ！</span></div><br></div><br></body>
+      <p><blockquote class="blockquote-center">生活不止眼前的苟且，还有诗和远方的田野，<br>你赤手空拳来到人世间，为找到那片海不顾一切。</blockquote></p>
+<script type="text/javascript">
+    function getRTime(){
+        var EndTime= new Date('2016/05/1 10:00:00'); //截止时间 前端路上 http://www.51xuediannao.com/qd63/
+        var NowTime = new Date();
+        var t =NowTime.getTime() - EndTime.getTime();
+        /*var d=Math.floor(t/1000/60/60/24);
+        t-=d*(1000*60*60*24);
+        var h=Math.floor(t/1000/60/60);
+        t-=h*60*60*1000;
+        var m=Math.floor(t/1000/60);
+        t-=m*60*1000;
+        var s=Math.floor(t/1000);*/
+
+        var d=Math.floor(t/1000/60/60/24);
+        var h=Math.floor(t/1000/60/60%24);
+        var m=Math.floor(t/1000/60%60);
+        var s=Math.floor(t/1000%60);
+        var month=Math.ceil(d/30);
+        var year=Math.ceil(d/365);
+
+        document.getElementById("t_d").innerHTML = d + "天";
+        document.getElementById("t_h").innerHTML = h + "时";
+        document.getElementById("t_m").innerHTML = m + "分";
+        document.getElementById("t_s").innerHTML = s + "秒";
+
+        document.getElementById("t_month").innerHTML = month ;
+        document.getElementById("t_year").innerHTML = year ;
+    }
+    setInterval(getRTime,1000);
+    </script>
+
+<div id="CountMsg" class="HotDate"><br><div id="countdown_prompt">过了：</div><br><div id="countdown"><br>    <span id="t_d">00天</span><br>    <span id="t_h">00时</span><br>    <span id="t_m">00分</span><br>    <span id="t_s">00秒</span><br></div><br><div id="countdown"><span id="loveYear">今天是第<span id="t_month">00</span>个月，第<span id="t_year">00</span>年 ！</span></div><br></div>
+
+
+
+
+<p><br><embed src="http://music.163.com/style/swf/widget.swf?sid=413366845&type=2&auto=1&width=320&height=66" width="340" height="86" allownetworking="all"><br><br></p>
+<blockquote>
+<p>最近访客</p>
+<div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
+</blockquote>
 
     
   </div>
