@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>倒计时js代码 - 懒人建站 http://www.51xuediannao.com/</title>
+</head>
+
+<body>
+<DIV id="CountMsg" class="HotDate">
+<div id="countdown_prompt">过了：</div>
+<div id="countdown">
+    <span id="t_d">00天</span>
+    <span id="t_h">00时</span>
+    <span id="t_m">00分</span>
+    <span id="t_s">00秒</span>
+</div>
+<div id="countdown"><span id="loveYear">今天是第<span id="t_month">00</span>个月，第<span id="t_year">00</span>年 ！</span></div>
+</DIV>
+
+
+<script type="text/javascript">
+    function getRTime(){
+        var EndTime= new Date('2016/05/1 10:00:00'); //截止时间 前端路上 http://www.51xuediannao.com/qd63/
+        var NowTime = new Date();
+        var t =NowTime.getTime() - EndTime.getTime();
+        /*var d=Math.floor(t/1000/60/60/24);
+        t-=d*(1000*60*60*24);
+        var h=Math.floor(t/1000/60/60);
+        t-=h*60*60*1000;
+        var m=Math.floor(t/1000/60);
+        t-=m*60*1000;
+        var s=Math.floor(t/1000);*/
+
+        var d=Math.floor(t/1000/60/60/24);
+        var h=Math.floor(t/1000/60/60%24);
+        var m=Math.floor(t/1000/60%60);
+        var s=Math.floor(t/1000%60);
+		var month=Math.ceil(d/30);
+		var year=Math.ceil(d/365);
+
+        document.getElementById("t_d").innerHTML = d + "天";
+        document.getElementById("t_h").innerHTML = h + "时";
+        document.getElementById("t_m").innerHTML = m + "分";
+        document.getElementById("t_s").innerHTML = s + "秒";
+		
+		document.getElementById("t_month").innerHTML = month ;
+		document.getElementById("t_year").innerHTML = year ;
+    }
+    setInterval(getRTime,1000);
+    </script>
+
+</body>
+</html> 

@@ -3,7 +3,7 @@ date: 2016-06-16
 categories:
 - 数据处理基础
 tags:
-- Matlab
+- matlab
 permalink: matlab-linestyle-marker-color
 ---
 
