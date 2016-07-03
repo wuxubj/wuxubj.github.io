@@ -4,6 +4,12 @@
   
     
     <entry>
+      <title><![CDATA[非诚勿扰20160702]]></title>
+      <url>http://yoursite.com/2016/07/03/feichengwurao-20160702/</url>
+      <content type="html"><![CDATA[<embed src="http://player.youku.com/player.php/sid/XMTYyOTM1NzY3Ng==/v.swf" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[魔方构造问题]]></title>
       <url>http://yoursite.com/2016/06/30/magic-square-generate/</url>
       <content type="html"><![CDATA[<p><a href="https://book.douban.com/subject/1886174/" target="_blank" rel="external">《数据结构(C语言版)》</a>学习笔记：<a href="http://wuxubj.cn/2016/06/30/magic-square-generate/" target="_blank" rel="external">魔方问题</a>(p23)</p>
