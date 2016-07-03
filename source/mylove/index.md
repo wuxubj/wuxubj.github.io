@@ -44,7 +44,7 @@ date: 2016-07-02 22:53:32
     setInterval(getRTime,1000);
     </script>
 
-<blockquote class="blockquote-center"><div id="lovelqw">猪头和丫头牵手走过了：
+<blockquote class="blockquote-center"><div id="lovelqw">李小二和雷四能牵手走过了：
     <span id="t_d">00天</span><span id="t_h">00时</span><span id="t_m">00分</span><span id="t_s">00秒</span>
 <span id="loveYear">今天是第<span id="t_month">00</span>个月，第<span id="t_year">00</span>年 ！</span></div></blockquote><div style="text-align: center;"><embed src="http://music.163.com/style/swf/widget.swf?sid=27836179&type=2&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all"></embed><div>
 <br/>
