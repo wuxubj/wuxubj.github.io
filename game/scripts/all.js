@@ -418,11 +418,11 @@ define("scripts/main.js", function(exports){
 	
 	    [ timeline, sence, control ].invoke( "init" );
 	
-	    log( "我爱你" );
-	    log( "爱着你" );
-		log( "就像老鼠爱大米" );
-	    log( "不管有多少风雨" );
-	    log( "我都会依然陪着你" );
+	    log( "愿得一人心" );
+	    log( "白首不分离" );
+		log( "遇到你是我的幸运" );
+	
+	  
 		log( "雷巧文，我爱你！！！" );
 	   
 	
