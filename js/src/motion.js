@@ -78,7 +78,7 @@ $(document).ready(function () {
   sidebarToggleLines.push(sidebarToggleLine3rd);
 
   var SIDEBAR_WIDTH = '320px';
-  var SIDEBAR_DISPLAY_DURATION = 100;
+  var SIDEBAR_DISPLAY_DURATION = 200;
 
   var sidebarToggleMotion = {
     toggleEl: $('.sidebar-toggle'),
@@ -196,7 +196,7 @@ $(document).ready(function () {
       $brand.size() > 0 && sequence.push({
         e: $brand,
         p: {opacity: 1},
-        o: {duration: 100}
+        o: {duration: 200}
       });
 
       NexT.utils.isMist() && hasElement([$logoLineTop, $logoLineBottom]) &&
@@ -208,13 +208,13 @@ $(document).ready(function () {
       hasElement($title) && sequence.push({
         e: $title,
         p: {opacity: 1, top: 0},
-        o: { duration: 100 }
+        o: { duration: 200 }
       });
 
       hasElement($subtitle) && sequence.push({
         e: $subtitle,
         p: {opacity: 1, top: 0},
-        o: {duration: 100}
+        o: {duration: 200}
       });
 
       if (sequence.length > 0) {
@@ -232,7 +232,7 @@ $(document).ready(function () {
           e: $(element),
           p: {translateX: translateX},
           o: {
-            duration: 100,
+            duration: 300,
             sequenceQueue: false
           }
         };
@@ -254,7 +254,7 @@ $(document).ready(function () {
     menu: function (integrator) {
       $('.menu-item').velocity('transition.slideDownIn', {
         display: null,
-        duration: 100,
+        duration: 200,
         complete: function () {
           integrator.next();
         }
