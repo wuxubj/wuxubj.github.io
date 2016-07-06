@@ -11,6 +11,7 @@ permalink: footer-beautify-of-nexT
 ``Next``的``Mist``主题页脚默认``左对齐``，本文目标：
 1.实现页脚元素``居中对齐``;
 2.页脚添加cnzz站长统计并简单美化
+<!--more-->
 
 ### 页脚元素居中
 修改``your blog\themes\next\source\css\_schemes\Mist\index.styl``文件，将``.footer-inner``中的``text-align: left;``修改为``text-align: center;``即可。
