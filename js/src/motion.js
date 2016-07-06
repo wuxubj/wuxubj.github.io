@@ -232,7 +232,7 @@ $(document).ready(function () {
           e: $(element),
           p: {translateX: translateX},
           o: {
-            duration: 300,
+            duration: 200,
             sequenceQueue: false
           }
         };
