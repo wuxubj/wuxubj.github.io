@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/guestbook/index.html</loc>
+    
+    <lastmod>2016-07-06T07:06:26.130Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/07/06/footer-beautify-of-nexT/</loc>
     
     <lastmod>2016-07-06T06:12:45.670Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://yoursite.com/mylove/downtime.html</loc>
     
     <lastmod>2016-07-02T15:54:40.802Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/guestbook/index.html</loc>
-    
-    <lastmod>2016-07-02T14:55:45.653Z</lastmod>
     
   </url>
   
