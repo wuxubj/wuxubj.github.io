@@ -84,15 +84,55 @@
 
 
 
-<meta name="description" content="leijiao,个人博客">
+<meta name="description" content="#lovelqw {
+  background: #ffe;
+  margin: 0px auto;
+  text-align: center;
+  padding: 0px;
+  font-size: 15px;
+  color: #9a8c8c;
+}
+.hidden{display:none;}
+
+
+
+    function getRTime(){
+        var EndTime=">
 <meta property="og:type" content="website">
-<meta property="og:title" content="雷娇娇">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+<meta property="og:title" content="mylove">
+<meta property="og:url" content="http://yoursite.com/mylove/index.html">
 <meta property="og:site_name" content="雷娇娇">
-<meta property="og:description" content="leijiao,个人博客">
+<meta property="og:description" content="#lovelqw {
+  background: #ffe;
+  margin: 0px auto;
+  text-align: center;
+  padding: 0px;
+  font-size: 15px;
+  color: #9a8c8c;
+}
+.hidden{display:none;}
+
+
+
+    function getRTime(){
+        var EndTime=">
+<meta property="og:updated_time" content="2016-07-07T02:05:41.669Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="雷娇娇">
-<meta name="twitter:description" content="leijiao,个人博客">
+<meta name="twitter:title" content="mylove">
+<meta name="twitter:description" content="#lovelqw {
+  background: #ffe;
+  margin: 0px auto;
+  text-align: center;
+  padding: 0px;
+  font-size: 15px;
+  color: #9a8c8c;
+}
+.hidden{display:none;}
+
+
+
+    function getRTime(){
+        var EndTime=">
 
 
 
@@ -110,7 +150,13 @@
   };
 </script>
 
-  <title> 归档 | 雷娇娇 </title>
+  <title>
+  
+
+  
+    mylove | 雷娇娇
+  
+</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -131,7 +177,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right  page-archive  ">
+  <div class="container one-collumn sidebar-position-right  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -203,66 +249,80 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
+    
+      <style type="text/css">
+#lovelqw {
+  background: #ffe;
+  margin: 0px auto;
+  text-align: center;
+  padding: 0px;
+  font-size: 15px;
+  color: #9a8c8c;
+}
+.hidden{display:none;}
+</style>
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 1 篇日志。 继续努力。
-    </span>
+<script type="text/javascript">
+    function getRTime(){
+        var EndTime= new Date('2014/02/6 19:46:00'); //截止时间 前端路上 http://www.51xuediannao.com/qd63/
+        var NowTime = new Date();
+        var t =NowTime.getTime() - EndTime.getTime();
+        /*var d=Math.floor(t/1000/60/60/24);
+        t-=d*(1000*60*60*24);
+        var h=Math.floor(t/1000/60/60);
+        t-=h*60*60*1000;
+        var m=Math.floor(t/1000/60);
+        t-=m*60*1000;
+        var s=Math.floor(t/1000);*/
+
+        var d=Math.floor(t/1000/60/60/24);
+        var h=Math.floor(t/1000/60/60%24);
+        var m=Math.floor(t/1000/60%60);
+        var s=Math.floor(t/1000%60);
+        var month=Math.ceil(d/30);
+        var year=Math.ceil(d/365);
+
+        document.getElementById("t_d").innerHTML = d + "天";
+        document.getElementById("t_h").innerHTML = h + "时";
+        document.getElementById("t_m").innerHTML = m + "分";
+        document.getElementById("t_s").innerHTML = s + "秒";
+
+        document.getElementById("t_month").innerHTML = month ;
+        document.getElementById("t_year").innerHTML = year ;
+    }
+    setInterval(getRTime,1000);
+//定义"隐藏内容"的函数
+function hidcontent()
+{
+    var myele=document.getElementById("txt");
+    myele.style.display="none";
+    var myele=document.getElementById("btshow");
+    myele.style.display="block";
+    var myele=document.getElementById("bthidden");
+    myele.style.display="none";
+}
+
+//定义"显示内容"的函数
+function showcontent()
+{
+    var myele=document.getElementById("txt");
+    myele.style.display="block";
+    var myele=document.getElementById("bthidden");
+    myele.style.display="block";
+    var myele=document.getElementById("btshow");
+    myele.style.display="none";
+}
+    </script>
+
+<p><blockquote class="blockquote-center"><div id="lovelqw">雷娇和金龙牵手走过了：<br>    <span id="t_d">00天</span><span id="t_h">00时</span><span id="t_m">00分</span><span id="t_s">00秒</span><br><span id="loveYear">今天是第<span id="t_month">00</span>个月，第<span id="t_year">00</span>年 ！</span></div></blockquote><form><!--当点击相应按钮，执行相应操作，为按钮添加相应事件--><input type="button" id="bthidden" onclick="hidcontent()" value="隐藏音乐"> <input type="button" id="btshow" class="hidden" onclick="showcontent()" value="显示音乐"></form><div id="txt" style="text-align: center;"><embed src="http://music.163.com/style/swf/widget.swf?sid=27836179&type=2&auto=1&width=320&height=66" width="340" height="86" allownetworking="all"><div><br><br></div></div></p>
+<blockquote>
+<p><span style="font-size: 15px;"><a href="http://wuxubj.cn/game/" target="_blank" rel="external">小游戏</a></span></p>
+</blockquote>
 
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/07/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-07T09:20:53+08:00"
-              content="2016-07-07" >
-          07-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
-
-  
-
+  </div>
 
 
           </div>
@@ -270,6 +330,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="mylove/index.html"
+           data-title="mylove" data-url="http://yoursite.com/mylove/index.html">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -423,12 +491,6 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
-
 
   
 
