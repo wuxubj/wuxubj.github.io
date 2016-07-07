@@ -84,55 +84,70 @@
 
 
 
-<meta name="description" content="#lovelqw {
-  background: #ffe;
-  margin: 0px auto;
-  text-align: center;
-  padding: 0px;
-  font-size: 15px;
-  color: #9a8c8c;
-}
-.hidden{display:none;}
+<meta name="description" content="倒计时js代码 - 懒人建站 http://www.51xuediannao.com/
+
+
+
+
+过了：
+
+    00天
+    00时
+    00分
+    00秒
+
+今天是第00个月，第00年 ！
+
 
 
 
     function getRTime(){
-        var EndTime=">
+        var EndTime= new Date(&apos;2016/05/1 10:00:00&apos;); //截止">
 <meta property="og:type" content="website">
-<meta property="og:title" content="mylove">
-<meta property="og:url" content="http://yoursite.com/mylove/index.html">
+<meta property="og:title" content="雷娇娇">
+<meta property="og:url" content="http://yoursite.com/mylove/downtime.html">
 <meta property="og:site_name" content="雷娇娇">
-<meta property="og:description" content="#lovelqw {
-  background: #ffe;
-  margin: 0px auto;
-  text-align: center;
-  padding: 0px;
-  font-size: 15px;
-  color: #9a8c8c;
-}
-.hidden{display:none;}
+<meta property="og:description" content="倒计时js代码 - 懒人建站 http://www.51xuediannao.com/
+
+
+
+
+过了：
+
+    00天
+    00时
+    00分
+    00秒
+
+今天是第00个月，第00年 ！
+
 
 
 
     function getRTime(){
-        var EndTime=">
-<meta property="og:updated_time" content="2016-07-07T06:24:58.528Z">
+        var EndTime= new Date(&apos;2016/05/1 10:00:00&apos;); //截止">
+<meta property="og:updated_time" content="2016-07-02T15:54:40.802Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mylove">
-<meta name="twitter:description" content="#lovelqw {
-  background: #ffe;
-  margin: 0px auto;
-  text-align: center;
-  padding: 0px;
-  font-size: 15px;
-  color: #9a8c8c;
-}
-.hidden{display:none;}
+<meta name="twitter:title" content="雷娇娇">
+<meta name="twitter:description" content="倒计时js代码 - 懒人建站 http://www.51xuediannao.com/
+
+
+
+
+过了：
+
+    00天
+    00时
+    00分
+    00秒
+
+今天是第00个月，第00年 ！
+
 
 
 
     function getRTime(){
-        var EndTime=">
+        var EndTime= new Date(&apos;2016/05/1 10:00:00&apos;); //截止">
 
 
 
@@ -154,7 +169,7 @@
   
 
   
-    mylove | 雷娇娇
+     | 雷娇娇
   
 </title>
 </head>
@@ -252,21 +267,29 @@
   <div id="posts" class="posts-expand">
     
     
-      <style type="text/css">
-#lovelqw {
-  background: #ffe;
-  margin: 0px auto;
-  text-align: center;
-  padding: 0px;
-  font-size: 15px;
-  color: #9a8c8c;
-}
-.hidden{display:none;}
-</style>
+      <!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>倒计时js代码 - 懒人建站 http://www.51xuediannao.com/</title>
+</head>
+
+<body>
+<div id="CountMsg" class="HotDate">
+<div id="countdown_prompt">过了：</div>
+<div id="countdown">
+    <span id="t_d">00天</span>
+    <span id="t_h">00时</span>
+    <span id="t_m">00分</span>
+    <span id="t_s">00秒</span>
+</div>
+<div id="countdown"><span id="loveYear">今天是第<span id="t_month">00</span>个月，第<span id="t_year">00</span>年 ！</span></div>
+</div>
+
 
 <script type="text/javascript">
     function getRTime(){
-        var EndTime= new Date('2014/02/19 00:00:00'); //截止时间 前端路上 http://www.51xuediannao.com/qd63/
+        var EndTime= new Date('2016/05/1 10:00:00'); //截止时间 前端路上 http://www.51xuediannao.com/qd63/
         var NowTime = new Date();
         var t =NowTime.getTime() - EndTime.getTime();
         /*var d=Math.floor(t/1000/60/60/24);
@@ -281,63 +304,22 @@
         var h=Math.floor(t/1000/60/60%24);
         var m=Math.floor(t/1000/60%60);
         var s=Math.floor(t/1000%60);
-        var month=Math.ceil(d/30);
-        var year=Math.ceil(d/365);
+		var month=Math.ceil(d/30);
+		var year=Math.ceil(d/365);
 
         document.getElementById("t_d").innerHTML = d + "天";
         document.getElementById("t_h").innerHTML = h + "时";
         document.getElementById("t_m").innerHTML = m + "分";
         document.getElementById("t_s").innerHTML = s + "秒";
-
-        document.getElementById("t_month").innerHTML = month ;
-        document.getElementById("t_year").innerHTML = year ;
+		
+		document.getElementById("t_month").innerHTML = month ;
+		document.getElementById("t_year").innerHTML = year ;
     }
     setInterval(getRTime,1000);
-function addmusic()
-{    
-    var musicid=prompt("请输入网易云音乐歌曲id:");
-    if(musicid!='')
-     {  
-        document.getElementById("txt").innerHTML ='<embed src="http://music.163.com/style/swf/widget.swf?sid='+musicid+'&type=2&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all">'+'</embed>';
-    }
-    else
-      {  alert("音乐id不能为空.");  }
-
-}
-function showmusic()
-{
-    var musicid='27836179';
-    document.getElementById("txt").innerHTML ='<embed src="http://music.163.com/style/swf/widget.swf?sid='+musicid+'&type=2&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all">'+'</embed>';
-}
-//定义"隐藏内容"的函数
-function hidcontent()
-{
-    var myele=document.getElementById("txt");
-    myele.style.display="none";
-    var myele=document.getElementById("btshow");
-    myele.style.display="block";
-    var myele=document.getElementById("bthidden");
-    myele.style.display="none";
-}
-
-//定义"显示内容"的函数
-function showcontent()
-{
-    var myele=document.getElementById("txt");
-    myele.style.display="block";
-    var myele=document.getElementById("bthidden");
-    myele.style.display="block";
-    var myele=document.getElementById("btshow");
-    myele.style.display="none";
-}
-showmusic();
     </script>
 
-<p><blockquote class="blockquote-center"><div id="lovelqw">雷娇和金龙牵手走过了：<br>    <span id="t_d">00天</span><span id="t_h">00时</span><span id="t_m">00分</span><span id="t_s">00秒</span><br><span id="loveYear">今天是第<span id="t_month">00</span>个月，第<span id="t_year">00</span>年 ！</span></div></blockquote><form><!--当点击相应按钮，执行相应操作，为按钮添加相应事件--><input type="button" onclick="addmusic()" value="更改音乐"> <input type="button" id="bthidden" onclick="hidcontent()" value="隐藏音乐"><input type="button" id="btshow" class="hidden" onclick="showcontent()" value="显示音乐"></form><div id="txt" style="text-align: center;"><embed src="http://music.163.com/style/swf/widget.swf?sid=27836179&type=2&auto=1&width=320&height=66" width="340" height="86" allownetworking="all"><div><br><br></div></div></p>
-<blockquote>
-<p><span style="font-size: 15px;"><a href="http://wuxubj.cn/leijiao/game/" target="_blank" rel="external">小游戏</a></span></p>
-</blockquote>
-
+</body>
+</html> 
     
   </div>
 
@@ -349,8 +331,8 @@ showmusic();
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="mylove/index.html"
-           data-title="mylove" data-url="http://yoursite.com/mylove/index.html">
+      <div class="ds-thread" data-thread-key="mylove/downtime.html"
+           data-title="" data-url="http://yoursite.com/mylove/downtime.html">
       </div>
     
   </div>
