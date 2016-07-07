@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/leijiao/index.html</loc>
+    
+    <lastmod>2016-07-07T03:59:06.808Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/guestbook/index.html</loc>
     
     <lastmod>2016-07-06T07:09:06.913Z</lastmod>
