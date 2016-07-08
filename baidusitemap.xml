@@ -3,11 +3,31 @@
 
 
     
-    
+  <url>
+    <loc>http://yoursite.com/2016/07/07/find-sci-or-ei-index/</loc>
+    <lastmod>2016-07-07T14:27:39.648Z</lastmod>
+    <data>
+        <display>
+        <title>查找论文是否被SCI,EI检索及其检索号</title>
+        <pubTime>2016-07-07T13:11:20.000Z</pubTime>
+        
+        <tag>SCI</tag>
+         
+        <tag>EI</tag>
+         
+         
+           
+             
+              <breadCrumb title="学术论文相关" url="http://yoursite.com/categories/%E5%AD%A6%E6%9C%AF%E8%AE%BA%E6%96%87%E7%9B%B8%E5%85%B3/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://yoursite.com/2016/07/06/footer-beautify-of-nexT/</loc>
-    <lastmod>2016-07-06T06:12:45.670Z</lastmod>
+    <lastmod>2016-07-07T14:27:00.019Z</lastmod>
     <data>
         <display>
         <title>Hexo+nexT页脚美化</title>
@@ -26,6 +46,7 @@
     </data>
     </url>
 
+    
     
     
   <url>
