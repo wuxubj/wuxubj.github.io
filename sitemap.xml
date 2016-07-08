@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/05/26/matlab-add-noise-calculating-signal-to-noise-ratio/</loc>
+    
+    <lastmod>2016-07-08T02:26:03.077Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/05/21/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E8%BF%9B%E9%98%B6%E7%AF%87/</loc>
     
     <lastmod>2016-07-08T02:20:28.741Z</lastmod>
@@ -89,13 +96,6 @@
     <loc>http://yoursite.com/2016/06/16/matlab-linestyle-marker-color/</loc>
     
     <lastmod>2016-06-28T12:45:54.855Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/05/26/matlab-add-noise-calculating-signal-to-noise-ratio/</loc>
-    
-    <lastmod>2016-06-16T03:55:13.961Z</lastmod>
     
   </url>
   
