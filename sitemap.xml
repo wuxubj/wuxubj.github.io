@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/mylove/index.html</loc>
+    
+    <lastmod>2016-07-08T03:05:53.362Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/05/26/matlab-add-noise-calculating-signal-to-noise-ratio/</loc>
     
     <lastmod>2016-07-08T02:26:03.077Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>http://yoursite.com/guestbook/index.html</loc>
     
     <lastmod>2016-07-06T07:09:06.913Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/mylove/index.html</loc>
-    
-    <lastmod>2016-07-06T02:31:03.552Z</lastmod>
     
   </url>
   
