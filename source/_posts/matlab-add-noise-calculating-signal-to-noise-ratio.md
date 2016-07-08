@@ -62,7 +62,7 @@ xlabel('t');
 title('加入高斯白噪声后的信号(SNR=5)');
 ```
 加入的高斯白噪声是随机的，所以``snr_out1``和``snr_out2``在``snr=5``上下波动。波形如图：
-![fig31](http://wuxubj.cn/images/201605/31.jpg)
+![fig31](http://o9w8f1xrl.bkt.clouddn.com/images/201605/31.jpg)
 </br>
 参考文献：
 [1] [matlab中的信噪比](http://blog.sina.com.cn/s/blog_758ebadc0100qchy.html)

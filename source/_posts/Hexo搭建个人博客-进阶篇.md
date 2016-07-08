@@ -36,11 +36,11 @@ menu:
 ### 添加swiftype搜索并自定义搜索框
 1.参考：[Swiftype 站内搜索](http://theme-next.iissnan.com/third-party-services.html#swiftype) 在导航栏添加搜索按钮。如图：
 
-![fig21](http://wuxubj.github.io/images/201605/21.jpg)
+![fig21](http://o9w8f1xrl.bkt.clouddn.com/images/201605/21.jpg)
 
 2.添加搜索框。我们希望搜索界面是这样的：
 
-![fig22](http://wuxubj.github.io/images/201605/22.jpg)
+![fig22](http://o9w8f1xrl.bkt.clouddn.com/images/201605/22.jpg)
 
 具体操作如下：
 编辑路径``\themes\next\source\css\_schemes\Mist``下的``_search.styl``文件，添加如下样式：
@@ -79,16 +79,16 @@ menu:
 ```
 效果如下图所示：
 
-![fig23](http://wuxubj.github.io/images/201605/23.jpg)
+![fig23](http://o9w8f1xrl.bkt.clouddn.com/images/201605/23.jpg)
 
 3.去掉导航栏搜索按钮
 编辑路径``\themes\next\layout\_partials``下的``header.swig``文件，去掉红色框内的代码，如图：
 
-![fig24](http://wuxubj.github.io/images/201605/24.jpg)
+![fig24](http://o9w8f1xrl.bkt.clouddn.com/images/201605/24.jpg)
 
 最终效果为：
 
-![fig25](http://wuxubj.github.io/images/201605/25.jpg)
+![fig25](http://o9w8f1xrl.bkt.clouddn.com/images/201605/25.jpg)
 
 ### 增大导航栏高度
 编辑路径``\themes\next\source\css\_schemes\Mist``下的``_header.styl``文件，修改样式：
@@ -101,7 +101,7 @@ menu:
 ```
 效果如图：
 
-![fig26](http://wuxubj.github.io/images/201605/26.jpg)
+![fig26](http://o9w8f1xrl.bkt.clouddn.com/images/201605/26.jpg)
 
 ### 添加留言页面及最近访客
 1.参考：[多说评论](http://theme-next.iissnan.com/getting-started.html#comment-system-duoshuo)完成基本配置实现多说评论。
@@ -143,4 +143,4 @@ menu:
 <body><script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone_v6/lostchild/search_children.js" charset="utf-8"></script></body>
 ```
 效果如图：
-![fig27](http://wuxubj.github.io/images/201605/27.jpg)
+![fig27](http://o9w8f1xrl.bkt.clouddn.com/images/201605/27.jpg)
