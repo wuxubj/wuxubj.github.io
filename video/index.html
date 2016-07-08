@@ -15,16 +15,19 @@ function access_get()
 if(myname=="tess")
   {   alert("你好 my friend,欢迎访问！"); }
 else
-  {  alert("抱歉你无访问权限,页面即将关闭..."); 
-  window.close();
-
+  { 
+  alert("抱歉你无访问权限,页面即将关闭..."); 
+ 
+  window.opener=null;
+window.open('http://wuxubj.cn','_self');
+//window.close();
   }
 }
 access_get();
 </script>
 </head>
 
-<body>
+<body id="bodyid">
  <div class="out">
  
 <div class="in">
