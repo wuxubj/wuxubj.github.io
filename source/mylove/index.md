@@ -70,5 +70,5 @@ function showcontent()
     <span id="t_d">00天</span><span id="t_h">00时</span><span id="t_m">00分</span><span id="t_s">00秒</span>
 <span id="loveYear">今天是第<span id="t_month">00</span>个月，第<span id="t_year">00</span>年 ！</span></div></blockquote><form><!--当点击相应按钮，执行相应操作，为按钮添加相应事件--><input type="button" id="bthidden" onclick="hidcontent()" value="隐藏音乐" > <input type="button" id="btshow" class="hidden" onclick="showcontent()" value="显示音乐" ></form><div id="txt" style="text-align: center;"><embed src="http://music.163.com/style/swf/widget.swf?sid=27836179&type=2&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all"></embed><div>
 <br/>
-><span style="font-size: 15px;">[小游戏](http://wuxubj.cn/game/)</span>
+><span style="font-size: 15px;">[小游戏](http://o9w8f1xrl.bkt.clouddn.com/game/index.html)</span>
 
