@@ -92,12 +92,11 @@
   font-size: 15px;
   color: #9a8c8c;
 }
-.hidden{display:none;}
 
 
 
     function getRTime(){
-        var EndTime=">
+        var EndTime= new Date(&apos;2014/02/6 19">
 <meta property="og:type" content="website">
 <meta property="og:title" content="mylove">
 <meta property="og:url" content="http://yoursite.com/mylove/index.html">
@@ -110,13 +109,12 @@
   font-size: 15px;
   color: #9a8c8c;
 }
-.hidden{display:none;}
 
 
 
     function getRTime(){
-        var EndTime=">
-<meta property="og:updated_time" content="2016-07-08T03:05:53.362Z">
+        var EndTime= new Date(&apos;2014/02/6 19">
+<meta property="og:updated_time" content="2016-07-10T07:30:27.103Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mylove">
 <meta name="twitter:description" content="#lovelqw {
@@ -127,12 +125,11 @@
   font-size: 15px;
   color: #9a8c8c;
 }
-.hidden{display:none;}
 
 
 
     function getRTime(){
-        var EndTime=">
+        var EndTime= new Date(&apos;2014/02/6 19">
 
 
 
@@ -319,7 +316,6 @@
   font-size: 15px;
   color: #9a8c8c;
 }
-.hidden{display:none;}
 </style>
 
 <script type="text/javascript">
@@ -351,30 +347,9 @@
         document.getElementById("t_year").innerHTML = year ;
     }
     setInterval(getRTime,1000);
-//定义"隐藏内容"的函数
-function hidcontent()
-{
-    var myele=document.getElementById("txt");
-    myele.style.display="none";
-    var myele=document.getElementById("btshow");
-    myele.style.display="block";
-    var myele=document.getElementById("bthidden");
-    myele.style.display="none";
-}
-
-//定义"显示内容"的函数
-function showcontent()
-{
-    var myele=document.getElementById("txt");
-    myele.style.display="block";
-    var myele=document.getElementById("bthidden");
-    myele.style.display="block";
-    var myele=document.getElementById("btshow");
-    myele.style.display="none";
-}
     </script>
 
-<p><blockquote class="blockquote-center"><div id="lovelqw">李小二和雷四能牵手走过了：<br>    <span id="t_d">00天</span><span id="t_h">00时</span><span id="t_m">00分</span><span id="t_s">00秒</span><br><span id="loveYear">今天是第<span id="t_month">00</span>个月，第<span id="t_year">00</span>年 ！</span></div></blockquote><form><!--当点击相应按钮，执行相应操作，为按钮添加相应事件--><input type="button" id="bthidden" onclick="hidcontent()" value="隐藏音乐"> <input type="button" id="btshow" class="hidden" onclick="showcontent()" value="显示音乐"></form><div id="txt" style="text-align: center;"><embed src="http://music.163.com/style/swf/widget.swf?sid=27836179&type=2&auto=1&width=320&height=66" width="340" height="86" allownetworking="all"><div><br><br></div></div></p>
+<p><blockquote class="blockquote-center"><div id="lovelqw">李小二和雷四能牵手走过了：<br>    <span id="t_d">00天</span><span id="t_h">00时</span><span id="t_m">00分</span><span id="t_s">00秒</span><br><span id="loveYear">今天是第<span id="t_month">00</span>个月，第<span id="t_year">00</span>年 ！</span></div></blockquote><form><!--当点击相应按钮，执行相应操作，为按钮添加相应事件--><input type="button" id="bthidden" onclick="hideElement('music');showElement('btshow');hideElement('bthidden')" value="隐藏音乐"> <input type="button" id="btshow" class="hidden" onclick="showElement('music');showElement('bthidden');hideElement('btshow')" value="显示音乐"></form><div id="music" style="text-align: center;"><embed src="http://music.163.com/style/swf/widget.swf?sid=27836179&type=2&auto=0&width=320&height=66" width="340" height="86" allownetworking="all"><div><br><br></div></div></p>
 <blockquote>
 <p><span style="font-size: 15px;"><a href="http://o9w8f1xrl.bkt.clouddn.com/game/index.html" target="_blank" rel="external">小游戏</a></span></p>
 </blockquote>
@@ -655,6 +630,40 @@ function showcontent()
 
 
 
+  <script type="text/JavaScript">
+function hideElement(elementID)
+{
+	var myele=document.getElementById(elementID);
+	myele.style.display="none";
+}
+
+function showElement(elementID)
+{
+	var myele=document.getElementById(elementID);
+	myele.style.display="block";
+}
+
+function loveTime(startDate){
+     //   var EndTime= new Date('2014/02/6 19:46:00'); //��ֹʱ�� ǰ��·�� http://www.51xuediannao.com/qd63/
+        var EndTime= new Date(startDate); 
+		var NowTime = new Date();
+        var t =NowTime.getTime() - EndTime.getTime();
+
+        var d=Math.floor(t/1000/60/60/24);
+        var h=Math.floor(t/1000/60/60%24);
+        var m=Math.floor(t/1000/60%60);
+        var s=Math.floor(t/1000%60);
+		var month=Math.ceil(d/30);
+		var year=Math.ceil(d/365);
+        document.getElementById("t_d").innerHTML = d ;
+        document.getElementById("t_h").innerHTML = h ;
+        document.getElementById("t_m").innerHTML = m ;
+        document.getElementById("t_s").innerHTML = s ;
+		
+		document.getElementById("t_month").innerHTML = month ;
+		document.getElementById("t_year").innerHTML = year ;
+    }
+</script>
 
 </body>
 </html>
