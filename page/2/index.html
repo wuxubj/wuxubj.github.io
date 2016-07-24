@@ -354,9 +354,7 @@
 
       
         
-          <h3 id="计算信噪比-SNR"><a href="#计算信噪比-SNR" class="headerlink" title="计算信噪比(SNR)"></a>计算信噪比(SNR)</h3><p>1.计算信号功率<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sigPower = sum(<span class="built_in">abs</span>(sig(:)).^<span class="number">2</span>)/<span class="built_in">length</span>(sig(:))</span><br></pre></td></tr></table></figure></p>
-<p>2.计算信噪比（SNR）<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SNR(dB)=<span class="number">10</span>*<span class="built_in">log10</span>(Ps/Pn)</span><br></pre></td></tr></table></figure></p>
-<p>3.相关单位<br><strong>分贝(decibel, dB)：</strong>分贝（dB）是表示相对功率或幅度电平的标准单位，换句话说，就是我们用来表示两个能量之间的差别的一种表示单位，它不是一个绝对单位。例如，电子系统中将电压、电流、功率等物理量的强弱通称为电平，电平的单位通常就以分贝表示，即事先取一个电压或电流作为参考值（0dB），用待表示的量与参考值之比取对数，再乘以20作为电平的分贝数（功率的电平值改乘10）。
+          <p>本文讲述Matlab中计算信号信噪比以及在信号中添加高斯白噪声的方法。<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/05/26/matlab-add-noise-calculating-signal-to-noise-ratio/#more" rel="contents">
               阅读全文 &raquo;
@@ -478,8 +476,7 @@
 
       
         
-          <h3 id="添加分类和标签页"><a href="#添加分类和标签页" class="headerlink" title="添加分类和标签页"></a>添加分类和标签页</h3><p>1.新建一个页面，命名为<code>categories</code> ，命令如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure></p>
-<p>2.编辑刚新建的页面，将页面的类型设置为<code>categories</code>，主题将自动为这个页面显示所有分类。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: 分类</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line"><span class="built_in">type</span>: <span class="string">"categories"</span></span><br><span class="line">comments: <span class="literal">false</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+          <p>记录了nexT主题的美化，包括添加分类和标签页、添加swiftype搜索、导航栏美化、添加留言页面及最近访客以及添加404公益页面。<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/05/21/Hexo-build-personal-blog-advance/#more" rel="contents">
               阅读全文 &raquo;
@@ -601,10 +598,7 @@
 
       
         
-          <h3 id="安装HEXO"><a href="#安装HEXO" class="headerlink" title="安装HEXO"></a>安装HEXO</h3><p>切换到博客所在目录，运行<code>Git Bash</code>，依次执行以下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ hexo init</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure></p>
-<p>指定博客文件夹的目录如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure></p>
-<p>运行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure></p>
-<p>在浏览器中输入：<a href="http://localhost:4000/">http://localhost:4000/</a>即可访问本地博客，如下图所示：<br>
+          <p>讲述Hexo的安装，nexT主题的下载及其简单配置。<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/05/21/Hexo-build-personal-blog-basics/#more" rel="contents">
               阅读全文 &raquo;
