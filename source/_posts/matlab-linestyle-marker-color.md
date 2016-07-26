@@ -6,6 +6,8 @@ tags:
 - matlab
 permalink: matlab-linestyle-marker-color
 ---
+Matlab画图时，线型、标记和颜色的设置。
+<!--more-->
 
 线型|说明|标记符|说明|颜色|说明
 :-:|:-:|:-:|:-:|:-:|:-:

@@ -1,11 +1,15 @@
 ---
 title: Hexo搭建个人博客(基础篇)
+date: 2016-05-21 15:20:28
 categories: 
-- Github+Hexo搭建个人博客
-tags: 
-- hexo
 - 博客搭建
+tags: 
+- Hexo
+- nexT
+permalink: Hexo-build-personal-blog-basics
 ---
+讲述Hexo的安装，nexT主题的下载及其简单配置。
+<!--more-->
 ### 安装HEXO
 切换到博客所在目录，运行``Git Bash``，依次执行以下命令：
 ``` bash
@@ -29,7 +33,6 @@ $ hexo g
 $ hexo s
 ```
 在浏览器中输入：[http://localhost:4000/](http://localhost:4000/)即可访问本地博客，如下图所示：
-<!--more-->
 
 ![fig11](http://o9w8f1xrl.bkt.clouddn.com/images/201605/11.jpg)
 

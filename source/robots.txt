@@ -4,6 +4,9 @@ Allow: /archives/
 Allow: /categories/
 Allow: /tags/
 Allow: /guestbook/
+Allow: /mylove/
+Allow: /weblog/
+Allow: /page/
 Allow: /2016/
 
 Disallow: /vendors/
@@ -12,7 +15,6 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
-Disallow: /daqiao/
 Disallow: /video/
 
 Sitemap: http://wuxubj.cn/sitemap.xml

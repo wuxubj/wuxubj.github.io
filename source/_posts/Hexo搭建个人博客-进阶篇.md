@@ -2,11 +2,14 @@
 title: Hexo搭建个人博客(进阶篇)
 date: 2016-05-21 16:01:28
 categories:
-- Github+Hexo搭建个人博客
-tags:
-- hexo
 - 博客搭建
+tags:
+- Hexo
+- nexT
+permalink: Hexo-build-personal-blog-advance 
 ---
+记录了nexT主题的美化，包括添加分类和标签页、添加swiftype搜索、导航栏美化、添加留言页面及最近访客以及添加404公益页面。
+<!--more-->
 ### 添加分类和标签页
 1.新建一个页面，命名为``categories`` ，命令如下:
 ``` bash
@@ -20,7 +23,6 @@ type: "categories"
 comments: false
 ---
 ```
-<!--more-->
 3.在菜单中添加链接。编辑主题的 ``_config.yml`` ，将`` menu`` 中的 ``categories: /categories`` 注释去掉，如下:
 ``` bash
 menu:

@@ -2,10 +2,11 @@
 title: Hexo+nexT页脚美化
 date: 2016-07-06 11:27:10
 categories: 
-- Github+Hexo搭建个人博客
+- 博客搭建
 tags: 
 - 页脚美化
-- 博客搭建
+- nexT
+- Hexo
 permalink: footer-beautify-of-nexT
 ---
 ``Next``的``Mist``主题页脚默认``左对齐``，本文目标：
