@@ -1548,7 +1548,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #73ffb4;
+  background: #a7416b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2301,6 +2301,18 @@ hr {
   outline: none;
   border-bottom: 1px solid #999;
   opacity: 0.5;
+}
+ul.search-result-list {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+a.search-result-title {
+  font-weight: bold;
+  font-size: 14px;
+}
+em.search-keyword {
+  border-bottom: 1px dashed #f00;
+  font-weight: bold;
 }
 .posts-expand {
   padding-top: 0;
