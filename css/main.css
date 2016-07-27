@@ -1548,7 +1548,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #eb1a91;
+  background: #06a37c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2013,8 +2013,8 @@ a.search-result {
 }
 @media (max-width: 767px) {
   .popup {
-    padding: 3px;
-    top: 0;
+    padding: 10px, 3px, 3px, 3px;
+    top: 30px;
     left: 0;
     margin: 0;
     width: 100%;
