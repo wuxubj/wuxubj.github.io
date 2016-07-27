@@ -77,7 +77,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/leijiao/favicon.ico?v=5.0.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
 
@@ -92,12 +92,7 @@
   font-size: 15px;
   color: #9a8c8c;
 }
-.hidden{display:none;}
-
-
-
-    function getRTime(){
-        var EndTime=">
+.demo{width:340px; margin:0px auto 10px auto}.aplayer-music{line-heigh">
 <meta property="og:type" content="website">
 <meta property="og:title" content="mylove">
 <meta property="og:url" content="http://yoursite.com/mylove/index.html">
@@ -110,13 +105,8 @@
   font-size: 15px;
   color: #9a8c8c;
 }
-.hidden{display:none;}
-
-
-
-    function getRTime(){
-        var EndTime=">
-<meta property="og:updated_time" content="2016-07-07T06:24:58.528Z">
+.demo{width:340px; margin:0px auto 10px auto}.aplayer-music{line-heigh">
+<meta property="og:updated_time" content="2016-07-27T16:08:28.456Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mylove">
 <meta name="twitter:description" content="#lovelqw {
@@ -127,12 +117,7 @@
   font-size: 15px;
   color: #9a8c8c;
 }
-.hidden{display:none;}
-
-
-
-    function getRTime(){
-        var EndTime=">
+.demo{width:340px; margin:0px auto 10px auto}.aplayer-music{line-heigh">
 
 
 
@@ -252,7 +237,8 @@
   <div id="posts" class="posts-expand">
     
     
-      <style type="text/css">
+      <p><link rel="stylesheet" href="http://o9w8f1xrl.bkt.clouddn.com/APlayer/APlayer.min.css"></p>
+<style type="text/css">
 #lovelqw {
   background: #ffe;
   margin: 0px auto;
@@ -261,21 +247,27 @@
   font-size: 15px;
   color: #9a8c8c;
 }
-.hidden{display:none;}
+.demo{width:340px; margin:0px auto 10px auto}.aplayer-music{line-height:18px;}.aplayer .aplayer-info .aplayer-controller .aplayer-time{bottom:0px;}
 </style>
 
 <script type="text/javascript">
-    function getRTime(){
-        var EndTime= new Date('2014/02/19 00:00:00'); //截止时间 前端路上 http://www.51xuediannao.com/qd63/
+function hideElement(elementID)
+{
+    var myele=document.getElementById(elementID);
+    myele.style.display="none";
+}
+
+function showElement(elementID)
+{
+    var myele=document.getElementById(elementID);
+    myele.style.display="block";
+}
+
+function loveTime(startDate){
+     //   var EndTime= new Date('2014/02/6 19:46:00'); //截止时间 前端路上 http://www.51xuediannao.com/qd63/
+        var EndTime= new Date(startDate); 
         var NowTime = new Date();
         var t =NowTime.getTime() - EndTime.getTime();
-        /*var d=Math.floor(t/1000/60/60/24);
-        t-=d*(1000*60*60*24);
-        var h=Math.floor(t/1000/60/60);
-        t-=h*60*60*1000;
-        var m=Math.floor(t/1000/60);
-        t-=m*60*1000;
-        var s=Math.floor(t/1000);*/
 
         var d=Math.floor(t/1000/60/60/24);
         var h=Math.floor(t/1000/60/60%24);
@@ -283,57 +275,36 @@
         var s=Math.floor(t/1000%60);
         var month=Math.ceil(d/30);
         var year=Math.ceil(d/365);
-
-        document.getElementById("t_d").innerHTML = d + "天";
-        document.getElementById("t_h").innerHTML = h + "时";
-        document.getElementById("t_m").innerHTML = m + "分";
-        document.getElementById("t_s").innerHTML = s + "秒";
+        document.getElementById("t_d").innerHTML = d ;
+        document.getElementById("t_h").innerHTML = h ;
+        document.getElementById("t_m").innerHTML = m ;
+        document.getElementById("t_s").innerHTML = s ;
 
         document.getElementById("t_month").innerHTML = month ;
         document.getElementById("t_year").innerHTML = year ;
     }
-    setInterval(getRTime,1000);
-function addmusic()
-{    
-    var musicid=prompt("请输入网易云音乐歌曲id:");
-    if(musicid!='')
-     {  
-        document.getElementById("txt").innerHTML ='<embed src="http://music.163.com/style/swf/widget.swf?sid='+musicid+'&type=2&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all">'+'</embed>';
-    }
-    else
-      {  alert("音乐id不能为空.");  }
-
-}
-function showmusic()
-{
-    var musicid='27836179';
-    document.getElementById("txt").innerHTML ='<embed src="http://music.163.com/style/swf/widget.swf?sid='+musicid+'&type=2&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all">'+'</embed>';
-}
-//定义"隐藏内容"的函数
-function hidcontent()
-{
-    var myele=document.getElementById("txt");
-    myele.style.display="none";
-    var myele=document.getElementById("btshow");
-    myele.style.display="block";
-    var myele=document.getElementById("bthidden");
-    myele.style.display="none";
-}
-
-//定义"显示内容"的函数
-function showcontent()
-{
-    var myele=document.getElementById("txt");
-    myele.style.display="block";
-    var myele=document.getElementById("bthidden");
-    myele.style.display="block";
-    var myele=document.getElementById("btshow");
-    myele.style.display="none";
-}
-showmusic();
+//用到的函数在\themes\next\layout\_scripts\myscript\myscript.swig文件中
+    setInterval("loveTime('2014/02/19 00:00:00')",1000);
     </script>
 
-<p><blockquote class="blockquote-center"><div id="lovelqw">雷娇和金龙牵手走过了：<br>    <span id="t_d">00天</span><span id="t_h">00时</span><span id="t_m">00分</span><span id="t_s">00秒</span><br><span id="loveYear">今天是第<span id="t_month">00</span>个月，第<span id="t_year">00</span>年 ！</span></div></blockquote><form><!--当点击相应按钮，执行相应操作，为按钮添加相应事件--><input type="button" onclick="addmusic()" value="更改音乐"> <input type="button" id="bthidden" onclick="hidcontent()" value="隐藏音乐"><input type="button" id="btshow" class="hidden" onclick="showcontent()" value="显示音乐"></form><div id="txt" style="text-align: center;"><embed src="http://music.163.com/style/swf/widget.swf?sid=27836179&type=2&auto=1&width=320&height=66" width="340" height="86" allownetworking="all"><div><br><br></div></div></p>
+<p><blockquote class="blockquote-center"><div id="lovelqw">雷娇和金龙牵手走过了：<br>    <span id="t_d">00</span>天<span id="t_h">00</span>时<span id="t_m">00</span>分<span id="t_s">00</span>秒<br><span id="loveYear">今天是第<span id="t_month">00</span>个月，第<span id="t_year">00</span>年 ！</span></div></blockquote><form><!--当点击相应按钮，执行相应操作，为按钮添加相应事件--><input type="button" id="bthidden" onclick="hideElement('music');showElement('btshow');hideElement('bthidden')" value="隐藏音乐"> <input type="button" id="btshow" style="display:none;" onclick="showElement('music');showElement('bthidden');hideElement('btshow')" value="显示音乐"></form><div class="demo" id="music"><div id="player3" class="aplayer"></div></div></p>
+<script src="http://o9w8f1xrl.bkt.clouddn.com/APlayer/APlayer.min.js"></script>
+    <script>
+        var ap3 = new APlayer({
+            element: document.getElementById('player3'),
+            narrow: false,
+            autoplay: true,
+            showlrc: false,
+            music: {
+                title: '终于等到你',
+                author: '张靓颖',
+                url: 'http://o9w8f1xrl.bkt.clouddn.com/APlayer/audio/zhongyudengdaoni.mp3',
+                pic: 'http://o9w8f1xrl.bkt.clouddn.com/APlayer/audio/zhongyudengdaoni.jpg'
+            }
+        });
+        ap3.init();
+    </script>
+
 <blockquote>
 <p><span style="font-size: 15px;"><a href="http://o9w8f1xrl.bkt.clouddn.com/game_leijiao/index.html" target="_blank" rel="external">小游戏</a></span></p>
 </blockquote>

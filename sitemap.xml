@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.wuxubj.cn/guestbook/index.html</loc>
+    
+    <lastmod>2016-07-27T15:35:03.472Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wuxubj.cn/weblog/index.html</loc>
     
     <lastmod>2016-07-27T13:48:39.235Z</lastmod>
@@ -96,13 +103,6 @@
     <loc>http://www.wuxubj.cn/2016/07/06/footer-beautify-of-nexT/</loc>
     
     <lastmod>2016-07-21T02:59:51.464Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wuxubj.cn/guestbook/index.html</loc>
-    
-    <lastmod>2016-07-14T16:08:47.738Z</lastmod>
     
   </url>
   
