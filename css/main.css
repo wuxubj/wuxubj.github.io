@@ -1549,7 +1549,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #5d4bff;
+  background: #1dff9a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2329,8 +2329,7 @@ body {
   background: none;
 }
 .brand:hover {
-  color: #fff;
-  font-weight: bolder;
+  color: #ff0;
 }
 .site-subtitle {
   margin: 0;
