@@ -1549,7 +1549,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #58ff98;
+  background: #3678ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2246,7 +2246,7 @@ body {
 @media (max-width: 767px) {
   .content-wrap {
     width: 100%;
-    padding: 6px;
+    padding: 3px;
     min-height: auto;
   }
 }
@@ -2311,16 +2311,16 @@ body {
 .site-meta {
   padding: 20px 0;
   color: #fff;
-  background: #222;
+  background: #f5f5f5;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .site-meta {
-    box-shadow: 0 0 16px rgba(0,0,0,0.5);
+    box-shadow: 0 0 16px #010101;
   }
 }
 @media (max-width: 767px) {
   .site-meta {
-    box-shadow: 0 0 16px rgba(0,0,0,0.5);
+    box-shadow: 0 0 16px rgba(1,1,1,0.5);
   }
 }
 .brand {
