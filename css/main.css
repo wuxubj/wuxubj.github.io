@@ -1549,7 +1549,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f2c2e5;
+  background: #fff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2310,18 +2310,17 @@ body {
 }
 .site-meta {
   padding: 20px 0;
-  color: #000;
-  background: #222;
+  color: #fff;
+  background: #555;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .site-meta {
-    box-shadow: 0 0 16px rgba(1,1,1,0.5);
+    box-shadow: 0 0 16px rgba(0,0,0,0.5);
   }
 }
 @media (max-width: 767px) {
   .site-meta {
-    box-shadow: 0 0 16px rgba(1,1,1,0.5);
-    background: #f5f5f5;
+    box-shadow: 0 0 16px rgba(0,0,0,0.5);
   }
 }
 .brand {
@@ -2330,7 +2329,7 @@ body {
   background: none;
 }
 .brand:hover {
-  color: #000;
+  color: #fff;
 }
 .site-subtitle {
   margin: 0;
