@@ -1549,7 +1549,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #37ffeb;
+  background: #5d4bff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2330,6 +2330,7 @@ body {
 }
 .brand:hover {
   color: #fff;
+  font-weight: bolder;
 }
 .site-subtitle {
   margin: 0;

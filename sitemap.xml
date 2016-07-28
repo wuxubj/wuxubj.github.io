@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.wuxubj.cn/mylove/index.html</loc>
+    
+    <lastmod>2016-07-28T14:50:32.893Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wuxubj.cn/guestbook/index.html</loc>
     
     <lastmod>2016-07-27T15:35:03.472Z</lastmod>
@@ -89,13 +96,6 @@
     <loc>http://www.wuxubj.cn/2016/07/19/mysql-learning-notes/</loc>
     
     <lastmod>2016-07-24T07:25:32.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wuxubj.cn/mylove/index.html</loc>
-    
-    <lastmod>2016-07-24T06:16:34.007Z</lastmod>
     
   </url>
   
