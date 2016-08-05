@@ -875,8 +875,8 @@ pre .javascript .function {
   position: relative;
 }
 .headband {
-  height: 3px;
-  background: #222;
+  height: 2px;
+  background: #555;
 }
 .site-meta {
   margin: 0;
@@ -1549,7 +1549,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ee81bd;
+  background: #088cc8;
 }
 .links-of-blogroll {
   font-size: 13px;
