@@ -1032,9 +1032,6 @@ pre .javascript .function {
   -o-transform: rotate(30deg);
   transform: rotate(30deg);
 }
-.post-body a {
-  color: #2196f3;
-}
 .posts-expand {
   padding-top: 40px;
 }
@@ -1552,7 +1549,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #55a66f;
+  background: #aa9cff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2473,7 +2470,6 @@ body {
   float: left;
   margin: 5px 0 0;
   width: 50%;
-  text-align: center;
 }
 .links-of-author-item a {
   box-sizing: border-box;
@@ -2523,7 +2519,6 @@ body {
   float: left;
   margin: 5px 0 0;
   width: 50%;
-  text-align: center;
 }
 .links-of-blogroll-inline .links-of-blogroll-item a {
   box-sizing: border-box;
