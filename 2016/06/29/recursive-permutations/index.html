@@ -72,6 +72,8 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="务虚笔记" type="application/atom+xml" />
+
 
 
 
@@ -171,6 +173,8 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
             首页
           </a>
         </li>
@@ -178,6 +182,8 @@
         
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
           </a>
@@ -187,6 +193,8 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-calendar-check-o"></i> <br />
+            
             归档
           </a>
         </li>
@@ -194,6 +202,8 @@
         
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -203,6 +213,8 @@
         <li class="menu-item menu-item-guestbook">
           <a href="/guestbook" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-envelope"></i> <br />
+            
             留言
           </a>
         </li>
@@ -210,6 +222,8 @@
         
         <li class="menu-item menu-item-mylove">
           <a href="/mylove" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />
             
             爱的纪念
           </a>
@@ -221,6 +235,8 @@
           
             <a href="#" class="popup-trigger">
           
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
             搜索
           </a>
@@ -345,8 +361,17 @@
 <h3 id="为什么会有2次交换数据"><a href="#为什么会有2次交换数据" class="headerlink" title="为什么会有2次交换数据"></a>为什么会有2次交换数据</h3><p>第一次交换是为了将<code>list[i]</code>设置为排列首元素，第二次交换是为了恢复第一次交换之前的状态，以保证循环依次遍历不同元素。<br>以序列<code>{a, b, c, d}</code>为例，循环并交换<code>list[i]</code>与<code>list[begin]</code>，使<code>a,b,c,d</code>依次为首元素;<br>以<code>a</code>为首元素，<code>list[0]</code>与<code>list[0]</code>交换，顺序不变；<br>以<code>b</code>为首元素，<code>list[1]</code>与<code>list[0]</code>交换，顺序变为<code>{b,a,c,d}</code>，第一个元素选定之后，对<code>{a,c,d}</code>递归执行全排列，执行完成之后，下一次循环之前，需要将<code>list[1]</code>与<code>list[0]</code>再次交换，以恢复到<code>{a, b, c, d}</code>的顺序，这样，下次循环，再交换<code>list[2]</code>与<code>list[0]</code>，才能使得字符<code>c</code>为首元素；<br>同理可以分析以<code>c</code>和<code>d</code>为首元素的情况。</p>
 <h3 id="测试主函数"><a href="#测试主函数" class="headerlink" title="测试主函数"></a>测试主函数</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">perm</span><span class="params">(<span class="keyword">char</span> *<span class="built_in">list</span>, <span class="keyword">int</span> begin, <span class="keyword">int</span> end)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">char</span> *<span class="built_in">list</span>, <span class="keyword">int</span> n)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">char</span> *a, <span class="keyword">char</span> *b)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> <span class="built_in">list</span>[<span class="number">4</span>] = &#123; <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span> &#125;;</span><br><span class="line">	perm(<span class="built_in">list</span>, <span class="number">0</span>, <span class="number">3</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
+	  
     </div>
+	
+	<div>
+      
+        
+<div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束 ------</div>
 
+      
+    </div>
+	
     <div>
       
         
@@ -490,6 +515,13 @@
         </nav>
 
         
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
 
         <div class="links-of-author motion-element">
           
@@ -520,26 +552,22 @@
 
         
         
-          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
             <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              Links
+              <i class="fa  fa-fw fa-link"></i>
+              友情链接
             </div>
-            <ul class="links-of-blogroll-list">
+            
               
-                <li class="links-of-blogroll-item">
+                <span class="links-of-author-item" style="text-align: left;">
                   <a href="/weblog" title="建站日志" target="_blank">建站日志</a>
-                </li>
+                </span>
               
-                <li class="links-of-blogroll-item">
-                  <a href="http://theme-next.iissnan.com/theme-settings.html" title="nexT官方文档" target="_blank">nexT官方文档</a>
-                </li>
+                <span class="links-of-author-item" style="text-align: left;">
+                  <a href="/study-plan" title="学习计划" target="_blank">学习计划</a>
+                </span>
               
-                <li class="links-of-blogroll-item">
-                  <a href="https://github.com/iissnan/hexo-theme-next/issues" title="Issues of hexo-theme-next" target="_blank">Issues of hexo-theme-next</a>
-                </li>
-              
-            </ul>
+           
           </div>
         
 	
