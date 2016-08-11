@@ -2,6 +2,10 @@
 title: weblog
 date: 2016-07-18 15:29:58
 ---
+### 建站日志
+**2016-07-28：**将网站主题更换为[NexT.Pisces](https://github.com/iissnan/hexo-theme-next)
+**2016-07-27：**添加本地搜索功能，不再使用swiftype搜索。
+**2016-07-26：**网站托管到腾讯云，提高访问速度和稳定性。
 **2016-07-18：**新建[建站日志](http://www.wuxubj.cn/weblog/)页面，并添加到侧栏链接。
 **2016-07-17：**为网站添加301跳转，域名统一为[http://www.wuxubj.cn](http://www.wuxubj.cn/)，域名解析从腾讯云搬到DNSPod。
 **2016-07-15：**[爱的纪念](http://www.wuxubj.cn/mylove/)页面用自定义音乐播放器替换网易云音乐外链播放器，解决部分歌曲因版权问题，无法生成外链。
@@ -12,3 +16,13 @@ date: 2016-07-18 15:29:58
 **2016-05-24：**将网站同时部署到``GitHub``和``Coding``。
 **2016-05-21：**发表我的[第一篇博文](http://www.wuxubj.cn/2016/05/21/Hexo搭建个人博客-初级篇/)，记录网站搭建过程中的关键问题。
 **2016-05-11：**网站绑定个人域名[wuxubj.cn](http://wuxubj.cn/)，并正式上线。
+
+**参考资料：**
+1.&nbsp;&nbsp;[nexT官方文档](http://theme-next.iissnan.com/theme-settings.html)
+2.&nbsp;&nbsp;[Issues of hexo-theme-next](https://github.com/iissnan/hexo-theme-next/issues)
+3.&nbsp;&nbsp;[w3school](http://www.w3school.com.cn/)
+
+![网站二维码](/images/wuxubj_mini.png)<center>扫一扫，用手机访问本站<center>
+<style type="text/css">
+.posts-expand a{ color: #0593d3;}
+</style>
