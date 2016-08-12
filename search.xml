@@ -314,36 +314,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[爱的纪念]]></title>
-      <url>http://www.wuxubj.cn/mylove/index.html</url>
-      <content type="html"><![CDATA[<p><img src="/images/mylove.jpg" alt="mylove"></p>
-<p><blockquote class="blockquote-center" id="clear"><div id="lovelqw">李小二和雷宝宝牵手走过了：<br>    <span id="t_d">00</span>天<span id="t_h">00</span>时<span id="t_m">00</span>分<span id="t_s">00</span>秒<br><span id="loveYear">今天是第<span id="t_month">00</span>个月，第<span id="t_year">00</span>年 ！</span></div></blockquote><form><!--当点击相应按钮，执行相应操作，为按钮添加相应事件--><input type="button" id="bthidden" onclick="hideElement('music');showElement('btshow');hideElement('bthidden')" value="隐藏音乐"> <input type="button" id="btshow" class="hidden" onclick="showElement('music');showElement('bthidden');hideElement('btshow')" value="显示音乐"></form><div class="demo" id="music"><div id="player3" class="aplayer"></div></div></p>
-<blockquote>
-<p><span style="font-size: 15px;"><a href="http://o9w8f1xrl.bkt.clouddn.com/game/index.html" target="_blank" rel="external">小游戏</a></span></p>
-</blockquote>
-<p><link rel="stylesheet" href="/css/mycss/underline.css"></p>
-<p><link rel="stylesheet" href="/css/mycss/mylove.css"></p>
-<p><link rel="stylesheet" href="http://o9w8f1xrl.bkt.clouddn.com/APlayer/APlayer.min.css"></p>
-<script src="http://o9w8f1xrl.bkt.clouddn.com/APlayer/APlayer.min.js"></script>
-<script src="/js/myscript/mylove.js"></script>]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[学习计划]]></title>
-      <url>http://www.wuxubj.cn/study-plan/index.html</url>
-      <content type="html"><![CDATA[<h2 id="主要书籍"><a href="#主要书籍" class="headerlink" title="主要书籍"></a>主要书籍</h2><p><strong>编程语言</strong><br><a href="https://book.douban.com/subject/25708312/" target="_blank" rel="external">《C++ Primer 中文版（第5版）》</a><br><a href="https://book.douban.com/subject/1110934/" target="_blank" rel="external">《STL源码剖析》</a><br><a href="https://book.douban.com/subject/25779298/" target="_blank" rel="external">《利用Python进行数据分析》</a></p>
-<p><strong>数据结构与算法</strong><br><a href="https://book.douban.com/subject/1886174/" target="_blank" rel="external">《数据结构(C语言版)》</a><br><a href="https://book.douban.com/subject/20432061/" target="_blank" rel="external">《算法导论（第3版）》</a></p>
-<p><strong>操作系统</strong><br><a href="https://book.douban.com/subject/2287506/" target="_blank" rel="external">《深入理解LINUX内核(第三版)》</a><br><a href="https://book.douban.com/subject/5333562/" target="_blank" rel="external">《深入理解计算机系统（原书第2版）》</a></p>
-<p><strong>数据库</strong><br><a href="https://book.douban.com/subject/3354490/" target="_blank" rel="external">《MySQL必知必会》</a><br><a href="https://book.douban.com/subject/23008813/" target="_blank" rel="external">《高性能MySQL》</a></p>
-<p><strong>网络通信</strong><br>书籍待定</p>
-<p><strong>OJ平台</strong><br><a href="https://leetcode.com/" target="_blank" rel="external">LeetCode Online Judge</a><br><a href="http://hihocoder.com/" target="_blank" rel="external">hihoCoder</a><br><a href="http://career-oj.huawei.com/exam/camLogin.jsp" target="_blank" rel="external">华为OJ平台</a></p>
-<h2 id="执行计划"><a href="#执行计划" class="headerlink" title="执行计划"></a>执行计划</h2><p><strong>2016-08-01到2016-10-01：</strong><br>1.《C++ Primer 中文版（第5版）》<br>2.《数据结构(C语言版)》<br>3.《MySQL必知必会》</p>
-<p><strong>2016-10-01到2016-12-01：</strong><br>1.《深入理解LINUX内核(第三版)》<br>2.《深入理解计算机系统（原书第2版）》<br>3.&nbsp;&nbsp;网络通信</p>
-<p><strong>2016-12-01到2017-01-15：</strong><br>1.&nbsp;&nbsp;整理巩固<br>2.&nbsp;&nbsp;OJ平台练习<br>3.&nbsp;&nbsp;小项目练手</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[av]]></title>
       <url>http://www.wuxubj.cn/guestbook/av.html</url>
       <content type="html"><![CDATA[<h3 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h3><p><a href="http://airav.cc/" target="_blank" rel="external">http://airav.cc/</a><br><a href="http://59iav.net/?s=上原" target="_blank" rel="external">http://59iav.net</a><br><a href="http://www.btwalk.net" target="_blank" rel="external">http://www.btwalk.net</a><br><a href="http://88ybyb.com" target="_blank" rel="external">88ybyb.com</a><br><a href="http://www.nidipa.com/" target="_blank" rel="external">http://www.nidipa.com/</a><br><a href="http://www.1pondo.tv/" target="_blank" rel="external">一本道</a><br><a href="http://www.91porn.com/" target="_blank" rel="external">91porn</a><br><a href="http://www.xvideos.com/" target="_blank" rel="external">xvideos</a></p>
@@ -413,6 +383,36 @@ access_get();
         });
         ap3.init();
     </script>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[爱的纪念]]></title>
+      <url>http://www.wuxubj.cn/mylove/index.html</url>
+      <content type="html"><![CDATA[<p><img src="/images/mylove.jpg" alt="mylove"></p>
+<p><blockquote class="blockquote-center" id="clear"><div id="lovelqw">李小二和雷宝宝牵手走过了：<br>    <span id="t_d">00</span>天<span id="t_h">00</span>时<span id="t_m">00</span>分<span id="t_s">00</span>秒<br><span id="loveYear">今天是第<span id="t_month">00</span>个月，第<span id="t_year">00</span>年 ！</span></div></blockquote><form><!--当点击相应按钮，执行相应操作，为按钮添加相应事件--><input type="button" id="bthidden" onclick="hideElement('music');showElement('btshow');hideElement('bthidden')" value="隐藏音乐"> <input type="button" id="btshow" class="hidden" onclick="showElement('music');showElement('bthidden');hideElement('btshow')" value="显示音乐"></form><div class="demo" id="music"><div id="player3" class="aplayer"></div></div></p>
+<blockquote>
+<p><span style="font-size: 15px;"><a href="http://o9w8f1xrl.bkt.clouddn.com/game/index.html" target="_blank" rel="external">小游戏</a></span></p>
+</blockquote>
+<p><link rel="stylesheet" href="/css/mycss/underline.css"></p>
+<p><link rel="stylesheet" href="/css/mycss/mylove.css"></p>
+<p><link rel="stylesheet" href="http://o9w8f1xrl.bkt.clouddn.com/APlayer/APlayer.min.css"></p>
+<script src="http://o9w8f1xrl.bkt.clouddn.com/APlayer/APlayer.min.js"></script>
+<script src="/js/myscript/mylove.js"></script>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[学习计划]]></title>
+      <url>http://www.wuxubj.cn/study-plan/index.html</url>
+      <content type="html"><![CDATA[<h2 id="主要书籍"><a href="#主要书籍" class="headerlink" title="主要书籍"></a>主要书籍</h2><p><strong>编程语言</strong><br><a href="https://book.douban.com/subject/25708312/" target="_blank" rel="external">《C++ Primer 中文版（第5版）》</a><br><a href="https://book.douban.com/subject/1110934/" target="_blank" rel="external">《STL源码剖析》</a><br><a href="https://book.douban.com/subject/25779298/" target="_blank" rel="external">《利用Python进行数据分析》</a></p>
+<p><strong>数据结构与算法</strong><br><a href="https://book.douban.com/subject/1886174/" target="_blank" rel="external">《数据结构(C语言版)》</a><br><a href="https://book.douban.com/subject/20432061/" target="_blank" rel="external">《算法导论（第3版）》</a></p>
+<p><strong>操作系统</strong><br><a href="https://book.douban.com/subject/2287506/" target="_blank" rel="external">《深入理解LINUX内核(第三版)》</a><br><a href="https://book.douban.com/subject/5333562/" target="_blank" rel="external">《深入理解计算机系统（原书第2版）》</a></p>
+<p><strong>数据库</strong><br><a href="https://book.douban.com/subject/3354490/" target="_blank" rel="external">《MySQL必知必会》</a><br><a href="https://book.douban.com/subject/23008813/" target="_blank" rel="external">《高性能MySQL》</a></p>
+<p><strong>网络通信</strong><br>书籍待定</p>
+<p><strong>OJ平台</strong><br><a href="https://leetcode.com/" target="_blank" rel="external">LeetCode Online Judge</a><br><a href="http://hihocoder.com/" target="_blank" rel="external">hihoCoder</a><br><a href="http://career-oj.huawei.com/exam/camLogin.jsp" target="_blank" rel="external">华为OJ平台</a></p>
+<h2 id="执行计划"><a href="#执行计划" class="headerlink" title="执行计划"></a>执行计划</h2><p><strong>2016-08-01到2016-10-01：</strong><br>1.《C++ Primer 中文版（第5版）》<br>2.《数据结构(C语言版)》<br>3.《MySQL必知必会》</p>
+<p><strong>2016-10-01到2016-12-01：</strong><br>1.《深入理解LINUX内核(第三版)》<br>2.《深入理解计算机系统（原书第2版）》<br>3.&nbsp;&nbsp;网络通信</p>
+<p><strong>2016-12-01到2017-01-15：</strong><br>1.&nbsp;&nbsp;整理巩固<br>2.&nbsp;&nbsp;OJ平台练习<br>3.&nbsp;&nbsp;小项目练手</p>
+]]></content>
     </entry>
     
     <entry>

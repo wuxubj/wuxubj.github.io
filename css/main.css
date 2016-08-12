@@ -1336,6 +1336,10 @@ pre .javascript .function {
   margin-right: 10px;
   font-size: 13px;
 }
+.posts-expand .post-tags a:hover {
+  color: #0593d3;
+  border-bottom: 1px solid #0593d3;
+}
 .post-nav {
   overflow: hidden;
   margin-top: 60px;
@@ -1586,7 +1590,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b996a6;
+  background: #ff2ac9;
 }
 .links-of-blogroll {
   font-size: 13px;
