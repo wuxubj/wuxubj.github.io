@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.wuxubj.cn/mylove/index.html</loc>
+    <loc>http://www.wuxubj.cn/weblog/index.html</loc>
     
-    <lastmod>2016-08-11T07:43:25.965Z</lastmod>
+    <lastmod>2016-08-12T06:18:34.875Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wuxubj.cn/weblog/index.html</loc>
+    <loc>http://www.wuxubj.cn/guestbook/index.html</loc>
     
-    <lastmod>2016-08-11T07:42:18.333Z</lastmod>
+    <lastmod>2016-08-12T06:17:31.389Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wuxubj.cn/tags/index.html</loc>
+    
+    <lastmod>2016-08-12T05:55:22.051Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wuxubj.cn/mylove/index.html</loc>
+    
+    <lastmod>2016-08-12T05:20:47.752Z</lastmod>
     
   </url>
   
@@ -19,20 +33,6 @@
     <loc>http://www.wuxubj.cn/study-plan/index.html</loc>
     
     <lastmod>2016-08-11T03:42:04.798Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wuxubj.cn/tags/index.html</loc>
-    
-    <lastmod>2016-08-07T13:23:15.321Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wuxubj.cn/guestbook/index.html</loc>
-    
-    <lastmod>2016-07-29T16:48:14.290Z</lastmod>
     
   </url>
   

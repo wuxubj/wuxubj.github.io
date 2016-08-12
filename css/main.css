@@ -185,7 +185,7 @@ th {
 }
 body {
   position: relative;
-  font-family: 'Arial', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 14px;
   line-height: 2;
   color: #555;
@@ -216,7 +216,7 @@ h6 {
   padding: 0;
   font-weight: bold;
   line-height: 1.5;
-  font-family: 'Arial', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 h2,
 h3,
@@ -833,7 +833,12 @@ pre .javascript .function {
 }
 .tag-cloud a {
   display: inline-block;
-  margin: 10px;
+  margin: 15px;
+}
+.tag-cloud a:hover {
+  color: #000;
+  font-weight: bold;
+  border-bottom: 2px solid #000;
 }
 .back-to-top {
   box-sizing: border-box;
@@ -910,7 +915,7 @@ pre .javascript .function {
   line-height: 36px;
   font-size: 20px;
   font-weight: normal;
-  font-family: 'Arial', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 .site-subtitle {
   margin-top: 10px;
@@ -999,7 +1004,7 @@ pre .javascript .function {
   opacity: 0;
 }
 .post-body {
-  font-family: 'Arial', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 @media (max-width: 767px) {
   .post-body {
@@ -1032,8 +1037,12 @@ pre .javascript .function {
   -o-transform: rotate(30deg);
   transform: rotate(30deg);
 }
-.post-body a {
+.post-body p a {
   color: #0593d3;
+  border-bottom: none;
+}
+.post-body p a:hover {
+  border-bottom: 1px solid #0593d3;
 }
 .posts-expand {
   padding-top: 40px;
@@ -1267,7 +1276,7 @@ pre .javascript .function {
 .posts-expand .post-meta {
   margin: 3px 0 60px 0;
   color: #999;
-  font-family: 'Arial', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 12px;
   text-align: center;
 }
@@ -1349,16 +1358,41 @@ pre .javascript .function {
 }
 .post-nav-item a:hover {
   color: #0593d3;
-  border-bottom: solid thin #0593d3;
-}
-.post-nav-item a:active {
-  top: 2px;
 }
 .post-nav-item a i {
   font-size: 12px;
 }
 .post-nav-prev {
   text-align: right;
+}
+.post-nav-title-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0593d3;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+.post-nav-title-link:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.post-nav-title-link .fa {
+  font-size: 12px;
 }
 .posts-expand .post-eof {
   display: block;
@@ -1552,7 +1586,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #12627d;
+  background: #b996a6;
 }
 .links-of-blogroll {
   font-size: 13px;
