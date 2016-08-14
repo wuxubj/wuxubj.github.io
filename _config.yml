@@ -77,6 +77,7 @@ deploy:
 #add by wuxubj
 avatar: /images/avatar.jpg
 duoshuo_shortname: wuxubj
+duoshuo_share: true
 #hexo sitemap网站地图
 sitemap:
 path: sitemap.xml

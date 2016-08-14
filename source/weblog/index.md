@@ -1,5 +1,5 @@
 ---
-title: weblog
+title: 建站日志
 date: 2016-07-18 15:29:58
 ---
 ### 建站日志
@@ -23,6 +23,4 @@ date: 2016-07-18 15:29:58
 3.&nbsp;&nbsp;[w3school](http://www.w3school.com.cn/)
 
 ![网站二维码](/images/wuxubj_mini.png)<center>扫一扫，用手机访问本站<center>
-<style type="text/css">
-.posts-expand a{ color: #0593d3;}
-</style>
+<link rel="stylesheet" href="/css/mycss/underline.css">
