@@ -249,11 +249,11 @@
     <div class="site-search">
       
   <div class="popup">
+
  <input type="text" id="local-search-input">
  <div id="local-search-result"></div>
  <span class="popup-btn-close">close</span>
 </div>
-
 
 
     </div>
@@ -361,9 +361,8 @@
 <h3 id="为什么会有2次交换数据"><a href="#为什么会有2次交换数据" class="headerlink" title="为什么会有2次交换数据"></a>为什么会有2次交换数据</h3><p>第一次交换是为了将<code>list[i]</code>设置为排列首元素，第二次交换是为了恢复第一次交换之前的状态，以保证循环依次遍历不同元素。<br>以序列<code>{a, b, c, d}</code>为例，循环并交换<code>list[i]</code>与<code>list[begin]</code>，使<code>a,b,c,d</code>依次为首元素;<br>以<code>a</code>为首元素，<code>list[0]</code>与<code>list[0]</code>交换，顺序不变；<br>以<code>b</code>为首元素，<code>list[1]</code>与<code>list[0]</code>交换，顺序变为<code>{b,a,c,d}</code>，第一个元素选定之后，对<code>{a,c,d}</code>递归执行全排列，执行完成之后，下一次循环之前，需要将<code>list[1]</code>与<code>list[0]</code>再次交换，以恢复到<code>{a, b, c, d}</code>的顺序，这样，下次循环，再交换<code>list[2]</code>与<code>list[0]</code>，才能使得字符<code>c</code>为首元素；<br>同理可以分析以<code>c</code>和<code>d</code>为首元素的情况。</p>
 <h3 id="测试主函数"><a href="#测试主函数" class="headerlink" title="测试主函数"></a>测试主函数</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">perm</span><span class="params">(<span class="keyword">char</span> *<span class="built_in">list</span>, <span class="keyword">int</span> begin, <span class="keyword">int</span> end)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">char</span> *<span class="built_in">list</span>, <span class="keyword">int</span> n)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">char</span> *a, <span class="keyword">char</span> *b)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> <span class="built_in">list</span>[<span class="number">4</span>] = &#123; <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span> &#125;;</span><br><span class="line">	perm(<span class="built_in">list</span>, <span class="number">0</span>, <span class="number">3</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
-	  
     </div>
-	
+
 	<div>
       
         
@@ -375,7 +374,7 @@
     <div>
       
         
-<div id="wechat_subscriber" style="display: block； padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
     <img id="wechat_subscriber_qcode" src="/images/wuxubj.png" alt="wuxubj wechat" style="width: 200px; max-width: 100%;"/>
     <div>扫一扫，用手机访问本站</div>
 </div>
@@ -407,7 +406,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a class="post-nav-title-link" href="/2016/06/28/binary-search/" rel="next" title="折半查找">
+              <a href="/2016/06/28/binary-search/" class="post-nav-title-link" rel="next" title="折半查找">
                 <i class="fa fa-chevron-left"></i> 折半查找
               </a>
             
@@ -415,7 +414,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a class="post-nav-title-link" href="/2016/06/30/magic-square-generate/" rel="prev" title="魔方构造问题">
+              <a href="/2016/06/30/magic-square-generate/" class="post-nav-title-link" rel="prev" title="魔方构造问题">
                 魔方构造问题 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -431,6 +430,25 @@
 
 
     <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/06/29/recursive-permutations/"
+     data-title="递归产生全排列"
+     data-content=""
+     data-url="http://www.wuxubj.cn/2016/06/29/recursive-permutations/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
       
     </div>
   </div>
@@ -489,7 +507,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -506,7 +524,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -516,7 +534,7 @@
 
         
           <div class="feed-link motion-element">
-            <a href="/atom.xml" target="_blank" rel="alternate">
+            <a href="/atom.xml" rel="alternate">
               <i class="fa fa-rss"></i>
               RSS
             </a>
@@ -557,20 +575,20 @@
               <i class="fa  fa-fw fa-link"></i>
               友情链接
             </div>
-            
+           
               
-                <span class="links-of-author-item" style="text-align: left;">
+                <span class="links-of-author-item" style="text-align:left">
                   <a href="/weblog" title="建站日志" target="_blank">建站日志</a>
                 </span>
               
-                <span class="links-of-author-item" style="text-align: left;">
+                <span class="links-of-author-item" style="text-align:left">
                   <a href="/study-plan" title="学习计划" target="_blank">学习计划</a>
                 </span>
               
-           
+            
           </div>
         
-	
+
       </section>
 
       
@@ -603,11 +621,11 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">wuxubj &nbsp;&nbsp;</span>
+  <span class="author" itemprop="copyrightHolder">wuxubj</span>
   
-  <span class="site-pv">
-    <script src="http://s6.cnzz.com/stat.php?id=1259784696&web_id=1259784696" type="text/javascript"></script>
-	</span>
+   <span style="margin-left:8px;">
+   <script src="http://s6.cnzz.com/stat.php?id=1259784696&web_id=1259784696" type="text/javascript"></script>
+   </span>
   
 </div>
 
@@ -841,24 +859,14 @@
     });}
 
     // handle and trigger popup window;
-	 $('.popup-trigger').click(function(e) {
+    $('.popup-trigger').mousedown(function(e) {
       e.stopPropagation();
       if (isfetched == false) {
         searchFunc(path, 'local-search-input', 'local-search-result');
       } else {
         proceedsearch();
       };
-    });
-	
-    $('.popup-trigger-input').bind('keypress',function(e) {
-	if(event.keyCode == "13"){
-      e.stopPropagation();
-      if (isfetched == false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-	}
+
     });
 
     $('.popup-btn-close').click(function(e){
@@ -876,28 +884,16 @@
   
 
   
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-  
 
   <div style="display: none;">
     <script src="http://s6.cnzz.com/stat.php?id=1259784696&web_id=1259784696" type="text/javascript"></script>
-	</div>
+  </div>
 
 
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
 
   <script type="text/JavaScript">
 function hideElement(elementID)
@@ -933,6 +929,6 @@ function loveTime(startDate){
 		document.getElementById("t_year").innerHTML = year ;
     }
 </script>
-  
+
 </body>
 </html>

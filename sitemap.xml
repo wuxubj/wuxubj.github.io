@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.wuxubj.cn/2016/08/13/Hexo-nexT-build-personal-blog/</loc>
+    
+    <lastmod>2016-08-14T09:23:18.667Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wuxubj.cn/mylove/index.html</loc>
     
     <lastmod>2016-08-12T07:04:08.240Z</lastmod>
@@ -124,20 +131,6 @@
     <loc>http://www.wuxubj.cn/guestbook/test.html</loc>
     
     <lastmod>2016-07-14T15:53:38.391Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wuxubj.cn/guestbook/one.html</loc>
-    
-    <lastmod>2016-07-13T14:36:23.766Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wuxubj.cn/guestbook/av.html</loc>
-    
-    <lastmod>2016-07-13T14:01:31.875Z</lastmod>
     
   </url>
   

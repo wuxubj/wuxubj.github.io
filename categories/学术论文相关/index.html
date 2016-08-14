@@ -248,11 +248,11 @@
     <div class="site-search">
       
   <div class="popup">
+
  <input type="text" id="local-search-input">
  <div id="local-search-result"></div>
  <span class="popup-btn-close">close</span>
 </div>
-
 
 
     </div>
@@ -347,7 +347,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -364,7 +364,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -374,7 +374,7 @@
 
         
           <div class="feed-link motion-element">
-            <a href="/atom.xml" target="_blank" rel="alternate">
+            <a href="/atom.xml" rel="alternate">
               <i class="fa fa-rss"></i>
               RSS
             </a>
@@ -415,20 +415,20 @@
               <i class="fa  fa-fw fa-link"></i>
               友情链接
             </div>
-            
+           
               
-                <span class="links-of-author-item" style="text-align: left;">
+                <span class="links-of-author-item" style="text-align:left">
                   <a href="/weblog" title="建站日志" target="_blank">建站日志</a>
                 </span>
               
-                <span class="links-of-author-item" style="text-align: left;">
+                <span class="links-of-author-item" style="text-align:left">
                   <a href="/study-plan" title="学习计划" target="_blank">学习计划</a>
                 </span>
               
-           
+            
           </div>
         
-	
+
       </section>
 
       
@@ -450,11 +450,11 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">wuxubj &nbsp;&nbsp;</span>
+  <span class="author" itemprop="copyrightHolder">wuxubj</span>
   
-  <span class="site-pv">
-    <script src="http://s6.cnzz.com/stat.php?id=1259784696&web_id=1259784696" type="text/javascript"></script>
-	</span>
+   <span style="margin-left:8px;">
+   <script src="http://s6.cnzz.com/stat.php?id=1259784696&web_id=1259784696" type="text/javascript"></script>
+   </span>
   
 </div>
 
@@ -684,24 +684,14 @@
     });}
 
     // handle and trigger popup window;
-	 $('.popup-trigger').click(function(e) {
+    $('.popup-trigger').mousedown(function(e) {
       e.stopPropagation();
       if (isfetched == false) {
         searchFunc(path, 'local-search-input', 'local-search-result');
       } else {
         proceedsearch();
       };
-    });
-	
-    $('.popup-trigger-input').bind('keypress',function(e) {
-	if(event.keyCode == "13"){
-      e.stopPropagation();
-      if (isfetched == false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-	}
+
     });
 
     $('.popup-btn-close').click(function(e){
@@ -719,28 +709,16 @@
   
 
   
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-  
 
   <div style="display: none;">
     <script src="http://s6.cnzz.com/stat.php?id=1259784696&web_id=1259784696" type="text/javascript"></script>
-	</div>
+  </div>
 
 
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
 
   <script type="text/JavaScript">
 function hideElement(elementID)
@@ -776,6 +754,6 @@ function loveTime(startDate){
 		document.getElementById("t_year").innerHTML = year ;
     }
 </script>
-  
+
 </body>
 </html>
