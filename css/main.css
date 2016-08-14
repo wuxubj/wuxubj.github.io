@@ -833,7 +833,12 @@ pre .javascript .function {
 }
 .tag-cloud a {
   display: inline-block;
-  margin: 10px;
+  margin: 15px;
+}
+.tag-cloud a:hover {
+  color: #000;
+  font-weight: bold;
+  border-bottom: 2px solid #000;
 }
 .back-to-top {
   box-sizing: border-box;
@@ -1586,7 +1591,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9a1c9e;
+  background: #6721ff;
 }
 .links-of-author-item {
   text-align: center;
