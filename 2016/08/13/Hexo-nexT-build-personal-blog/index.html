@@ -102,7 +102,7 @@
 <meta property="og:image" content="http://www.wuxubj.cn/images/201608/010.jpg">
 <meta property="og:image" content="http://www.wuxubj.cn/images/201608/011.jpg">
 <meta property="og:image" content="http://www.wuxubj.cn/images/201608/012.jpg">
-<meta property="og:updated_time" content="2016-08-14T12:41:13.859Z">
+<meta property="og:updated_time" content="2016-08-14T13:01:46.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+nexT主题搭建个人博客">
 <meta name="twitter:description" content="Hexo简介Hexo 是一款基于 Node.js 的静态博客框架。Hexo 使用 Markdown 解析文章，用户在本地安装Hexo并进行写作，通过一条命令，Hexo即可利用靓丽的主题自动生成静态网页。参考：Hexo Github地址                &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Hexo帮助文档">
@@ -435,7 +435,7 @@
 <p>完成以上设置之后，在每篇文章之后都会添加“本文结束”标记。<br>该功能简易添加方法参见：<a href="https://github.com/iissnan/hexo-theme-next/issues/1039" target="_blank" rel="external">Issues of hexo-theme-next</a></p>
 <h3 id="文章末尾添加网站二维码"><a href="#文章末尾添加网站二维码" class="headerlink" title="文章末尾添加网站二维码"></a>文章末尾添加网站二维码</h3><p>利用 NexT 主题自带的<code>wechat_subscriber</code>功能在文章末尾添加网站二维码。<br>首先生成你网站的二维码，放到网站根目录下的<code>images</code>文件夹中，然后修改<font color="#f00">主题配置文件</font> <code>_config.yml</code>，添加如下内容：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Wechat Subscriber</span></span><br><span class="line"><span class="attr">wechat_subscriber:</span></span><br><span class="line"><span class="attr">  enabled:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  qcode:</span> /images/wuxubj.png</span><br><span class="line"><span class="attr">  description:</span> 扫一扫，用手机访问本站</span><br></pre></td></tr></table></figure></p>
 <p>完成以上设置之后，在每篇文章之后都会添加网站二维码。</p>
-<h3 id="其他美化"><a href="#其他美化" class="headerlink" title="其他美化"></a>其他美化</h3><p>1.标签云页面鼠标划过字体加粗<br>2.文章末尾标签鼠标划过变蓝色<br>3.优化文章末尾上一篇和下一篇链接显示</p>
+<h3 id="其他美化"><a href="#其他美化" class="headerlink" title="其他美化"></a>其他美化</h3><p>1.标签云页面鼠标划过字体加粗<br>2.文章末尾标签鼠标划过变蓝色<br>3.优化文章末尾上一篇和下一篇链接显示顺序（左右互换）<br>4.优化文章末尾上一篇和下一篇链接显示效果</p>
 <h2 id="SEO推广"><a href="#SEO推广" class="headerlink" title="SEO推广"></a>SEO推广</h2><h3 id="生成sitemap"><a href="#生成sitemap" class="headerlink" title="生成sitemap"></a>生成sitemap</h3><p>Sitemap用于通知搜索引擎网站上有哪些可供抓取的网页，以便搜索引擎可以更加智能地抓取网站。<br>执行以下命令，安装插件<code>hexo-generator-sitemap</code>，用于生成<code>sitemap</code>：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure></p>
 <p>在<font color="#f00">站点配置文件</font> <code>_config.yml</code>中添加如下字段：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line"><span class="attr">path:</span> sitemap.xml</span><br></pre></td></tr></table></figure></p>
 <p>执行<code>hexo g</code>，就会在网站根目录生成 sitemap.xml 。</p>
@@ -490,13 +490,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/19/mysql-learning-notes/" class="post-nav-title-link" rel="next" title="《MySQL必知必会》学习笔记">
-                <i class="fa fa-chevron-left"></i> 《MySQL必知必会》学习笔记
-              </a>
-            
           </div>
-
-          <div class="post-nav-prev post-nav-item">
+		  
+		  <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/19/mysql-learning-notes/" class="post-nav-title-link" rel="next" title="《MySQL必知必会》学习笔记">
+                《MySQL必知必会》学习笔记  <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
