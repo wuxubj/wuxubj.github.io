@@ -87,4 +87,4 @@ path: sitemap.xml
 #本地搜索
 search:
   path: search.xml
-  field: all
+  field: post

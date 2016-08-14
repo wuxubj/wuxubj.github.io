@@ -7,6 +7,7 @@ tags:
 - mysql
 permalink: mysql-learning-notes
 ---
+![mysql](/images/201607/mysql_title.jpg)
 [《MySQL必知必会》](https://book.douban.com/subject/3354490/)是MySQL入门书籍，本文是阅读该书的一些学习笔记，主要记录相关知识要点。
 <!--more-->
 ### 第三章 使用MySQL

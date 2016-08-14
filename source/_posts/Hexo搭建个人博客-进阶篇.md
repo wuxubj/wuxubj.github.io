@@ -8,6 +8,8 @@ tags:
 - nexT
 permalink: Hexo-build-personal-blog-advance 
 ---
+<font color=#f00>本文为建站初期小结，查看完整建站教程：</font>[Hexo+nexT主题搭建个人博客](/2016/08/13/Hexo-nexT-build-personal-blog/)
+
 记录了nexT主题的美化，包括添加分类和标签页、添加swiftype搜索、导航栏美化、添加留言页面及最近访客以及添加404公益页面。
 <!--more-->
 ### 添加分类和标签页

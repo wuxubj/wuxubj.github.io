@@ -207,8 +207,8 @@ p.search-result {
  <span class="popup-btn-close">close</span>
 </div>
 ```
-[点此查看]()我的``localsearch.styl``文件。
-[点此查看]()我的``localsearch.swig``文件。
+[点此查看](https://github.com/wuxubj/wuxubj.github.io/blob/hexo/themes/next/source/css/_common/components/third-party/localsearch.styl)我的``localsearch.styl``文件。
+[点此查看](https://github.com/wuxubj/wuxubj.github.io/blob/hexo/themes/next/layout/_partials/search/localsearch.swig)我的``localsearch.swig``文件。
 最终效果如图：
 
 ![localsearch](/images/201608/006.jpg)
@@ -420,7 +420,8 @@ wechat_subscriber:
 ### 其他美化
 1.标签云页面鼠标划过字体加粗
 2.文章末尾标签鼠标划过变蓝色
-3.优化文章末尾上一篇和下一篇链接显示
+3.优化文章末尾上一篇和下一篇链接显示顺序（左右互换）
+4.优化文章末尾上一篇和下一篇链接显示效果
 
 ## SEO推广
 ### 生成sitemap
@@ -468,11 +469,11 @@ baidu_push: true
 在搜索引擎搜索框输入``site:your.domain``可以查看域名是否被该搜索引擎收录，用户可以使用各大搜索引擎站长工具提交个人博客网址。
 
 ## 博客维护
+后期更新
 
 ## 相关资源
-
+[我的站点文件备份](https://github.com/wuxubj/wuxubj.github.io)
 [优化之后的NexT主题下载](https://github.com/wuxubj/hexo-theme-next-wuxubj/releases)
-[iissnan:hexo-theme-next](https://github.com/iissnan/hexo-theme-next/releases)
 [hexo-theme-next-5.0.1](http://obtvnlw7v.bkt.clouddn.com/hexo-theme-next-5.0.1.zip)
 [markdownpad2](http://obtvnlw7v.bkt.clouddn.com/markdownpad2-setup.exe)
 [Notepad++ v6.9.2](http://sw.bos.baidu.com/sw-search-sp/software/22de65944e9/npp_6.9.2_Installer.exe)
