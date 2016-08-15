@@ -2,58 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.wuxubj.cn/weblog/index.html</loc>
+    
+    <lastmod>2016-08-15T15:30:11.029Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wuxubj.cn/guestbook/index.html</loc>
     
-    <lastmod>2016-08-15T01:55:14.374Z</lastmod>
+    <lastmod>2016-08-15T10:13:27.954Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wuxubj.cn/2016/07/06/footer-beautify-of-nexT/</loc>
+    <loc>http://www.wuxubj.cn/2016/08/Hexo-nexT-build-personal-blog/</loc>
     
-    <lastmod>2016-08-14T15:47:20.810Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wuxubj.cn/2016/05/21/Hexo-build-personal-blog-basics/</loc>
-    
-    <lastmod>2016-08-14T15:47:12.557Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wuxubj.cn/2016/05/21/Hexo-build-personal-blog-advance/</loc>
-    
-    <lastmod>2016-08-14T15:46:58.617Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wuxubj.cn/2016/08/13/Hexo-nexT-build-personal-blog/</loc>
-    
-    <lastmod>2016-08-14T13:25:14.424Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wuxubj.cn/2016/07/19/mysql-learning-notes/</loc>
-    
-    <lastmod>2016-08-14T12:28:34.753Z</lastmod>
+    <lastmod>2016-08-15T09:59:52.952Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.wuxubj.cn/mylove/index.html</loc>
     
-    <lastmod>2016-08-12T07:04:08.240Z</lastmod>
+    <lastmod>2016-08-15T08:52:04.860Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wuxubj.cn/weblog/index.html</loc>
+    <loc>http://www.wuxubj.cn/2016/07/footer-beautify-of-nexT/</loc>
     
-    <lastmod>2016-08-12T06:18:34.875Z</lastmod>
+    <lastmod>2016-08-14T15:47:20.810Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wuxubj.cn/2016/05/Hexo-build-personal-blog-basics/</loc>
+    
+    <lastmod>2016-08-14T15:47:12.557Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wuxubj.cn/2016/05/Hexo-build-personal-blog-advance/</loc>
+    
+    <lastmod>2016-08-14T15:46:58.617Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wuxubj.cn/2016/07/mysql-learning-notes/</loc>
+    
+    <lastmod>2016-08-14T12:28:34.753Z</lastmod>
     
   </url>
   
@@ -79,63 +79,63 @@
   </url>
   
   <url>
-    <loc>http://www.wuxubj.cn/2016/06/16/matlab-linestyle-marker-color/</loc>
+    <loc>http://www.wuxubj.cn/2016/06/matlab-linestyle-marker-color/</loc>
     
     <lastmod>2016-07-24T07:56:59.707Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wuxubj.cn/2016/07/10/my-favorites/</loc>
+    <loc>http://www.wuxubj.cn/2016/07/my-favorites/</loc>
     
     <lastmod>2016-07-24T07:49:24.437Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wuxubj.cn/2016/06/28/binary-search/</loc>
+    <loc>http://www.wuxubj.cn/2016/06/binary-search/</loc>
     
     <lastmod>2016-07-24T07:47:38.001Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wuxubj.cn/2016/06/28/select-sort-algorithm/</loc>
+    <loc>http://www.wuxubj.cn/2016/06/select-sort-algorithm/</loc>
     
     <lastmod>2016-07-24T07:47:07.378Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wuxubj.cn/2016/06/30/magic-square-generate/</loc>
+    <loc>http://www.wuxubj.cn/2016/06/magic-square-generate/</loc>
     
     <lastmod>2016-07-24T07:44:49.893Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wuxubj.cn/2016/06/29/recursive-permutations/</loc>
+    <loc>http://www.wuxubj.cn/2016/06/recursive-permutations/</loc>
     
     <lastmod>2016-07-24T07:41:44.600Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wuxubj.cn/2016/05/26/matlab-add-noise-calculating-signal-to-noise-ratio/</loc>
+    <loc>http://www.wuxubj.cn/2016/05/matlab-add-noise-calculating-signal-to-noise-ratio/</loc>
     
     <lastmod>2016-07-24T07:37:37.614Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wuxubj.cn/2016/07/03/feichengwurao-20160702/</loc>
+    <loc>http://www.wuxubj.cn/2016/07/feichengwurao-20160702/</loc>
     
     <lastmod>2016-07-08T03:41:12.536Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.wuxubj.cn/2016/07/07/find-sci-or-ei-index/</loc>
+    <loc>http://www.wuxubj.cn/2016/07/find-sci-or-ei-index/</loc>
     
     <lastmod>2016-07-07T14:27:39.648Z</lastmod>
     

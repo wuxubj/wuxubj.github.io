@@ -95,7 +95,7 @@
 
 小游戏">
 <meta property="og:image" content="http://www.wuxubj.cn/images/mylove.jpg">
-<meta property="og:updated_time" content="2016-08-12T07:04:08.240Z">
+<meta property="og:updated_time" content="2016-08-15T08:52:04.860Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="爱的纪念">
 <meta name="twitter:description" content="李小二和雷宝宝牵手走过了：    00天00时00分00秒今天是第00个月，第00年 ！ 
@@ -125,7 +125,7 @@
   
     爱的纪念 | 务虚笔记
   
-</title>
+ - wuxubj,个人博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -166,7 +166,7 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle"></p>
+  <p class="site-subtitle">Li Xiaowei's blog</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -227,7 +227,7 @@
         <li class="menu-item menu-item-guestbook">
           <a href="/guestbook" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-envelope"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-commenting"></i> <br />
             
             留言
           </a>
@@ -286,7 +286,7 @@
   <div id="posts" class="posts-expand">
     
     
-      <p><img src="/images/mylove.jpg" alt="mylove"></p>
+      <div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 100%;"><img src="/images/mylove.jpg" alt="mylove"></div></div><div class="group-picture-row"></div></div></div>
 <p><blockquote class="blockquote-center" id="clear"><div id="lovelqw">李小二和雷宝宝牵手走过了：<br>    <span id="t_d">00</span>天<span id="t_h">00</span>时<span id="t_m">00</span>分<span id="t_s">00</span>秒<br><span id="loveYear">今天是第<span id="t_month">00</span>个月，第<span id="t_year">00</span>年 ！</span></div></blockquote><form><!--当点击相应按钮，执行相应操作，为按钮添加相应事件--><input type="button" id="bthidden" onclick="hideElement('music');showElement('btshow');hideElement('bthidden')" value="隐藏音乐"> <input type="button" id="btshow" class="hidden" onclick="showElement('music');showElement('bthidden');hideElement('btshow')" value="显示音乐"></form><div class="demo" id="music"><div id="player3" class="aplayer"></div></div></p>
 <blockquote>
 <p><span style="font-size: 15px;"><a href="http://o9w8f1xrl.bkt.clouddn.com/game/index.html" target="_blank" rel="external">小游戏</a></span></p>
@@ -339,7 +339,7 @@
                src="/images/avatar.jpg"
                alt="wuxubj" />
           <p class="site-author-name" itemprop="name">wuxubj</p>
-          <p class="site-description motion-element" itemprop="description">wuxubj,个人技术博客</p>
+          <p class="site-description motion-element" itemprop="description">记录敲过的代码、走过的人生</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
@@ -456,12 +456,12 @@
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="http://hexo.io" target="_blank">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank">
     NexT.Pisces
   </a>
 </div>
@@ -729,28 +729,8 @@ function showElement(elementID)
 	var myele=document.getElementById(elementID);
 	myele.style.display="block";
 }
-
-function loveTime(startDate){
-     //   var EndTime= new Date('2014/02/6 19:46:00'); //��ֹʱ�� ǰ��·�� http://www.51xuediannao.com/qd63/
-        var EndTime= new Date(startDate); 
-		var NowTime = new Date();
-        var t =NowTime.getTime() - EndTime.getTime();
-
-        var d=Math.floor(t/1000/60/60/24);
-        var h=Math.floor(t/1000/60/60%24);
-        var m=Math.floor(t/1000/60%60);
-        var s=Math.floor(t/1000%60);
-		var month=Math.ceil(d/30);
-		var year=Math.ceil(d/365);
-        document.getElementById("t_d").innerHTML = d ;
-        document.getElementById("t_h").innerHTML = h ;
-        document.getElementById("t_m").innerHTML = m ;
-        document.getElementById("t_s").innerHTML = s ;
-		
-		document.getElementById("t_month").innerHTML = month ;
-		document.getElementById("t_year").innerHTML = year ;
-    }
 </script>
+
 
 </body>
 </html>

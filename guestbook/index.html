@@ -99,7 +99,7 @@
 
 最近访客">
 <meta property="og:image" content="http://www.wuxubj.cn/images/wuxubj_mini.png">
-<meta property="og:updated_time" content="2016-08-15T01:55:14.374Z">
+<meta property="og:updated_time" content="2016-08-15T10:13:27.954Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="留言">
 <meta name="twitter:description" content="生活不止眼前的苟且，还有诗和远方的田野，你赤手空拳来到人世间，为找到那片海不顾一切。
@@ -131,7 +131,7 @@
   
     留言 | 务虚笔记
   
-</title>
+ - wuxubj,个人博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -172,7 +172,7 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle"></p>
+  <p class="site-subtitle">Li Xiaowei's blog</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -233,7 +233,7 @@
         <li class="menu-item menu-item-guestbook">
           <a href="/guestbook" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-envelope"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-commenting"></i> <br />
             
             留言
           </a>
@@ -348,7 +348,7 @@
                src="/images/avatar.jpg"
                alt="wuxubj" />
           <p class="site-author-name" itemprop="name">wuxubj</p>
-          <p class="site-description motion-element" itemprop="description">wuxubj,个人技术博客</p>
+          <p class="site-description motion-element" itemprop="description">记录敲过的代码、走过的人生</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
@@ -465,12 +465,12 @@
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="http://hexo.io" target="_blank">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank">
     NexT.Pisces
   </a>
 </div>
@@ -738,28 +738,8 @@ function showElement(elementID)
 	var myele=document.getElementById(elementID);
 	myele.style.display="block";
 }
-
-function loveTime(startDate){
-     //   var EndTime= new Date('2014/02/6 19:46:00'); //��ֹʱ�� ǰ��·�� http://www.51xuediannao.com/qd63/
-        var EndTime= new Date(startDate); 
-		var NowTime = new Date();
-        var t =NowTime.getTime() - EndTime.getTime();
-
-        var d=Math.floor(t/1000/60/60/24);
-        var h=Math.floor(t/1000/60/60%24);
-        var m=Math.floor(t/1000/60%60);
-        var s=Math.floor(t/1000%60);
-		var month=Math.ceil(d/30);
-		var year=Math.ceil(d/365);
-        document.getElementById("t_d").innerHTML = d ;
-        document.getElementById("t_h").innerHTML = h ;
-        document.getElementById("t_m").innerHTML = m ;
-        document.getElementById("t_s").innerHTML = s ;
-		
-		document.getElementById("t_month").innerHTML = month ;
-		document.getElementById("t_year").innerHTML = year ;
-    }
 </script>
+
 
 </body>
 </html>
