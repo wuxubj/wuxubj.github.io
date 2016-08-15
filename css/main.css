@@ -1591,7 +1591,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #5c04ff;
+  background: #ff6288;
 }
 .links-of-author-item {
   text-align: center;
@@ -2275,7 +2275,7 @@ body {
 @media (max-width: 767px) {
   .content-wrap {
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     min-height: auto;
   }
 }
