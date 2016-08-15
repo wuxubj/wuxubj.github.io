@@ -217,7 +217,7 @@
     <link href="http://www.wuxubj.cn/2016/07/06/footer-beautify-of-nexT/"/>
     <id>http://www.wuxubj.cn/2016/07/06/footer-beautify-of-nexT/</id>
     <published>2016-07-06T03:27:10.000Z</published>
-    <updated>2016-08-14T12:25:03.888Z</updated>
+    <updated>2016-08-14T15:47:20.810Z</updated>
     
     <content type="html"><![CDATA[<p><font color="#f00">本文为建站初期小结，查看完整建站教程：</font><a href="/2016/08/13/Hexo-nexT-build-personal-blog/">Hexo+nexT主题搭建个人博客</a></p>
 <p><code>Next</code>的<code>Mist</code>主题页脚默认<code>左对齐</code>，本文目标：<br>1.实现页脚元素<code>居中对齐</code>;<br>2.页脚添加cnzz站长统计并简单美化<br><a id="more"></a></p>
@@ -239,7 +239,7 @@
     
       <category term="Hexo" scheme="http://www.wuxubj.cn/tags/Hexo/"/>
     
-      <category term="nexT" scheme="http://www.wuxubj.cn/tags/nexT/"/>
+      <category term="NexT" scheme="http://www.wuxubj.cn/tags/NexT/"/>
     
       <category term="页脚美化" scheme="http://www.wuxubj.cn/tags/%E9%A1%B5%E8%84%9A%E7%BE%8E%E5%8C%96/"/>
     
@@ -561,7 +561,7 @@
     <link href="http://www.wuxubj.cn/2016/05/21/Hexo-build-personal-blog-advance/"/>
     <id>http://www.wuxubj.cn/2016/05/21/Hexo-build-personal-blog-advance/</id>
     <published>2016-05-21T08:01:28.000Z</published>
-    <updated>2016-08-14T12:25:00.014Z</updated>
+    <updated>2016-08-14T15:46:58.617Z</updated>
     
     <content type="html"><![CDATA[<p><font color="#f00">本文为建站初期小结，查看完整建站教程：</font><a href="/2016/08/13/Hexo-nexT-build-personal-blog/">Hexo+nexT主题搭建个人博客</a></p>
 <p>记录了nexT主题的美化，包括添加分类和标签页、添加swiftype搜索、导航栏美化、添加留言页面及最近访客以及添加404公益页面。<br><a id="more"></a></p>
@@ -603,7 +603,7 @@
     
       <category term="Hexo" scheme="http://www.wuxubj.cn/tags/Hexo/"/>
     
-      <category term="nexT" scheme="http://www.wuxubj.cn/tags/nexT/"/>
+      <category term="NexT" scheme="http://www.wuxubj.cn/tags/NexT/"/>
     
   </entry>
   
@@ -612,7 +612,7 @@
     <link href="http://www.wuxubj.cn/2016/05/21/Hexo-build-personal-blog-basics/"/>
     <id>http://www.wuxubj.cn/2016/05/21/Hexo-build-personal-blog-basics/</id>
     <published>2016-05-21T07:20:28.000Z</published>
-    <updated>2016-08-14T12:25:08.970Z</updated>
+    <updated>2016-08-14T15:47:12.557Z</updated>
     
     <content type="html"><![CDATA[<p><font color="#f00">本文为建站初期小结，查看完整建站教程：</font><a href="/2016/08/13/Hexo-nexT-build-personal-blog/">Hexo+nexT主题搭建个人博客</a></p>
 <p>讲述Hexo的安装，nexT主题的下载及其简单配置。<br><a id="more"></a></p>
@@ -642,7 +642,7 @@
     
       <category term="Hexo" scheme="http://www.wuxubj.cn/tags/Hexo/"/>
     
-      <category term="nexT" scheme="http://www.wuxubj.cn/tags/nexT/"/>
+      <category term="NexT" scheme="http://www.wuxubj.cn/tags/NexT/"/>
     
   </entry>
   

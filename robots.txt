@@ -16,4 +16,4 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://wuxubj.cn/sitemap.xml
+Sitemap: http://www.wuxubj.cn/sitemap.xml
