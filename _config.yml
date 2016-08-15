@@ -4,8 +4,8 @@
 
 # Site
 title: 务虚笔记
-subtitle: 
-description: wuxubj,个人技术博客
+subtitle: Li Xiaowei's blog
+description: wuxubj,个人博客
 author: wuxubj
 language: zh-Hans
 timezone:
@@ -14,7 +14,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://www.wuxubj.cn
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:month/:title/
 permalink_defaults:
 
 # Directory

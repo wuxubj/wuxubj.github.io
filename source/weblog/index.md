@@ -21,6 +21,6 @@ date: 2016-07-18 15:29:58
 1.&nbsp;&nbsp;[nexT官方文档](http://theme-next.iissnan.com/theme-settings.html)
 2.&nbsp;&nbsp;[Issues of hexo-theme-next](https://github.com/iissnan/hexo-theme-next/issues)
 3.&nbsp;&nbsp;[w3school](http://www.w3school.com.cn/)
-
-![网站二维码](/images/wuxubj_mini.png)<center>扫一扫，用手机访问本站<center>
+4.&nbsp;&nbsp;[Git教程](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git)
+<div>![网站二维码](/images/wuxubj_mini.png)<center>扫一扫，用手机访问本站<center></div>
 <link rel="stylesheet" href="/css/mycss/underline.css">

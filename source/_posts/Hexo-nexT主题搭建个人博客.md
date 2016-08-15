@@ -267,7 +267,7 @@ transform: rotateZ(360deg);     /*图像旋转360度*/
 }
 /*
 #ds-thread #ds-reset .ds-textarea-wrapper textarea {
-background: url(http://ww4.sinaimg.cn/small/649a4735gw1et7gnhy5fej20zk0m8q3q.jpg) right no-repeat;
+background: url(http://www.wuxubj.cn/images/duoshuo_bkground.jpg) right no-repeat;
 }
 */
 #ds-recent-visitors .ds-avatar {
@@ -342,11 +342,12 @@ permalink: /404
 GitHub pages 的使用教程参见：[GitHub Pages + Hexo搭建博客](http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo搭建博客/)    [Hexo 3.1.1 静态博客搭建指南](http://lovenight.github.io/2015/11/10/Hexo-3-1-1-静态博客搭建指南/)
 Coding Pages 的使用教程参见：[将hexo博客同时托管到github和coding](http://www.jianshu.com/p/7ad9d3cd4d6e)
 
+我刚开始建站的时候使用的是``GitHub pages``，后来也部署到了``Coding``，但访问速度都不咋令人满意。最后我选择了腾讯云主机，顿时感觉访问速度飞快。
 ## NexT主题美化
 
 ### 修改导航栏图标
 NexT 使用的是 [Font Awesome](http://fontawesome.io/) 提供的图标， Font Awesome 提供了 600+ 的图标，可以满足绝大的多数的场景，同时无须担心在 Retina 屏幕下 图标模糊的问题。对应的文件在``themes\next\source\vendors\font-awesome``中。
-在[font-awesome](http://fontawesome.dashgame.com/)中有图标与其名称的对应，用户可根据需要修改图标。我的``menu_icons``配置为：
+在[http://fontawesome.dashgame.com/](http://fontawesome.dashgame.com/)中有图标与其名称的对应，用户可根据需要修改图标。我的``menu_icons``配置为：
 ```yml
 menu_icons:
   enable: true
@@ -376,6 +377,7 @@ menu_icons:
 }
 
 ```
+选择``.post-body``是为了不影响标题，选择``p``是为了不影响首页“阅读全文”的显示样式。
 ### 文章末尾添加“本文结束”标记
 ![本文结束标记](/images/201608/012.jpg)
 **1.&nbsp;&nbsp;新建 passage-end-tag.swig 文件**
@@ -420,7 +422,7 @@ wechat_subscriber:
 ### 其他美化
 1.标签云页面鼠标划过字体加粗
 2.文章末尾标签鼠标划过变蓝色
-3.优化文章末尾上一篇和下一篇链接显示顺序（左右互换）
+3.调换文章末尾上一篇和下一篇链接显示位置（左右互换）
 4.优化文章末尾上一篇和下一篇链接显示效果
 
 ## SEO推广

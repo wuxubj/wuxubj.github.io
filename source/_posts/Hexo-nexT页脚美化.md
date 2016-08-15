@@ -5,7 +5,7 @@ categories:
 - 博客搭建
 tags: 
 - 页脚美化
-- nexT
+- NexT
 - Hexo
 permalink: footer-beautify-of-nexT
 ---
