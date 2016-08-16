@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.wuxubj.cn/js/myscript/love.js</loc>
+    
+    <lastmod>2016-08-16T08:21:57.401Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wuxubj.cn/js/src/love.js</loc>
     
     <lastmod>2016-08-16T08:17:46.499Z</lastmod>
@@ -16,23 +23,16 @@
   </url>
   
   <url>
+    <loc>http://www.wuxubj.cn/js/myscript/particle.js</loc>
+    
+    <lastmod>2016-08-16T08:17:00.183Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wuxubj.cn/mylove/index.html</loc>
     
     <lastmod>2016-08-16T08:08:37.113Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wuxubj.cn/js/myscript/love.js</loc>
-    
-    <lastmod>2016-08-16T08:04:56.481Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wuxubj.cn/js/myscript/particle.js</loc>
-    
-    <lastmod>2016-08-16T08:04:29.366Z</lastmod>
     
   </url>
   
