@@ -1,11 +1,35 @@
 .hidden{display:none;}
 
-site-subtitle{
+.site-subtitle{
 +mobile() {
     display: none;
   }
 }
+body{color:#333;}
 
+.footer{
++mobile() {
+background:#555;
+color:#ccc;
+}
+}
+.footer-inner a{
++mobile() {
+color:#ccc;
+border-bottom-color:#ccc;
+}
+}
+.footer-inner a:hover{
++mobile() {
+color:#eee;
+border-bottom-color:#eee;
+font-weight:bolder;
+}
+}
+
+.comments{
+margin-bottom: 30px;
+}
 
 .site-author-name {
   font-size: 16px;
@@ -100,3 +124,6 @@ site-subtitle{
   }
 }
 
+.site-nav-toggle{
+
+}

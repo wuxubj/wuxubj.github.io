@@ -72,6 +72,12 @@
   {% include '_scripts/third-party/analytics/cnzz-analytics.swig' %}
   {% include '_scripts/baidu-push.swig' %}
   {% include '_scripts/myscript/myscript.swig' %}
+  {% if page.title === "爱的纪念" %}
+    {% include '_scripts/myscript/love.swig' %}
+  {% endif %}
+  {% if page.title === "留言" %}
+    {% include '_scripts/myscript/love.swig' %}
+  {% endif %}
 
 </body>
 </html>

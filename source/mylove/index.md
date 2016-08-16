@@ -13,3 +13,5 @@ date: 2016-07-02 22:53:32
 <link rel="stylesheet" href="/css/mycss/mylove.css">
 <script src="http://o9w8f1xrl.bkt.clouddn.com/APlayer/APlayer.min.js"></script>
 <script src="/js/myscript/mylove.js"></script>
+<script src="/js/myscript/love.js"></script>
+

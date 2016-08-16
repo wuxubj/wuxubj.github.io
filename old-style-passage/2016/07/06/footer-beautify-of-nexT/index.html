@@ -158,18 +158,18 @@ Next的Mist主题页脚默认左对齐，本文目标：1.实现页脚元素居�
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">Li Xiaowei's blog</p>
+  <p class="site-subtitle" id="site-subtitle">Li Xiaowei's blog</p>
 </div>
 
 <div class="site-nav-toggle">
-  <button>
+  <button onclick="showSubtitle()">
     <span class="btn-bar"></span>
     <span class="btn-bar"></span>
     <span class="btn-bar"></span>
   </button>
 </div>
 
-<nav class="site-nav">
+<nav class="site-nav" id="site-nav">
   
 
   
@@ -916,6 +916,25 @@ function showElement(elementID)
 }
 </script>
 
+<script type="text/JavaScript">
+function showSubtitle()
+{
+  var siteNav=document.getElementById("site-nav");
+  if(siteNav.style.display=="block")
+  {
+   var subTitle=document.getElementById("site-subtitle");
+   subTitle.style.display="none";
+  }else
+  {
+   var subTitle=document.getElementById("site-subtitle");
+   subTitle.style.display="block";
+  }
+
+}
+</script>
+
+  
+  
 
 </body>
 </html>

@@ -1,0 +1,14 @@
+#lovelqw {
+  background: #ffe;
+  margin: 0px auto;
+  text-align: center;
+  padding: 0px;
+  font-size: 15px;
+  color: #9a8c8c;
+}
+#clear{clear:both;}
+.demo{width:310px; margin:0px auto 10px auto}
+.aplayer-music{line-height:18px;}
+.aplayer .aplayer-info .aplayer-controller .aplayer-time{bottom:0px;}
+.topimg {float: left;padding:0px 39%;margin-bottom:20px;} 
+.topimg img {float: left;padding:10px 0;}
