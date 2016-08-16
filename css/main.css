@@ -1591,7 +1591,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b4c3ff;
+  background: #fff;
 }
 .links-of-author-item {
   text-align: center;
@@ -2568,9 +2568,34 @@ body {
   display: none;
 }
 @media (max-width: 767px) {
-  site-subtitle {
+  .site-subtitle {
     display: none;
   }
+}
+body {
+  color: #333;
+}
+@media (max-width: 767px) {
+  .footer {
+    background: #555;
+    color: #ccc;
+  }
+}
+@media (max-width: 767px) {
+  .footer-inner a {
+    color: #ccc;
+    border-bottom-color: #ccc;
+  }
+}
+@media (max-width: 767px) {
+  .footer-inner a:hover {
+    color: #eee;
+    border-bottom-color: #eee;
+    font-weight: bolder;
+  }
+}
+.comments {
+  margin-bottom: 30px;
 }
 .site-author-name {
   font-size: 16px;

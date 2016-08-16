@@ -153,18 +153,18 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">Li Xiaowei's blog</p>
+  <p class="site-subtitle" id="site-subtitle">Li Xiaowei's blog</p>
 </div>
 
 <div class="site-nav-toggle">
-  <button>
+  <button onclick="showSubtitle()">
     <span class="btn-bar"></span>
     <span class="btn-bar"></span>
     <span class="btn-bar"></span>
   </button>
 </div>
 
-<nav class="site-nav">
+<nav class="site-nav" id="site-nav">
   
 
   
@@ -1208,6 +1208,25 @@ function showElement(elementID)
 	myele.style.display="block";
 }
 </script>
+
+<script type="text/JavaScript">
+function showSubtitle()
+{
+  var siteNav=document.getElementById("site-nav");
+  if(siteNav.style.display=="block")
+  {
+   var subTitle=document.getElementById("site-subtitle");
+   subTitle.style.display="none";
+  }else
+  {
+   var subTitle=document.getElementById("site-subtitle");
+   subTitle.style.display="block";
+  }
+
+}
+</script>
+  <script type="text/javascript" src="/js/src/love.js"></script>
+  <script type="text/javascript" src="/js/src/particle.js" count="50" zindex="-2" opacity="1" color="0,104,183"></script>
 
 
 </body>
