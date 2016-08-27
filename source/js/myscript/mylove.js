@@ -32,6 +32,7 @@ function loveTime(startDate){
     }
 
 setInterval("loveTime('2014/02/6 19:46:00')",1000);
+
 var ap3 = new APlayer({
             element: document.getElementById('player3'),
             narrow: false,

@@ -9,7 +9,7 @@ tags:
 - Hexo
 permalink: footer-beautify-of-nexT
 ---
-<font color=#f00>本文为建站初期小结，查看完整建站教程：</font>[Hexo+nexT主题搭建个人博客](/2016/08/13/Hexo-nexT-build-personal-blog/)
+<font color=#f00>本文为建站初期小结，查看完整建站教程：</font>[Hexo+nexT主题搭建个人博客](/2016/08/Hexo-nexT-build-personal-blog/)
 
 ``Next``的``Mist``主题页脚默认``左对齐``，本文目标：
 1.实现页脚元素``居中对齐``;

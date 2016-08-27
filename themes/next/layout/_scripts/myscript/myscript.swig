@@ -10,9 +10,7 @@ function showElement(elementID)
 	var myele=document.getElementById(elementID);
 	myele.style.display="block";
 }
-</script>
 
-<script type="text/JavaScript">
 function showSubtitle()
 {
   var siteNav=document.getElementById("site-nav");

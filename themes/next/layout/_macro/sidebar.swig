@@ -65,6 +65,9 @@
               <i class="fa fa-rss"></i>
               RSS
             </a>
+			{% if theme.highqilai.enabled %}
+			{% include 'high.swig' %}
+			{% endif %}
           </div>
         {% endif %}
 

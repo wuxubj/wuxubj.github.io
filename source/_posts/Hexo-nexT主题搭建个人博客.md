@@ -419,6 +419,62 @@ wechat_subscriber:
 ```
 完成以上设置之后，在每篇文章之后都会添加网站二维码。
 
+### 手机端site-subtitle显示优化
+手机端默认显示副标题，个人觉得不太美观，现修改为：默认不显示副标题，显示导航栏的同时显示副标题。效果如图：
+![site-subtitle](/images/201608/013.gif)
+原理：编写JavaScript函数，根据导航栏的``display``属性来决定是否显示副标题，实现方法如下：
+
+**1.&nbsp;&nbsp;给导航栏添加id并隐藏site-subtitle**
+在``themes\next\layout\_partials\header.swig``中找到``<nav class="site-nav">``，为其添加id。大概在第29行，将其修改为：
+```html
+<nav class="site-nav" id="site-nav">
+```
+设置手机端默认不显示网站副标题。在``themes\next\source\css\_common\components\header\site-meta.styl``中添加如下样式：
+```css
+.site-subtitle{
++mobile() {
+    display: none;
+  }
+}
+```
+**2.&nbsp;&nbsp;编写JavaScript函数**
+```javascript
+</script>
+<script type="text/JavaScript">
+function showSubtitle()
+{
+  var siteNav=document.getElementById("site-nav");
+  if(siteNav.style.display=="block")
+  {
+   var subTitle=document.getElementById("site-subtitle");
+   subTitle.style.display="none";
+  }else
+  {
+   var subTitle=document.getElementById("site-subtitle");
+   subTitle.style.display="block";
+  }
+
+}
+</script>
+
+```
+将其放到任意一个``*.swig``文件中，在``_layout.swig``中引入即可。我的处理方法是，在``themes\next\layout\_scripts\``文件夹中新建``myscript``文件夹，专门用于存放自己添加的JavaScript代码。在里面创建一个``myscript.swig``文件，将上述代码copy到里面，再在``themes\next\layout\_layout.swig``中添加如下代码引入：
+```yml
+{% include '_scripts/myscript/myscript.swig' %}
+```
+[点击](https://github.com/wuxubj/wuxubj.github.io/blob/hexo/themes/next/layout/_layout.swig)查看我的``_layout.swig``文件。
+
+**3.&nbsp;&nbsp;点击网站标题旁边的按钮时触发JavaScript函数**
+在``themes\next\layout\_partials\header.swig``中给``<button></button>``添加 onclick 事件：
+```html
+<button onclick="showSubtitle()">
+  <span class="btn-bar"></span>
+  <span class="btn-bar"></span>
+  <span class="btn-bar"></span>
+</button>
+```
+[点击](https://github.com/wuxubj/wuxubj.github.io/blob/hexo/themes/next/layout/_partials/header.swig)查看我的``header.swig``文件。
+
 ### 其他美化
 1.标签云页面鼠标划过字体加粗
 2.文章末尾标签鼠标划过变蓝色
@@ -426,6 +482,7 @@ wechat_subscriber:
 4.优化文章末尾上一篇和下一篇链接显示效果
 
 ## SEO推广
+
 ### 生成sitemap
 Sitemap用于通知搜索引擎网站上有哪些可供抓取的网页，以便搜索引擎可以更加智能地抓取网站。
 执行以下命令，安装插件``hexo-generator-sitemap``，用于生成``sitemap``：

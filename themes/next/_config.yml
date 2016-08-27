@@ -84,7 +84,7 @@ font:
   global:
     # external: true will load this font family from host.
     external: true
-    family: Lato
+    family: 
 
   # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
   # Fallback to `global` font settings.
@@ -300,9 +300,10 @@ facebook_sdk:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  display: none
+  app_id: zPFLpkVuL8bNpqMl24W0E86i-gzGzoHsz
+  app_key: YhJrGjyDpGD6a8V2BvhDU0X9
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
@@ -395,6 +396,8 @@ images: images
 
 # 文章末尾添加“本文结束”标记
 passage_end_tag:
+  enabled: true
+highqilai: 
   enabled: true
   
 feed:

@@ -105,7 +105,7 @@
 
           {# LeanCould PageView #}
           {% if theme.leancloud_visitors.enable %}
-             <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
+             <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}" style="display:{{ theme.leancloud_visitors.display }}">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>

@@ -51,7 +51,7 @@
     </footer>
 
     <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
+      <i class="fa fa-arrow-up fa-2x"></i>
     </div>
   </div>
 
@@ -69,7 +69,6 @@
   {% include '_scripts/third-party/localsearch.swig' %}
   {% include '_scripts/third-party/mathjax.swig' %}
   {% include '_scripts/third-party/lean-analytics.swig' %}
-  {% include '_scripts/third-party/analytics/cnzz-analytics.swig' %}
   {% include '_scripts/baidu-push.swig' %}
   {% include '_scripts/myscript/myscript.swig' %}
   {% if page.title === "爱的纪念" %}

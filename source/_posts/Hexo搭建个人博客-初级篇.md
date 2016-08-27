@@ -8,7 +8,7 @@ tags:
 - NexT
 permalink: Hexo-build-personal-blog-basics
 ---
-<font color=#f00>本文为建站初期小结，查看完整建站教程：</font>[Hexo+nexT主题搭建个人博客](/2016/08/13/Hexo-nexT-build-personal-blog/)
+<font color=#f00>本文为建站初期小结，查看完整建站教程：</font>[Hexo+nexT主题搭建个人博客](/2016/08/Hexo-nexT-build-personal-blog/)
 
 讲述Hexo的安装，nexT主题的下载及其简单配置。
 <!--more-->
