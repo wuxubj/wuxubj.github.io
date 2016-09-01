@@ -38,9 +38,6 @@
   
 
   
-    
-    
-  
 
   
 
@@ -50,10 +47,6 @@
 
   
 
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -102,7 +95,8 @@
 <meta property="og:image" content="http://www.wuxubj.cn/images/201608/010.jpg">
 <meta property="og:image" content="http://www.wuxubj.cn/images/201608/011.jpg">
 <meta property="og:image" content="http://www.wuxubj.cn/images/201608/012.jpg">
-<meta property="og:updated_time" content="2016-08-15T09:59:52.952Z">
+<meta property="og:image" content="http://www.wuxubj.cn/images/201608/013.gif">
+<meta property="og:updated_time" content="2016-08-30T11:22:58.450Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+nexT主题搭建个人博客">
 <meta name="twitter:description" content="Hexo简介Hexo 是一款基于 Node.js 的静态博客框架。Hexo 使用 Markdown 解析文章，用户在本地安装Hexo并进行写作，通过一条命令，Hexo即可利用靓丽的主题自动生成静态网页。参考：Hexo Github地址                &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Hexo帮助文档">
@@ -135,12 +129,6 @@
 
 
 
-
-
-
-  <div style="display: none;">
-    <script src="http://s6.cnzz.com/stat.php?id=1259784696&web_id=1259784696" type="text/javascript"></script>
-  </div>
 
 
 
@@ -262,7 +250,7 @@
     <div class="site-search">
       
   <div class="popup">
-
+ <span class="search-icon fa fa-search fa-lg"></span>
  <input type="text" id="local-search-input">
  <div id="local-search-result"></div>
  <span class="popup-btn-close">close</span>
@@ -356,6 +344,15 @@
 
           
           
+             <span id="/2016/08/Hexo-nexT-build-personal-blog/" class="leancloud_visitors" data-flag-title="Hexo+nexT主题搭建个人博客" style="display:none">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
 
           
         </div>
@@ -403,15 +400,16 @@
 <p>编辑 <font color="#f00">站点配置文件</font> <code>_config.yml</code>，新增以下内容到任意位置：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line"><span class="attr">  path:</span> search.xml</span><br><span class="line"><span class="attr">  field:</span> post</span><br></pre></td></tr></table></figure></p>
 <p>更多配置说明可到插件页面查看：<a href="https://github.com/PaicHyperionDev/hexo-generator-search" target="_blank" rel="external">hexo-generator-search</a><br>至此，本地搜索功能已经完成，如图：</p>
 <p><img src="/images/201608/005.jpg" alt="localsearch"><br>可以看到，搜索弹窗界面比较粗糙，下面进行简单美化。</p>
-<p><strong>2.&nbsp;&nbsp;弹窗界面美化</strong><br>本地搜索的样式文件路径为<code>themes\next\source\css\_common\components\third-party\localsearch.styl</code>。本地搜索弹窗界面美化主要包括搜索输入显示、搜索结果关键字显示和搜索结果段落排版的美化，相关css样式为：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#local-search-input</span> &#123;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">97%</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">18px</span></span><br><span class="line">  background:<span class="built_in">url</span>(<span class="string">"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iMTZweCIgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE2IDE2OyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMTYgMTYiIHdpZHRoPSIxNnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNMTUuNywxNC4zbC0zLjEwNS0zLjEwNUMxMy40NzMsMTAuMDI0LDE0LDguNTc2LDE0LDdjMC0zLjg2Ni0zLjEzNC03LTctN1MwLDMuMTM0LDAsN3MzLjEzNCw3LDcsNyAgYzEuNTc2LDAsMy4wMjQtMC41MjcsNC4xOTQtMS40MDVMMTQuMywxNS43YzAuMTg0LDAuMTg0LDAuMzgsMC4zLDAuNywwLjNjMC41NTMsMCwxLTAuNDQ3LDEtMUMxNiwxNC43ODEsMTUuOTQ2LDE0LjU0NiwxNS43LDE0LjN6ICAgTTIsN2MwLTIuNzYyLDIuMjM4LTUsNS01czUsMi4yMzgsNSw1cy0yLjIzOCw1LTUsNVMyLDkuNzYyLDIsN3oiLz48L3N2Zz4="</span>) no-repeat <span class="number">0</span> <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.search-keyword</span> &#123;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> dashed <span class="number">#ff0000</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>: bold;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#ff0000</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span><span class="selector-class">.search-result</span> &#123;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> dashed <span class="number">#ccc</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">0</span> <span class="number">2px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#local-search-result</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">88%</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>最后，修改<code>themes\next\layout\_partials\search\localsearch.swig</code>文件，删除第二行的<code>&lt;span class=&quot;search-icon fa fa-search&quot;&gt;&lt;/span&gt;</code>，去掉输入框右侧内置的搜索图标：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"popup"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"local-search-input"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"local-search-result"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"popup-btn-close"</span>&gt;</span>close<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p><a href="https://github.com/wuxubj/wuxubj.github.io/blob/hexo/themes/next/source/css/_common/components/third-party/localsearch.styl" target="_blank" rel="external">点此查看</a>我的<code>localsearch.styl</code>文件。<br><a href="https://github.com/wuxubj/wuxubj.github.io/blob/hexo/themes/next/layout/_partials/search/localsearch.swig" target="_blank" rel="external">点此查看</a>我的<code>localsearch.swig</code>文件。<br>最终效果如图：</p>
+<p><strong>2.&nbsp;&nbsp;弹窗界面美化</strong><br>本地搜索的样式文件路径为<code>themes\next\source\css\_common\components\third-party\localsearch.styl</code>。本地搜索弹窗界面美化主要包括搜索输入显示、搜索结果关键字显示和搜索结果段落排版的美化，相关css样式为：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#local-search-input</span> &#123;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">97%</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">18px</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.popup</span> <span class="selector-class">.fa-search</span>&#123;<span class="attribute">padding</span>:<span class="number">8px</span> <span class="number">0</span>;&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.search-keyword</span> &#123;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> dashed <span class="number">#f00</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>: bold;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#f00</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span><span class="selector-class">.search-result</span> &#123;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> dashed <span class="number">#ccc</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">0</span> <span class="number">2px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#local-search-result</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">88%</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果觉得输入框search图标太小，可以将其放大。修改<code>themes\next\layout\_partials\search\localsearch.swig</code>文件，将第二行的<code>&lt;span class=&quot;search-icon fa fa-search&quot;&gt;&lt;/span&gt;</code>修改为：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"search-icon fa fa-search fa-lg"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/wuxubj/wuxubj.github.io/blob/hexo/themes/next/source/css/_common/components/third-party/localsearch.styl" target="_blank" rel="external">点此查看</a>我的<code>localsearch.styl</code>文件。<br><a href="https://github.com/wuxubj/wuxubj.github.io/blob/hexo/themes/next/layout/_partials/search/localsearch.swig" target="_blank" rel="external">点此查看</a>我的<code>localsearch.swig</code>文件。</p>
+<p>最终效果如图：</p>
 <p><img src="/images/201608/006.jpg" alt="localsearch"></p>
 <h3 id="使用多说"><a href="#使用多说" class="headerlink" title="使用多说"></a>使用多说</h3><p>使用多说需要先到其<a href="http://duoshuo.com/" target="_blank" rel="external">官网</a>注册账户，并创建一个站点，获取你的<code>duoshuo_shortname</code>，如图：</p>
 <p><img src="/images/201608/007.png" alt="duoshuo_shortname"></p>
 <p><strong>1.&nbsp;&nbsp;添加多说评论</strong><br>在<font color="#f00">站点配置文件</font> <code>_config.yml</code>中新增 <code>duoshuo_shortname</code> 字段，值设置成你的 duoshuo_shortname。</p>
 <p><strong>2.&nbsp;&nbsp;添加多说分享</strong><br>在<font color="#f00">站点配置文件</font> <code>_config.yml</code>中添加字段 <code>duoshuo_share</code>， 值为 <code>true</code>。<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 多说</span></span><br><span class="line"><span class="attr">duoshuo_shortname:</span> wuxubj</span><br><span class="line"><span class="attr">duoshuo_share:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-<p>最终效果如图：</p>
+<p>多说分享有个小bug，当点击“分享到”会出现“缺少service参数”提示，而且下拉分享按钮有些是undefined，这个bug可以通过在 duoshuo.swig 中引用多说开发版js ：embed.unstable.js来修复。修改后的<a href="https://github.com/wuxubj/hexo-theme-next/commit/96c2d5d9938fb233d9a64292e0f729b446c1af0f" target="_blank" rel="external">duoshuo.swig</a>。当然也可以通过删除部分代码，取消更多分享的功能来修复这个bug（我就是这么干的）。<br>最终效果如图：</p>
 <p><img src="/images/201608/008.jpg" alt="多说分享和多说评论"><br><strong>3.&nbsp;&nbsp;添加多说最近访客</strong><br>在需要添加最近访客的网页对应的 markdown 文件中添加如下代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;最近访客</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ds-recent-visitors"</span> <span class="attr">data-num-items</span>=<span class="string">"28"</span> <span class="attr">data-avatar-size</span>=<span class="string">"42"</span> <span class="attr">id</span>=<span class="string">"ds-recent-visitors"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>然后到多说后台管理-&gt;设置-&gt;基本设置-&gt;自定义css中添加如下css样式：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#ds-reset .ds-avatar img,</span><br><span class="line">#ds-recent-visitors .ds-avatar img &#123;</span><br><span class="line">width: 54px;</span><br><span class="line">height: 54px;     /*设置图像的长和宽，这里要根据自己的评论框情况更改*/</span><br><span class="line">border-radius: 27px;     /*设置图像圆角效果,在这里我直接设置了超过width/2的像素，即为圆形了*/</span><br><span class="line">-webkit-border-radius: 27px;     /*圆角效果：兼容webkit浏览器*/</span><br><span class="line">-moz-border-radius: 27px;</span><br><span class="line">box-shadow: inset 0 -1px 0 #3333sf;     /*设置图像阴影效果*/</span><br><span class="line">-webkit-box-shadow: inset 0 -1px 0 #3333sf;</span><br><span class="line">-webkit-transition: 0.4s;</span><br><span class="line">-webkit-transition: -webkit-transform 0.4s ease-out;</span><br><span class="line">transition: transform 0.4s ease-out;     /*变化时间设置为0.4秒(变化动作即为下面的图像旋转360读）*/</span><br><span class="line">-moz-transition: -moz-transform 0.4s ease-out;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-reset .ds-avatar img:hover,</span><br><span class="line">#ds-recent-visitors .ds-avatar img:hover &#123;</span><br><span class="line"></span><br><span class="line">/*设置鼠标悬浮在头像时的CSS样式*/    box-shadow: 0 0 10px #fff;</span><br><span class="line">rgba(255, 255, 255, .6), inset 0 0 20px rgba(255, 255, 255, 1);</span><br><span class="line">-webkit-box-shadow: 0 0 10px #fff;</span><br><span class="line">rgba(255, 255, 255, .6), inset 0 0 20px rgba(255, 255, 255, 1);</span><br><span class="line">transform: rotateZ(360deg);     /*图像旋转360度*/</span><br><span class="line">-webkit-transform: rotateZ(360deg);</span><br><span class="line">-moz-transform: rotateZ(360deg);</span><br><span class="line">&#125;</span><br><span class="line">/*</span><br><span class="line">#ds-thread #ds-reset .ds-textarea-wrapper textarea &#123;</span><br><span class="line">background: url(http://www.wuxubj.cn/images/duoshuo_bkground.jpg) right no-repeat;</span><br><span class="line">&#125;</span><br><span class="line">*/</span><br><span class="line">#ds-recent-visitors .ds-avatar &#123;</span><br><span class="line">float: left</span><br><span class="line">&#125;</span><br><span class="line">/*隐藏多说底部版权*/</span><br><span class="line">#ds-thread #ds-reset .ds-powered-by &#123;</span><br><span class="line">display: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>效果如图：</p>
@@ -437,6 +435,14 @@
 <p>完成以上设置之后，在每篇文章之后都会添加“本文结束”标记。<br>该功能简易添加方法参见：<a href="https://github.com/iissnan/hexo-theme-next/issues/1039" target="_blank" rel="external">Issues of hexo-theme-next</a></p>
 <h3 id="文章末尾添加网站二维码"><a href="#文章末尾添加网站二维码" class="headerlink" title="文章末尾添加网站二维码"></a>文章末尾添加网站二维码</h3><p>利用 NexT 主题自带的<code>wechat_subscriber</code>功能在文章末尾添加网站二维码。<br>首先生成你网站的二维码，放到网站根目录下的<code>images</code>文件夹中，然后修改<font color="#f00">主题配置文件</font> <code>_config.yml</code>，添加如下内容：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Wechat Subscriber</span></span><br><span class="line"><span class="attr">wechat_subscriber:</span></span><br><span class="line"><span class="attr">  enabled:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  qcode:</span> /images/wuxubj.png</span><br><span class="line"><span class="attr">  description:</span> 扫一扫，用手机访问本站</span><br></pre></td></tr></table></figure></p>
 <p>完成以上设置之后，在每篇文章之后都会添加网站二维码。</p>
+<h3 id="手机端site-subtitle显示优化"><a href="#手机端site-subtitle显示优化" class="headerlink" title="手机端site-subtitle显示优化"></a>手机端site-subtitle显示优化</h3><p>手机端默认显示副标题，个人觉得不太美观，现修改为：默认不显示副标题，显示导航栏的同时显示副标题。效果如图：<br><img src="/images/201608/013.gif" alt="site-subtitle"><br>原理：编写JavaScript函数，根据导航栏的<code>display</code>属性来决定是否显示副标题，实现方法如下：</p>
+<p><strong>1.&nbsp;&nbsp;给导航栏添加id并隐藏site-subtitle</strong><br>在<code>themes\next\layout\_partials\header.swig</code>中找到<code>&lt;nav class=&quot;site-nav&quot;&gt;</code>，为其添加id。大概在第29行，将其修改为：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">"site-nav"</span> <span class="attr">id</span>=<span class="string">"site-nav"</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>设置手机端默认不显示网站副标题。在<code>themes\next\source\css\_common\components\header\site-meta.styl</code>中添加如下样式：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.site-subtitle&#123;</span><br><span class="line">+mobile() &#123;</span><br><span class="line">    display: none;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>2.&nbsp;&nbsp;编写JavaScript函数</strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;script type="text/JavaScript"&gt;</span><br><span class="line">function showSubtitle()</span><br><span class="line">&#123;</span><br><span class="line">  var siteNav=document.getElementById("site-nav");</span><br><span class="line">  if(siteNav.style.display=="block")</span><br><span class="line">  &#123;</span><br><span class="line">   var subTitle=document.getElementById("site-subtitle");</span><br><span class="line">   subTitle.style.display="none";</span><br><span class="line">  &#125;else</span><br><span class="line">  &#123;</span><br><span class="line">   var subTitle=document.getElementById("site-subtitle");</span><br><span class="line">   subTitle.style.display="block";</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>将其放到任意一个<code>*.swig</code>文件中，在<code>_layout.swig</code>中引入即可。我的处理方法是，在<code>themes\next\layout\_scripts\</code>文件夹中新建<code>myscript</code>文件夹，专门用于存放自己添加的JavaScript代码。在里面创建一个<code>myscript.swig</code>文件，将上述代码copy到里面，再在<code>themes\next\layout\_layout.swig</code>中添加如下代码引入：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% include <span class="string">'_scripts/myscript/myscript.swig'</span> %&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/wuxubj/wuxubj.github.io/blob/hexo/themes/next/layout/_layout.swig" target="_blank" rel="external">点击</a>查看我的<code>_layout.swig</code>文件。</p>
+<p><strong>3.&nbsp;&nbsp;点击网站标题旁边的按钮时触发JavaScript函数</strong><br>在<code>themes\next\layout\_partials\header.swig</code>中给<code>&lt;button&gt;&lt;/button&gt;</code>添加 onclick 事件：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"showSubtitle()"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"btn-bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"btn-bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"btn-bar"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/wuxubj/wuxubj.github.io/blob/hexo/themes/next/layout/_partials/header.swig" target="_blank" rel="external">点击</a>查看我的<code>header.swig</code>文件。</p>
 <h3 id="其他美化"><a href="#其他美化" class="headerlink" title="其他美化"></a>其他美化</h3><p>1.标签云页面鼠标划过字体加粗<br>2.文章末尾标签鼠标划过变蓝色<br>3.调换文章末尾上一篇和下一篇链接显示位置（左右互换）<br>4.优化文章末尾上一篇和下一篇链接显示效果</p>
 <h2 id="SEO推广"><a href="#SEO推广" class="headerlink" title="SEO推广"></a>SEO推广</h2><h3 id="生成sitemap"><a href="#生成sitemap" class="headerlink" title="生成sitemap"></a>生成sitemap</h3><p>Sitemap用于通知搜索引擎网站上有哪些可供抓取的网页，以便搜索引擎可以更加智能地抓取网站。<br>执行以下命令，安装插件<code>hexo-generator-sitemap</code>，用于生成<code>sitemap</code>：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure></p>
 <p>在<font color="#f00">站点配置文件</font> <code>_config.yml</code>中添加如下字段：<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line"><span class="attr">path:</span> sitemap.xml</span><br></pre></td></tr></table></figure></p>
@@ -492,6 +498,10 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/08/expression-evaluation/" class="post-nav-title-link" rel="prev" title="栈的应用：表达式求值">
+                <i class="fa fa-chevron-left"></i> 栈的应用：表达式求值 
+              </a>
+            
           </div>
 		  
 		  <div class="post-nav-prev post-nav-item">
@@ -513,24 +523,25 @@
 
     <div class="post-spread">
       
+    </div>
+	
         <div class="ds-share flat" data-thread-key="2016/08/Hexo-nexT-build-personal-blog/"
      data-title="Hexo+nexT主题搭建个人博客"
      data-content=""
      data-url="http://www.wuxubj.cn/2016/08/Hexo-nexT-build-personal-blog/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
-
       <li data-toggle="ds-share-icons-more"><span class="ds-more" >分享到：</span></li>
       <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
       <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
       <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
       <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-
+	  <li><a class="ds-facebook" href="javascript:void(0);" data-service="facebook">Facebook</a></li>
+	  <li><a class="ds-google" href="javascript:void(0);" data-service="google">谷歌</a></li> 
     </ul>
   </div>
 </div>
       
-    </div>
   </div>
 
 
@@ -541,6 +552,7 @@
           
   <div class="comments" id="comments">
     
+	  
       <div class="ds-thread" data-thread-key="2016/08/Hexo-nexT-build-personal-blog/"
            data-title="Hexo+nexT主题搭建个人博客" data-url="http://www.wuxubj.cn/2016/08/Hexo-nexT-build-personal-blog/">
       </div>
@@ -587,7 +599,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -604,7 +616,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -618,6 +630,162 @@
               <i class="fa fa-rss"></i>
               RSS
             </a>
+			
+			<a title="小high一下~" rel="alternate" class="mw-harlem_shake_slow wobble shake" href="javascript:shake()"><i class="fa fa-music"></i> High</a>
+
+<script type="text/JavaScript">
+function shake() {
+    function c() {
+        var e = document.createElement("link");
+        e.setAttribute("type", "text/css");
+        e.setAttribute("rel", "stylesheet");
+        e.setAttribute("href", f);
+        e.setAttribute("class", l);
+        document.body.appendChild(e)
+    }
+ 
+    function h() {
+        var e = document.getElementsByClassName(l);
+        for (var t = 0; t < e.length; t++) {
+            document.body.removeChild(e[t])
+        }
+    }
+ 
+    function p() {
+        var e = document.createElement("div");
+        e.setAttribute("class", a);
+        document.body.appendChild(e);
+        setTimeout(function() {
+            document.body.removeChild(e)
+        }, 100)
+    }
+ 
+    function d(e) {
+        return {
+            height : e.offsetHeight,
+            width : e.offsetWidth
+        }
+    }
+ 
+    function v(i) {
+        var s = d(i);
+        return s.height > e && s.height < n && s.width > t && s.width < r
+    }
+ 
+    function m(e) {
+        var t = e;
+        var n = 0;
+        while (!!t) {
+            n += t.offsetTop;
+            t = t.offsetParent
+        }
+        return n
+    }
+ 
+    function g() {
+        var e = document.documentElement;
+        if (!!window.innerWidth) {
+            return window.innerHeight
+        } else if (e && !isNaN(e.clientHeight)) {
+            return e.clientHeight
+        }
+        return 0
+    }
+ 
+    function y() {
+        if (window.pageYOffset) {
+            return window.pageYOffset
+        }
+        return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+    }
+ 
+    function E(e) {
+        var t = m(e);
+        return t >= w && t <= b + w
+    }
+ 
+    function S() {
+        var e = document.createElement("audio");
+        e.setAttribute("class", l);
+        e.src = i;
+        e.loop = false;
+        e.addEventListener("canplay", function() {
+            setTimeout(function() {
+                x(k)
+            }, 500);
+            setTimeout(function() {
+                N();
+                p();
+                for (var e = 0; e < O.length; e++) {
+                    T(O[e])
+                }
+            }, 15500)
+        }, true);
+        e.addEventListener("ended", function() {
+            N();
+            h()
+        }, true);
+        e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+        document.body.appendChild(e);
+        e.play()
+    }
+ 
+    function x(e) {
+        e.className += " " + s + " " + o
+    }
+ 
+    function T(e) {
+        e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+    }
+ 
+    function N() {
+        var e = document.getElementsByClassName(s);
+        var t = new RegExp("\\b" + s + "\\b");
+        for (var n = 0; n < e.length; ) {
+            e[n].className = e[n].className.replace(t, "")
+        }
+    }
+ 
+    var e = 30;
+    var t = 30;
+    var n = 350;
+    var r = 350;
+    var i = "http://o9w8f1xrl.bkt.clouddn.com/highqilai/harlem-shake.mp3";
+    var s = "mw-harlem_shake_me";
+    var o = "im_first";
+    var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+    var a = "mw-strobe_light";
+    var f = "http://o9w8f1xrl.bkt.clouddn.com/highqilai/harlem-shake-style.css";
+    var l = "mw_added_css";
+    var b = g();
+    var w = y();
+    var C = document.getElementsByTagName("*");
+    var k = null;
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            if (E(A)) {
+                k = A;
+                break
+            }
+        }
+    }
+    if (A === null) {
+        console.warn("Could not find a node of the right size. Please try a different page.");
+        return
+    }
+    c();
+    S();
+    var O = [];
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            O.push(A)
+        }
+    }
+}
+</script>
+			
           </div>
         
 
@@ -678,7 +846,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo简介"><span class="nav-number">1.</span> <span class="nav-text">Hexo简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客环境搭建"><span class="nav-number">2.</span> <span class="nav-text">博客环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Git"><span class="nav-number">2.1.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Node-js"><span class="nav-number">2.2.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.3.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用nexT主题"><span class="nav-number">2.4.</span> <span class="nav-text">使用nexT主题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NexT主题配置"><span class="nav-number">3.</span> <span class="nav-text">NexT主题配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主题基本设定"><span class="nav-number">3.1.</span> <span class="nav-text">主题基本设定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加侧栏社交链接和友链"><span class="nav-number">3.2.</span> <span class="nav-text">添加侧栏社交链接和友链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加并美化本地搜索"><span class="nav-number">3.3.</span> <span class="nav-text">添加并美化本地搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用多说"><span class="nav-number">3.4.</span> <span class="nav-text">使用多说</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加cnzz站长统计"><span class="nav-number">3.5.</span> <span class="nav-text">添加cnzz站长统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置404页面"><span class="nav-number">3.6.</span> <span class="nav-text">设置404页面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网站发布"><span class="nav-number">4.</span> <span class="nav-text">网站发布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#云主机"><span class="nav-number">4.1.</span> <span class="nav-text">云主机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git托管的Pages服务"><span class="nav-number">4.2.</span> <span class="nav-text">Git托管的Pages服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NexT主题美化"><span class="nav-number">5.</span> <span class="nav-text">NexT主题美化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#修改导航栏图标"><span class="nav-number">5.1.</span> <span class="nav-text">修改导航栏图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改文章内链接文本样式"><span class="nav-number">5.2.</span> <span class="nav-text">修改文章内链接文本样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章末尾添加“本文结束”标记"><span class="nav-number">5.3.</span> <span class="nav-text">文章末尾添加“本文结束”标记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章末尾添加网站二维码"><span class="nav-number">5.4.</span> <span class="nav-text">文章末尾添加网站二维码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他美化"><span class="nav-number">5.5.</span> <span class="nav-text">其他美化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SEO推广"><span class="nav-number">6.</span> <span class="nav-text">SEO推广</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生成sitemap"><span class="nav-number">6.1.</span> <span class="nav-text">生成sitemap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加-robots-txt"><span class="nav-number">6.2.</span> <span class="nav-text">添加 robots.txt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启百度自动推送"><span class="nav-number">6.3.</span> <span class="nav-text">开启百度自动推送</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用各大搜索引擎站长工具"><span class="nav-number">6.4.</span> <span class="nav-text">使用各大搜索引擎站长工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客维护"><span class="nav-number">7.</span> <span class="nav-text">博客维护</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关资源"><span class="nav-number">8.</span> <span class="nav-text">相关资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">9.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo简介"><span class="nav-number">1.</span> <span class="nav-text">Hexo简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客环境搭建"><span class="nav-number">2.</span> <span class="nav-text">博客环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Git"><span class="nav-number">2.1.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Node-js"><span class="nav-number">2.2.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.3.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用nexT主题"><span class="nav-number">2.4.</span> <span class="nav-text">使用nexT主题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NexT主题配置"><span class="nav-number">3.</span> <span class="nav-text">NexT主题配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主题基本设定"><span class="nav-number">3.1.</span> <span class="nav-text">主题基本设定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加侧栏社交链接和友链"><span class="nav-number">3.2.</span> <span class="nav-text">添加侧栏社交链接和友链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加并美化本地搜索"><span class="nav-number">3.3.</span> <span class="nav-text">添加并美化本地搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用多说"><span class="nav-number">3.4.</span> <span class="nav-text">使用多说</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加cnzz站长统计"><span class="nav-number">3.5.</span> <span class="nav-text">添加cnzz站长统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置404页面"><span class="nav-number">3.6.</span> <span class="nav-text">设置404页面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网站发布"><span class="nav-number">4.</span> <span class="nav-text">网站发布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#云主机"><span class="nav-number">4.1.</span> <span class="nav-text">云主机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git托管的Pages服务"><span class="nav-number">4.2.</span> <span class="nav-text">Git托管的Pages服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NexT主题美化"><span class="nav-number">5.</span> <span class="nav-text">NexT主题美化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#修改导航栏图标"><span class="nav-number">5.1.</span> <span class="nav-text">修改导航栏图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改文章内链接文本样式"><span class="nav-number">5.2.</span> <span class="nav-text">修改文章内链接文本样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章末尾添加“本文结束”标记"><span class="nav-number">5.3.</span> <span class="nav-text">文章末尾添加“本文结束”标记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章末尾添加网站二维码"><span class="nav-number">5.4.</span> <span class="nav-text">文章末尾添加网站二维码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手机端site-subtitle显示优化"><span class="nav-number">5.5.</span> <span class="nav-text">手机端site-subtitle显示优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他美化"><span class="nav-number">5.6.</span> <span class="nav-text">其他美化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SEO推广"><span class="nav-number">6.</span> <span class="nav-text">SEO推广</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生成sitemap"><span class="nav-number">6.1.</span> <span class="nav-text">生成sitemap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加-robots-txt"><span class="nav-number">6.2.</span> <span class="nav-text">添加 robots.txt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启百度自动推送"><span class="nav-number">6.3.</span> <span class="nav-text">开启百度自动推送</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用各大搜索引擎站长工具"><span class="nav-number">6.4.</span> <span class="nav-text">使用各大搜索引擎站长工具</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客维护"><span class="nav-number">7.</span> <span class="nav-text">博客维护</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关资源"><span class="nav-number">8.</span> <span class="nav-text">相关资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">9.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
           </div>
         </section>
@@ -725,9 +893,14 @@
         
       </div>
     </footer>
-
+    
+	  <div class="mobile_code">
+    <i class="fa fa-mobile-phone fa-2x"></i>
+	<div class="code_img"><img src="/images/wuxubj.png" alt="扫一扫，用手机访问本站"></div>
+</div>
+	
     <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
+      <i class="fa fa-arrow-up fa-2x"></i>
     </div>
   </div>
 
@@ -874,7 +1047,7 @@
                 if (this.value.trim().length > 1) {
                 // perform local searching
                 datas.forEach(function(data) {
-                    var isMatch = true;
+                    var isMatch = false;
                     var content_index = [];
                     var data_title = data.title.trim().toLowerCase();
                     var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
@@ -883,20 +1056,17 @@
                     var index_content = -1;
                     var first_occur = -1;
                     // only match artiles with not empty titles and contents
-                    if(data_title != '' && data_content != '') {
+                    if(data_title != '') {
                         keywords.forEach(function(keyword, i) {
                             index_title = data_title.indexOf(keyword);
                             index_content = data_content.indexOf(keyword);
-                            if( index_title < 0 && index_content < 0 ){
-                                isMatch = false;
-                            } else {
-                                if (index_content < 0) {
-                                    index_content = 0;
-                                }
-                                if (i == 0) {
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
                                     first_occur = index_content;
                                 }
-                            }
+                            } 
+							
                         });
                     }
                     // show search results
@@ -964,10 +1134,101 @@
   
 
   
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("zPFLpkVuL8bNpqMl24W0E86i-gzGzoHsz", "YhJrGjyDpGD6a8V2BvhDU0X9");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
 
-  <div style="display: none;">
-    <script src="http://s6.cnzz.com/stat.php?id=1259784696&web_id=1259784696" type="text/javascript"></script>
-  </div>
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
 
 
 
@@ -987,9 +1248,7 @@ function showElement(elementID)
 	var myele=document.getElementById(elementID);
 	myele.style.display="block";
 }
-</script>
 
-<script type="text/JavaScript">
 function showSubtitle()
 {
   var siteNav=document.getElementById("site-nav");
@@ -1005,9 +1264,10 @@ function showSubtitle()
 
 }
 </script>
-  <script type="text/javascript" src="/js/src/love.js"></script>
-  <script type="text/javascript" src="/js/src/particle.js" count="50" zindex="-2" opacity="1" color="0,104,183"></script>
 
+  
+  
+  
 
 </body>
 </html>

@@ -38,9 +38,6 @@
   
 
   
-    
-    
-  
 
   
 
@@ -50,10 +47,6 @@
 
   
 
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -94,7 +87,7 @@ Next的Mist主题页脚默认左对齐，本文目标：1.实现页脚元素居�
 Next的Mist主题页脚默认左对齐，本文目标：1.实现页脚元素居中对齐;2.页脚添加cnzz站长统计并简单美化">
 <meta property="og:image" content="http://o9w8f1xrl.bkt.clouddn.com/images/201607/01.jpg">
 <meta property="og:image" content="http://o9w8f1xrl.bkt.clouddn.com/images/201607/02.jpg">
-<meta property="og:updated_time" content="2016-08-14T15:47:20.810Z">
+<meta property="og:updated_time" content="2016-08-17T01:39:39.781Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+nexT页脚美化">
 <meta name="twitter:description" content="本文为建站初期小结，查看完整建站教程：Hexo+nexT主题搭建个人博客
@@ -128,12 +121,6 @@ Next的Mist主题页脚默认左对齐，本文目标：1.实现页脚元素居�
 
 
 
-
-
-
-  <div style="display: none;">
-    <script src="http://s6.cnzz.com/stat.php?id=1259784696&web_id=1259784696" type="text/javascript"></script>
-  </div>
 
 
 
@@ -255,7 +242,7 @@ Next的Mist主题页脚默认左对齐，本文目标：1.实现页脚元素居�
     <div class="site-search">
       
   <div class="popup">
-
+ <span class="search-icon fa fa-search fa-lg"></span>
  <input type="text" id="local-search-input">
  <div id="local-search-result"></div>
  <span class="popup-btn-close">close</span>
@@ -349,6 +336,15 @@ Next的Mist主题页脚默认左对齐，本文目标：1.实现页脚元素居�
 
           
           
+             <span id="/2016/07/footer-beautify-of-nexT/" class="leancloud_visitors" data-flag-title="Hexo+nexT页脚美化" style="display:none">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
 
           
         </div>
@@ -362,7 +358,7 @@ Next的Mist主题页脚默认左对齐，本文目标：1.实现页脚元素居�
       
 
       
-        <p><font color="#f00">本文为建站初期小结，查看完整建站教程：</font><a href="/2016/08/13/Hexo-nexT-build-personal-blog/">Hexo+nexT主题搭建个人博客</a></p>
+        <p><font color="#f00">本文为建站初期小结，查看完整建站教程：</font><a href="/2016/08/Hexo-nexT-build-personal-blog/">Hexo+nexT主题搭建个人博客</a></p>
 <p><code>Next</code>的<code>Mist</code>主题页脚默认<code>左对齐</code>，本文目标：<br>1.实现页脚元素<code>居中对齐</code>;<br>2.页脚添加cnzz站长统计并简单美化<br><a id="more"></a></p>
 <h3 id="页脚元素居中"><a href="#页脚元素居中" class="headerlink" title="页脚元素居中"></a>页脚元素居中</h3><p>修改<code>your blog\themes\next\source\css\_schemes\Mist\index.styl</code>文件，将<code>.footer-inner</code>中的<code>text-align: left;</code>修改为<code>text-align: center;</code>即可。</p>
 <h3 id="页脚添加cnzz站长统计"><a href="#页脚添加cnzz站长统计" class="headerlink" title="页脚添加cnzz站长统计"></a>页脚添加cnzz站长统计</h3><p>1.站点添加cnzz站长统计<br>参考：<a href="https://github.com/iissnan/hexo-theme-next/pull/712" target="_blank" rel="external">添加CNZZ数据统计功能的支持（隐藏“站长统计”文字）</a><br>2.修改<code>站长统计</code>显示位置<br>修改<code>your blog\themes\next\layout\_partials\footer.swig</code>文件，在<code>&lt;div class=&quot;copyright&quot; &gt;</code>…<code>&lt;/div&gt;</code>中添加如下代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.cnzz_siteid %&#125;</span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"site-pv"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://s6.cnzz.com/stat.php?id=&#123;&#123; theme.cnzz_siteid &#125;&#125;&amp;web_id=&#123;&#123; theme.cnzz_siteid &#125;&#125;"</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"> &#123;% endif %&#125;</span><br></pre></td></tr></table></figure></p>
@@ -440,24 +436,25 @@ Next的Mist主题页脚默认左对齐，本文目标：1.实现页脚元素居�
 
     <div class="post-spread">
       
+    </div>
+	
         <div class="ds-share flat" data-thread-key="2016/07/footer-beautify-of-nexT/"
      data-title="Hexo+nexT页脚美化"
      data-content=""
      data-url="http://www.wuxubj.cn/2016/07/footer-beautify-of-nexT/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
-
       <li data-toggle="ds-share-icons-more"><span class="ds-more" >分享到：</span></li>
       <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
       <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
       <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
       <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-
+	  <li><a class="ds-facebook" href="javascript:void(0);" data-service="facebook">Facebook</a></li>
+	  <li><a class="ds-google" href="javascript:void(0);" data-service="google">谷歌</a></li> 
     </ul>
   </div>
 </div>
       
-    </div>
   </div>
 
 
@@ -468,6 +465,7 @@ Next的Mist主题页脚默认左对齐，本文目标：1.实现页脚元素居�
           
   <div class="comments" id="comments">
     
+	  
       <div class="ds-thread" data-thread-key="2016/07/footer-beautify-of-nexT/"
            data-title="Hexo+nexT页脚美化" data-url="http://www.wuxubj.cn/2016/07/footer-beautify-of-nexT/">
       </div>
@@ -514,7 +512,7 @@ Next的Mist主题页脚默认左对齐，本文目标：1.实现页脚元素居�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -531,7 +529,7 @@ Next的Mist主题页脚默认左对齐，本文目标：1.实现页脚元素居�
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -545,6 +543,162 @@ Next的Mist主题页脚默认左对齐，本文目标：1.实现页脚元素居�
               <i class="fa fa-rss"></i>
               RSS
             </a>
+			
+			<a title="小high一下~" rel="alternate" class="mw-harlem_shake_slow wobble shake" href="javascript:shake()"><i class="fa fa-music"></i> High</a>
+
+<script type="text/JavaScript">
+function shake() {
+    function c() {
+        var e = document.createElement("link");
+        e.setAttribute("type", "text/css");
+        e.setAttribute("rel", "stylesheet");
+        e.setAttribute("href", f);
+        e.setAttribute("class", l);
+        document.body.appendChild(e)
+    }
+ 
+    function h() {
+        var e = document.getElementsByClassName(l);
+        for (var t = 0; t < e.length; t++) {
+            document.body.removeChild(e[t])
+        }
+    }
+ 
+    function p() {
+        var e = document.createElement("div");
+        e.setAttribute("class", a);
+        document.body.appendChild(e);
+        setTimeout(function() {
+            document.body.removeChild(e)
+        }, 100)
+    }
+ 
+    function d(e) {
+        return {
+            height : e.offsetHeight,
+            width : e.offsetWidth
+        }
+    }
+ 
+    function v(i) {
+        var s = d(i);
+        return s.height > e && s.height < n && s.width > t && s.width < r
+    }
+ 
+    function m(e) {
+        var t = e;
+        var n = 0;
+        while (!!t) {
+            n += t.offsetTop;
+            t = t.offsetParent
+        }
+        return n
+    }
+ 
+    function g() {
+        var e = document.documentElement;
+        if (!!window.innerWidth) {
+            return window.innerHeight
+        } else if (e && !isNaN(e.clientHeight)) {
+            return e.clientHeight
+        }
+        return 0
+    }
+ 
+    function y() {
+        if (window.pageYOffset) {
+            return window.pageYOffset
+        }
+        return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+    }
+ 
+    function E(e) {
+        var t = m(e);
+        return t >= w && t <= b + w
+    }
+ 
+    function S() {
+        var e = document.createElement("audio");
+        e.setAttribute("class", l);
+        e.src = i;
+        e.loop = false;
+        e.addEventListener("canplay", function() {
+            setTimeout(function() {
+                x(k)
+            }, 500);
+            setTimeout(function() {
+                N();
+                p();
+                for (var e = 0; e < O.length; e++) {
+                    T(O[e])
+                }
+            }, 15500)
+        }, true);
+        e.addEventListener("ended", function() {
+            N();
+            h()
+        }, true);
+        e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+        document.body.appendChild(e);
+        e.play()
+    }
+ 
+    function x(e) {
+        e.className += " " + s + " " + o
+    }
+ 
+    function T(e) {
+        e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+    }
+ 
+    function N() {
+        var e = document.getElementsByClassName(s);
+        var t = new RegExp("\\b" + s + "\\b");
+        for (var n = 0; n < e.length; ) {
+            e[n].className = e[n].className.replace(t, "")
+        }
+    }
+ 
+    var e = 30;
+    var t = 30;
+    var n = 350;
+    var r = 350;
+    var i = "http://o9w8f1xrl.bkt.clouddn.com/highqilai/harlem-shake.mp3";
+    var s = "mw-harlem_shake_me";
+    var o = "im_first";
+    var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+    var a = "mw-strobe_light";
+    var f = "http://o9w8f1xrl.bkt.clouddn.com/highqilai/harlem-shake-style.css";
+    var l = "mw_added_css";
+    var b = g();
+    var w = y();
+    var C = document.getElementsByTagName("*");
+    var k = null;
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            if (E(A)) {
+                k = A;
+                break
+            }
+        }
+    }
+    if (A === null) {
+        console.warn("Could not find a node of the right size. Please try a different page.");
+        return
+    }
+    c();
+    S();
+    var O = [];
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            O.push(A)
+        }
+    }
+}
+</script>
+			
           </div>
         
 
@@ -652,9 +806,14 @@ Next的Mist主题页脚默认左对齐，本文目标：1.实现页脚元素居�
         
       </div>
     </footer>
-
+    
+	  <div class="mobile_code">
+    <i class="fa fa-mobile-phone fa-2x"></i>
+	<div class="code_img"><img src="/images/wuxubj.png" alt="扫一扫，用手机访问本站"></div>
+</div>
+	
     <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
+      <i class="fa fa-arrow-up fa-2x"></i>
     </div>
   </div>
 
@@ -801,7 +960,7 @@ Next的Mist主题页脚默认左对齐，本文目标：1.实现页脚元素居�
                 if (this.value.trim().length > 1) {
                 // perform local searching
                 datas.forEach(function(data) {
-                    var isMatch = true;
+                    var isMatch = false;
                     var content_index = [];
                     var data_title = data.title.trim().toLowerCase();
                     var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
@@ -810,20 +969,17 @@ Next的Mist主题页脚默认左对齐，本文目标：1.实现页脚元素居�
                     var index_content = -1;
                     var first_occur = -1;
                     // only match artiles with not empty titles and contents
-                    if(data_title != '' && data_content != '') {
+                    if(data_title != '') {
                         keywords.forEach(function(keyword, i) {
                             index_title = data_title.indexOf(keyword);
                             index_content = data_content.indexOf(keyword);
-                            if( index_title < 0 && index_content < 0 ){
-                                isMatch = false;
-                            } else {
-                                if (index_content < 0) {
-                                    index_content = 0;
-                                }
-                                if (i == 0) {
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
                                     first_occur = index_content;
                                 }
-                            }
+                            } 
+							
                         });
                     }
                     // show search results
@@ -891,10 +1047,101 @@ Next的Mist主题页脚默认左对齐，本文目标：1.实现页脚元素居�
   
 
   
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("zPFLpkVuL8bNpqMl24W0E86i-gzGzoHsz", "YhJrGjyDpGD6a8V2BvhDU0X9");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
 
-  <div style="display: none;">
-    <script src="http://s6.cnzz.com/stat.php?id=1259784696&web_id=1259784696" type="text/javascript"></script>
-  </div>
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
 
 
 
@@ -914,9 +1161,7 @@ function showElement(elementID)
 	var myele=document.getElementById(elementID);
 	myele.style.display="block";
 }
-</script>
 
-<script type="text/JavaScript">
 function showSubtitle()
 {
   var siteNav=document.getElementById("site-nav");
@@ -932,9 +1177,10 @@ function showSubtitle()
 
 }
 </script>
-  <script type="text/javascript" src="/js/src/love.js"></script>
-  <script type="text/javascript" src="/js/src/particle.js" count="50" zindex="-2" opacity="1" color="0,104,183"></script>
 
+  
+  
+  
 
 </body>
 </html>

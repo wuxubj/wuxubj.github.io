@@ -15,5 +15,6 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
+Disallow: /video/
 
 Sitemap: http://www.wuxubj.cn/sitemap.xml

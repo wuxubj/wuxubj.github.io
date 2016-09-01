@@ -1,0 +1,1174 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="表达式求值,栈," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="务虚笔记" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="例题编写一个程序可以完成基本的带括号的四则运算。其中除法(/)是整除，并且在负数除法时向0取整。(C/C++/Java默认的除法就是向0取整，python默认的是向负无穷取整)。例如计算 100 * ( 2 + 12 ) - (20 / 3) * 2, 结果是1388。样例输入：100*(2+12)-(20/3)*2样例输出：1388">
+<meta property="og:type" content="article">
+<meta property="og:title" content="栈的应用：表达式求值">
+<meta property="og:url" content="http://www.wuxubj.cn/2016/08/expression-evaluation/index.html">
+<meta property="og:site_name" content="务虚笔记">
+<meta property="og:description" content="例题编写一个程序可以完成基本的带括号的四则运算。其中除法(/)是整除，并且在负数除法时向0取整。(C/C++/Java默认的除法就是向0取整，python默认的是向负无穷取整)。例如计算 100 * ( 2 + 12 ) - (20 / 3) * 2, 结果是1388。样例输入：100*(2+12)-(20/3)*2样例输出：1388">
+<meta property="og:updated_time" content="2016-08-21T14:30:17.699Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="栈的应用：表达式求值">
+<meta name="twitter:description" content="例题编写一个程序可以完成基本的带括号的四则运算。其中除法(/)是整除，并且在负数除法时向0取整。(C/C++/Java默认的除法就是向0取整，python默认的是向负无穷取整)。例如计算 100 * ( 2 + 12 ) - (20 / 3) * 2, 结果是1388。样例输入：100*(2+12)-(20/3)*2样例输出：1388">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 栈的应用：表达式求值 | 务虚笔记  - wuxubj,个人博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">务虚笔记</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle" id="site-subtitle">Li Xiaowei's blog</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button onclick="showSubtitle()">
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav" id="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar-check-o"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-commenting"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mylove">
+          <a href="/mylove" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />
+            
+            爱的纪念
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search fa-lg"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                栈的应用：表达式求值
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-21T20:52:26+08:00" content="2016-08-21">
+              2016-08-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/算法与数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">算法与数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/expression-evaluation/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/expression-evaluation/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/08/expression-evaluation/" class="leancloud_visitors" data-flag-title="栈的应用：表达式求值" style="display:none">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><p>编写一个程序可以完成基本的带括号的四则运算。其中除法(/)是整除，并且在负数除法时向0取整。(C/C++/Java默认的除法就是向0取整，python默认的是向负无穷取整)。<br>例如计算 <code>100 * ( 2 + 12 ) - (20 / 3) * 2</code>, 结果是<code>1388</code>。<br><strong>样例输入：</strong><br><code>100*(2+12)-(20/3)*2</code><br><strong>样例输出：</strong><br><code>1388</code><br><a id="more"></a></p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>中缀表达式将二元运算符放在两个操作数之间，而后缀表达式的每个运算符都出现在相应操作数之后。后缀表达式去掉了括号，因此在计算机中，用后缀表达式求值更为简单。<br><code>100*(2+12)-(20/3)*2</code>为中缀表达式，其对应的后缀表达式(逆波兰式)为<code>100&amp;2&amp;12+*20&amp;3/2*-</code>。<br>用用后缀表达式求值是栈的典型应用，其步骤分为两步：</p>
+<p><strong>1.&nbsp;&nbsp;将中缀表达式转换为后缀表达式</strong><br><strong>数字：</strong>直接添加到后缀表达式中，<font color="#f00">数值之间需要添加分隔符</font>。<br><strong>左括号：</strong>直接压入到符号栈。<br><strong>右括号：</strong>右括号总是不入栈，遇到右括号，则之前入栈的运算符逐一出栈，并添加到后缀表达式中，直到碰到左括号。<font color="#f00">遇到左括号直接将其弹出即可</font>。<br><strong>运算符：</strong>运算符入栈之前，与符号栈栈顶的运算符比较优先级，如果优先级<font color="#f00">小于或等于</font>栈顶运算符优先级，则栈顶运算符弹出，并添加到后缀表达式中，最后将待入栈的运算符入栈<font color="#f00">（优先级比较时，左括号当作低优先级运算符处理）</font>。<br>中缀表达式循环一遍之后，最后将符号栈中的运算符逐一弹出，添加到后缀表达式中。</p>
+<p><strong>2.&nbsp;&nbsp;利用后缀表达式求值</strong><br><strong>数字：</strong>根据分隔符取出完整数值，压入到数值栈。<font color="#f00">数字处理注意如何将数字组合成完整的数值</font>。<br><strong>运算符：</strong>弹出数值栈的栈顶前两个数值，与运算符一起进行四则运算，再将运算结果压入到数值栈，当到达后缀表达式末端时，数值栈中应该只有一个数值，该值即为整个表达式的运算结果。<font color="#f00">运算符处理时，注意除法中操作数的顺序</font>。</p>
+<h3 id="中缀表达式转换为后缀表达式"><a href="#中缀表达式转换为后缀表达式" class="headerlink" title="中缀表达式转换为后缀表达式"></a>中缀表达式转换为后缀表达式</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取运算符优先级</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getRink</span><span class="params">(<span class="keyword">char</span> opt)</span></span>&#123;    </span><br><span class="line">	<span class="keyword">if</span> (opt == <span class="string">'+'</span> || opt == <span class="string">'-'</span>) <span class="keyword">return</span> <span class="number">10</span>;</span><br><span class="line">	<span class="keyword">if</span> (opt == <span class="string">'*'</span> || opt == <span class="string">'/'</span>) <span class="keyword">return</span> <span class="number">20</span>;</span><br><span class="line">	<span class="keyword">if</span> (opt == <span class="string">'('</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//中缀表达式转为后缀表达式</span></span><br><span class="line"><span class="comment">//str_mid:中缀表达式</span></span><br><span class="line"><span class="comment">//str_post:后缀表达式</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">postfix</span><span class="params">(<span class="built_in">string</span> &amp;str_post, <span class="built_in">string</span> &amp;str_mid)</span></span>&#123;  </span><br><span class="line">	<span class="built_in">stack</span>&lt;<span class="keyword">char</span>&gt; opt;   <span class="comment">//定义运算符栈</span></span><br><span class="line">	<span class="keyword">bool</span> flag = <span class="literal">false</span>; <span class="comment">//标记上一个输出是否为数字</span></span><br><span class="line">	<span class="keyword">while</span> (!opt.empty()) opt.pop();<span class="comment">//运算符栈清空</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; str_mid[i] != <span class="string">'\0'</span>; i++)&#123;</span><br><span class="line">		<span class="comment">// 数字处理</span></span><br><span class="line">		<span class="keyword">if</span> (str_mid[i] &gt;= <span class="string">'0'</span> &amp;&amp; str_mid[i] &lt;= <span class="string">'9'</span>)&#123;</span><br><span class="line">			<span class="keyword">if</span> (flag) str_post += <span class="string">'&amp;'</span>; <span class="comment">//上一个输出为数字则中间用&amp;分隔</span></span><br><span class="line">			<span class="keyword">else</span> flag = <span class="literal">true</span>;</span><br><span class="line">			<span class="comment">//获取一个数值中的连续多个数字</span></span><br><span class="line">			<span class="keyword">while</span> (<span class="string">'0'</span> &lt;= str_mid[i] &amp;&amp; <span class="string">'9'</span> &gt;= str_mid[i])&#123;</span><br><span class="line">				str_post += str_mid[i];</span><br><span class="line">				i++;</span><br><span class="line">			&#125;</span><br><span class="line">			i--;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//左括号处理</span></span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (str_mid[i] == <span class="string">'('</span>)&#123;</span><br><span class="line">			opt.push(str_mid[i]);</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//右括号处理</span></span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (str_mid[i] == <span class="string">')'</span>)&#123;</span><br><span class="line">			<span class="keyword">while</span> (opt.top() != <span class="string">'('</span> &amp;&amp; !opt.empty())&#123;</span><br><span class="line">				str_post += opt.top();</span><br><span class="line">				opt.pop();</span><br><span class="line">				flag = <span class="literal">false</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (opt.empty()) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">			<span class="keyword">if</span> (opt.top() == <span class="string">'('</span>)&#123;</span><br><span class="line">				opt.pop();</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//运算符处理</span></span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (str_mid[i] == <span class="string">'+'</span> || str_mid[i] == <span class="string">'-'</span> || str_mid[i] == <span class="string">'*'</span> || str_mid[i] == <span class="string">'/'</span>)&#123;</span><br><span class="line">			<span class="keyword">int</span> a1 = getRink(str_mid[i]);</span><br><span class="line">			<span class="keyword">if</span> (a1&lt;<span class="number">0</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">			<span class="keyword">int</span> a2;</span><br><span class="line">			<span class="keyword">while</span> (!opt.empty())&#123;</span><br><span class="line">				a2 = getRink(opt.top());</span><br><span class="line">				<span class="keyword">if</span> (a2&lt;<span class="number">0</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">				<span class="keyword">if</span> (a1 &lt;= a2)&#123; <span class="comment">//等于的时候也要弹出</span></span><br><span class="line">					str_post += opt.top();</span><br><span class="line">					opt.pop();</span><br><span class="line">					flag = <span class="literal">false</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			opt.push(str_mid[i]);</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 运算符出栈</span></span><br><span class="line">	<span class="keyword">while</span> (!opt.empty())&#123;</span><br><span class="line">		<span class="keyword">if</span> (opt.top() == <span class="string">'('</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">		str_post += opt.top();</span><br><span class="line">		opt.pop();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="根据后缀表达式求值"><a href="#根据后缀表达式求值" class="headerlink" title="根据后缀表达式求值"></a>根据后缀表达式求值</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//加减乘除结果计算</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getResult</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">char</span> opp)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (opp == <span class="string">'+'</span>) <span class="keyword">return</span> a + b;</span><br><span class="line">	<span class="keyword">if</span> (opp == <span class="string">'-'</span>) <span class="keyword">return</span> a - b;</span><br><span class="line">	<span class="keyword">if</span> (opp == <span class="string">'*'</span>) <span class="keyword">return</span> a*b;</span><br><span class="line">	<span class="keyword">if</span> (opp == <span class="string">'/'</span>) <span class="keyword">return</span> a / b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">compute</span><span class="params">(<span class="built_in">string</span> str)</span></span>&#123;</span><br><span class="line">	<span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt;  data;</span><br><span class="line">	<span class="keyword">int</span> temp, op1, op2;</span><br><span class="line">	<span class="keyword">while</span> (!data.empty()) data.pop();</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; str[i] != <span class="string">'\0'</span>; i++)&#123;</span><br><span class="line">		<span class="comment">//数值分隔符直接跳过</span></span><br><span class="line">		<span class="keyword">if</span> (<span class="string">'&amp;'</span> == str[i]) <span class="keyword">continue</span>;</span><br><span class="line">		<span class="comment">//数值处理</span></span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">'0'</span> &lt;= str[i] &amp;&amp; <span class="string">'9'</span> &gt;= str[i]) &#123;</span><br><span class="line">			temp = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">while</span> (<span class="string">'0'</span> &lt;= str[i] &amp;&amp; <span class="string">'9'</span> &gt;= str[i])&#123;</span><br><span class="line">				temp = temp * <span class="number">10</span> + str[i] - <span class="string">'0'</span>;</span><br><span class="line">				i++;</span><br><span class="line">			&#125;</span><br><span class="line">			i--;</span><br><span class="line">			data.push(temp);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//运算符处理</span></span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (str[i] == <span class="string">'+'</span> || str[i] == <span class="string">'-'</span> || str[i] == <span class="string">'*'</span> || str[i] == <span class="string">'/'</span>)&#123;</span><br><span class="line">			<span class="keyword">if</span> (data.size()&lt;<span class="number">2</span>)&#123; <span class="keyword">return</span> <span class="number">-1</span>; &#125;</span><br><span class="line">			op1 = data.top(); data.pop();</span><br><span class="line">			op2 = data.top(); data.pop();</span><br><span class="line">			temp = getResult(op2, op1, str[i]); <span class="comment">//除法的时候注意数值顺序</span></span><br><span class="line">			data.push(temp);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (data.size() != <span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> data.top();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="测试主函数"><a href="#测试主函数" class="headerlink" title="测试主函数"></a>测试主函数</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">string</span> str_post, str_mid;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; str_mid;</span><br><span class="line">	<span class="keyword">if</span>(!postfix(str_post, str_mid))&#123;</span><br><span class="line">	  <span class="built_in">cout</span> &lt;&lt; str_post &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	  <span class="built_in">cout</span> &lt;&lt; compute(str_post) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> 	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+	<div>
+      
+        
+<div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束 ------</div>
+
+      
+    </div>
+	
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/wuxubj.png" alt="wuxubj wechat" style="width: 200px; max-width: 100%;"/>
+    <div>扫一扫，用手机访问本站</div>
+</div>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/表达式求值/" rel="tag">#表达式求值</a>
+          
+            <a href="/tags/栈/" rel="tag">#栈</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+		  
+		  <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/Hexo-nexT-build-personal-blog/" class="post-nav-title-link" rel="next" title="Hexo+nexT主题搭建个人博客">
+                Hexo+nexT主题搭建个人博客  <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+	
+        <div class="ds-share flat" data-thread-key="2016/08/expression-evaluation/"
+     data-title="栈的应用：表达式求值"
+     data-content=""
+     data-url="http://www.wuxubj.cn/2016/08/expression-evaluation/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+      <li data-toggle="ds-share-icons-more"><span class="ds-more" >分享到：</span></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+	  <li><a class="ds-facebook" href="javascript:void(0);" data-service="facebook">Facebook</a></li>
+	  <li><a class="ds-google" href="javascript:void(0);" data-service="google">谷歌</a></li> 
+    </ul>
+  </div>
+</div>
+      
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+	  
+      <div class="ds-thread" data-thread-key="2016/08/expression-evaluation/"
+           data-title="栈的应用：表达式求值" data-url="http://www.wuxubj.cn/2016/08/expression-evaluation/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="wuxubj" />
+          <p class="site-author-name" itemprop="name">wuxubj</p>
+          <p class="site-description motion-element" itemprop="description">记录敲过的代码、走过的人生</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" target="_blank" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+			
+			<a title="小high一下~" rel="alternate" class="mw-harlem_shake_slow wobble shake" href="javascript:shake()"><i class="fa fa-music"></i> High</a>
+
+<script type="text/JavaScript">
+function shake() {
+    function c() {
+        var e = document.createElement("link");
+        e.setAttribute("type", "text/css");
+        e.setAttribute("rel", "stylesheet");
+        e.setAttribute("href", f);
+        e.setAttribute("class", l);
+        document.body.appendChild(e)
+    }
+ 
+    function h() {
+        var e = document.getElementsByClassName(l);
+        for (var t = 0; t < e.length; t++) {
+            document.body.removeChild(e[t])
+        }
+    }
+ 
+    function p() {
+        var e = document.createElement("div");
+        e.setAttribute("class", a);
+        document.body.appendChild(e);
+        setTimeout(function() {
+            document.body.removeChild(e)
+        }, 100)
+    }
+ 
+    function d(e) {
+        return {
+            height : e.offsetHeight,
+            width : e.offsetWidth
+        }
+    }
+ 
+    function v(i) {
+        var s = d(i);
+        return s.height > e && s.height < n && s.width > t && s.width < r
+    }
+ 
+    function m(e) {
+        var t = e;
+        var n = 0;
+        while (!!t) {
+            n += t.offsetTop;
+            t = t.offsetParent
+        }
+        return n
+    }
+ 
+    function g() {
+        var e = document.documentElement;
+        if (!!window.innerWidth) {
+            return window.innerHeight
+        } else if (e && !isNaN(e.clientHeight)) {
+            return e.clientHeight
+        }
+        return 0
+    }
+ 
+    function y() {
+        if (window.pageYOffset) {
+            return window.pageYOffset
+        }
+        return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+    }
+ 
+    function E(e) {
+        var t = m(e);
+        return t >= w && t <= b + w
+    }
+ 
+    function S() {
+        var e = document.createElement("audio");
+        e.setAttribute("class", l);
+        e.src = i;
+        e.loop = false;
+        e.addEventListener("canplay", function() {
+            setTimeout(function() {
+                x(k)
+            }, 500);
+            setTimeout(function() {
+                N();
+                p();
+                for (var e = 0; e < O.length; e++) {
+                    T(O[e])
+                }
+            }, 15500)
+        }, true);
+        e.addEventListener("ended", function() {
+            N();
+            h()
+        }, true);
+        e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+        document.body.appendChild(e);
+        e.play()
+    }
+ 
+    function x(e) {
+        e.className += " " + s + " " + o
+    }
+ 
+    function T(e) {
+        e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+    }
+ 
+    function N() {
+        var e = document.getElementsByClassName(s);
+        var t = new RegExp("\\b" + s + "\\b");
+        for (var n = 0; n < e.length; ) {
+            e[n].className = e[n].className.replace(t, "")
+        }
+    }
+ 
+    var e = 30;
+    var t = 30;
+    var n = 350;
+    var r = 350;
+    var i = "http://o9w8f1xrl.bkt.clouddn.com/highqilai/harlem-shake.mp3";
+    var s = "mw-harlem_shake_me";
+    var o = "im_first";
+    var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+    var a = "mw-strobe_light";
+    var f = "http://o9w8f1xrl.bkt.clouddn.com/highqilai/harlem-shake-style.css";
+    var l = "mw_added_css";
+    var b = g();
+    var w = y();
+    var C = document.getElementsByTagName("*");
+    var k = null;
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            if (E(A)) {
+                k = A;
+                break
+            }
+        }
+    }
+    if (A === null) {
+        console.warn("Could not find a node of the right size. Please try a different page.");
+        return
+    }
+    c();
+    S();
+    var O = [];
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            O.push(A)
+        }
+    }
+}
+</script>
+			
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wuxubj" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wuxubj" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-link"></i>
+              友情链接
+            </div>
+           
+              
+                <span class="links-of-author-item" style="text-align:left">
+                  <a href="/weblog" title="建站日志" target="_blank">建站日志</a>
+                </span>
+              
+                <span class="links-of-author-item" style="text-align:left">
+                  <a href="/study-plan" title="学习计划" target="_blank">学习计划</a>
+                </span>
+              
+            
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#例题"><span class="nav-number">1.</span> <span class="nav-text">例题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分析"><span class="nav-number">2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中缀表达式转换为后缀表达式"><span class="nav-number">3.</span> <span class="nav-text">中缀表达式转换为后缀表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#根据后缀表达式求值"><span class="nav-number">4.</span> <span class="nav-text">根据后缀表达式求值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试主函数"><span class="nav-number">5.</span> <span class="nav-text">测试主函数</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wuxubj</span>
+  
+   <span style="margin-left:8px;">
+   <script src="http://s6.cnzz.com/stat.php?id=1259784696&web_id=1259784696" type="text/javascript"></script>
+   </span>
+  
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io" target="_blank">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+    
+	  <div class="mobile_code">
+    <i class="fa fa-mobile-phone fa-2x"></i>
+	<div class="code_img"><img src="/images/wuxubj.png" alt="扫一扫，用手机访问本站"></div>
+</div>
+	
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up fa-2x"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"wuxubj"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = false;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            } 
+							
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("zPFLpkVuL8bNpqMl24W0E86i-gzGzoHsz", "YhJrGjyDpGD6a8V2BvhDU0X9");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+  <script type="text/JavaScript">
+function hideElement(elementID)
+{
+	var myele=document.getElementById(elementID);
+	myele.style.display="none";
+}
+
+function showElement(elementID)
+{
+	var myele=document.getElementById(elementID);
+	myele.style.display="block";
+}
+
+function showSubtitle()
+{
+  var siteNav=document.getElementById("site-nav");
+  if(siteNav.style.display=="block")
+  {
+   var subTitle=document.getElementById("site-subtitle");
+   subTitle.style.display="none";
+  }else
+  {
+   var subTitle=document.getElementById("site-subtitle");
+   subTitle.style.display="block";
+  }
+
+}
+</script>
+
+  
+  
+  
+
+</body>
+</html>
