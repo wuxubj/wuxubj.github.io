@@ -131,6 +131,40 @@ margin-bottom: 30px;
   }
 }
 
-.site-nav-toggle{
+
+.mobile_code {
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 300px;
+  right: 0;
+  z-index: $zindex-5;
+  padding: 2px 3px 0 3px;
+  height:36px;
+  width: 30px;
+  background: #ccc;
+  font-size: 16px;
+  color: $b2t-color;
+  cursor: pointer;
+  text-align: center;
+  opacity:1;
+  +mobile() {
+    display: none;
+  }
+  
 
 }
+.mobile_code .code_img{
+	padding: 20px;
+	border: 1px solid #d1d2d6;
+	position: fixed;
+	right: 30px;
+	bottom: 230px;
+	background-color: #fff;
+	display: none;
+	}
+.mobile_code .code_img img {
+	width: 156px;
+	height: 156px;
+}
+.mobile_code:hover{background-color: #669fdd;}
+.mobile_code:hover .code_img{display:block;}

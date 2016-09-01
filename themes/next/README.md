@@ -2,11 +2,29 @@
 
 > 精于心，简于形
 
-<a href="http://notes.iissnan.com" target="_blank">在线预览 Preview</a> | <a href="http://theme-next.iissnan.com" target="_blank">NexT 使用文档</a> |  [English Documentation](README.en.md)
+<a href="http://www.wuxubj.cn/" target="_blank">在线预览 Preview</a> | <a href="http://www.wuxubj.cn/2016/08/Hexo-nexT-build-personal-blog/" target="_blank">修改教程</a> |   <a href="http://theme-next.iissnan.com" target="_blank">NexT 使用文档</a>
+
+基于iissnan的hexo-theme-next v5.0.1修改
+
+1.优化本地搜索弹窗显示界面
+2.cnzz站长统计显示到页脚
+3.修改文章内链接文本样式
+4.文章末尾添加“本文结束”标记（可选择是否添加）
+5.调换下一篇和上一篇文章链接位置并优化显示效果
+6.美化侧栏网站标题背景色和标题显示样式
+7.修改侧栏menu和Link部分的icon
+8.侧栏图像avater添加动画效果
+9.美化侧栏社交链接和友链的显示
+10.正文字体颜色加深
+11.美化移动端页脚显示
+12.移动端默认不显示副标题，显示menu时才显示副标题
+13.正文部分布局加宽
+14.标签云页面鼠标划过字体加粗
+
 
 [![Join the chat at https://gitter.im/iissnan/hexo-theme-next](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/iissnan/hexo-theme-next?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-![NexT Schemes](http://iissnan.com/nexus/next/next-schemes.jpg)
+![NexT Schemes](source\images\demo.jpg)
 
 
 ## 浏览器支持 Browser support

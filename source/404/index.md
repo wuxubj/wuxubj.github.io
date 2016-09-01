@@ -11,4 +11,4 @@ permalink: /404
 <center>**对不起，您所访问的页面不存在或者已删除**
 你可以**[点击此处](http://www.wuxubj.cn)**返回首页。
 你也可以<a href="#" class="popup-trigger">**点击此处**</a>重新搜索结果。</center>
-![网站二维码](/images/wuxubj_mini.png)<center>扫一扫，用手机访问本站<center>
+<center><div style="width:200px;height:200px;padding-bottom:30px;">![网站二维码](/images/wuxubj_mini.png)扫一扫，用手机访问本站</div></center>

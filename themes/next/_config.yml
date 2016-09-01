@@ -399,7 +399,12 @@ passage_end_tag:
   enabled: true
 highqilai: 
   enabled: true
-  
+mobile_code:
+  enabled: true
+  qcode: /images/wuxubj.png
+  description: 扫一扫，用手机访问本站
+particle: 
+  enabled: false
 feed:
   type: atom
   path: atom.xml

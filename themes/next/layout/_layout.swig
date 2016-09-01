@@ -49,7 +49,9 @@
         {% block footer %}{% endblock %}
       </div>
     </footer>
-
+    {% if theme.mobile_code.enabled %}
+	  {% include '_macro/mobile-code.swig' %}
+	{% endif %}
     <div class="back-to-top">
       <i class="fa fa-arrow-up fa-2x"></i>
     </div>
@@ -71,6 +73,9 @@
   {% include '_scripts/third-party/lean-analytics.swig' %}
   {% include '_scripts/baidu-push.swig' %}
   {% include '_scripts/myscript/myscript.swig' %}
+  {% if theme.particle.enabled %}
+	  {% include '_scripts/myscript/particle.swig' %}
+	{% endif %}
   {% if page.title === "爱的纪念" %}
     {% include '_scripts/myscript/love.swig' %}
   {% endif %}

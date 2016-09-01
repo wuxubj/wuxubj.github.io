@@ -174,18 +174,18 @@ search:
 ```css
 #local-search-input {
   margin-bottom: 10px;
-  width: 50%;
   padding: 10px;
   width: 97%;
   font-size: 18px
-  background:url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iMTZweCIgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE2IDE2OyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMTYgMTYiIHdpZHRoPSIxNnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNMTUuNywxNC4zbC0zLjEwNS0zLjEwNUMxMy40NzMsMTAuMDI0LDE0LDguNTc2LDE0LDdjMC0zLjg2Ni0zLjEzNC03LTctN1MwLDMuMTM0LDAsN3MzLjEzNCw3LDcsNyAgYzEuNTc2LDAsMy4wMjQtMC41MjcsNC4xOTQtMS40MDVMMTQuMywxNS43YzAuMTg0LDAuMTg0LDAuMzgsMC4zLDAuNywwLjNjMC41NTMsMCwxLTAuNDQ3LDEtMUMxNiwxNC43ODEsMTUuOTQ2LDE0LjU0NiwxNS43LDE0LjN6ICAgTTIsN2MwLTIuNzYyLDIuMjM4LTUsNS01czUsMi4yMzgsNSw1cy0yLjIzOCw1LTUsNVMyLDkuNzYyLDIsN3oiLz48L3N2Zz4=") no-repeat 0 50%;
 }
 
+.popup .fa-search{padding:8px 0;}
+
 .search-keyword {
-  border-bottom: 1px dashed #ff0000;
+  border-bottom: 1px dashed #f00;
   font-size: 14px;
   font-weight: bold;
-  color: #ff0000;
+  color: #f00;
 }
 
 p.search-result {
@@ -198,17 +198,13 @@ p.search-result {
   overflow: auto;
 }
 ```
-最后，修改``themes\next\layout\_partials\search\localsearch.swig``文件，删除第二行的``<span class="search-icon fa fa-search"></span>``，去掉输入框右侧内置的搜索图标：
+如果觉得输入框search图标太小，可以将其放大。修改``themes\next\layout\_partials\search\localsearch.swig``文件，将第二行的``<span class="search-icon fa fa-search"></span>``修改为：
 ```html
-<div class="popup">
-
- <input type="text" id="local-search-input">
- <div id="local-search-result"></div>
- <span class="popup-btn-close">close</span>
-</div>
+<span class="search-icon fa fa-search fa-lg"></span>
 ```
 [点此查看](https://github.com/wuxubj/wuxubj.github.io/blob/hexo/themes/next/source/css/_common/components/third-party/localsearch.styl)我的``localsearch.styl``文件。
 [点此查看](https://github.com/wuxubj/wuxubj.github.io/blob/hexo/themes/next/layout/_partials/search/localsearch.swig)我的``localsearch.swig``文件。
+
 最终效果如图：
 
 ![localsearch](/images/201608/006.jpg)
@@ -228,6 +224,7 @@ p.search-result {
 duoshuo_shortname: wuxubj
 duoshuo_share: true
 ```
+多说分享有个小bug，当点击“分享到”会出现“缺少service参数”提示，而且下拉分享按钮有些是undefined，这个bug可以通过在 duoshuo.swig 中引用多说开发版js ：embed.unstable.js来修复。修改后的[duoshuo.swig](https://github.com/wuxubj/hexo-theme-next/commit/96c2d5d9938fb233d9a64292e0f729b446c1af0f)。当然也可以通过删除部分代码，取消更多分享的功能来修复这个bug（我就是这么干的）。
 最终效果如图：
 
 ![多说分享和多说评论](/images/201608/008.jpg)
