@@ -1,6 +1,6 @@
 // Custom styles.
-.hidden{display:none;}
 
+.hidden{display:none;}
 .site-subtitle{
 display: block;
 +mobile() {
@@ -135,7 +135,7 @@ margin-bottom: 30px;
 .mobile_code {
   box-sizing: border-box;
   position: fixed;
-  bottom: 300px;
+  bottom: 50%;
   right: 0;
   z-index: $zindex-5;
   padding: 2px 3px 0 3px;
@@ -147,10 +147,7 @@ margin-bottom: 30px;
   cursor: pointer;
   text-align: center;
   opacity:1;
-  +mobile() {
-    display: none;
-  }
-  
+  +mobile(){display:none;}
 
 }
 .mobile_code .code_img{
@@ -158,7 +155,7 @@ margin-bottom: 30px;
 	border: 1px solid #d1d2d6;
 	position: fixed;
 	right: 30px;
-	bottom: 230px;
+	bottom: 38%;
 	background-color: #fff;
 	display: none;
 	}

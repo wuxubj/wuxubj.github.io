@@ -2,13 +2,16 @@
   box-sizing: border-box;
   position: fixed;
   bottom: $b2t-position-bottom;
-  right: $b2t-position-right;
+  right: 80px;
   z-index: $zindex-5;
-  padding: 2px 3px;
+  padding: 4px 3px 0 3px;
   width: 30px;
-  background: $b2t-bg-color;
+  height:36px;
+ // background: $b2t-bg-color;
+  background: #ccc;
   font-size: $b2t-font-size;
-  opacity: $b2t-opacity;
+ // opacity: $b2t-opacity;
+  opacity: 1;
   color: $b2t-color;
   cursor: pointer;
   text-align: center;
@@ -25,8 +28,8 @@
 
   &.back-to-top-on {
     //bottom: $b2t-position-bottom-on;
-	bottom: 150px;
+	bottom: 128px;
   }
 }
 
-.back-to-top:hover{opacity:0.9;}
+.back-to-top:hover{background-color: #669fdd;}
