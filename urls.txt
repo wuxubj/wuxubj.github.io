@@ -19,4 +19,3 @@ http://www.wuxubj.cn/2016/07/find-sci-or-ei-index/index.html
 http://www.wuxubj.cn/2016/07/my-favorites/index.html
 http://www.wuxubj.cn/2016/07/mysql-learning-notes/index.html
 http://www.wuxubj.cn/2016/08/Hexo-nexT-build-personal-blog/index.html
-http://www.wuxubj.cn/2016/08/expression-evaluation/
