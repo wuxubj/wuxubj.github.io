@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.wuxubj.cn/js/myscript/mylove.js</loc>
+    
+    <lastmod>2016-09-03T13:48:54.270Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wuxubj.cn/mylove/index.html</loc>
+    
+    <lastmod>2016-09-03T13:47:30.935Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wuxubj.cn/guestbook/index.html</loc>
     
     <lastmod>2016-08-31T11:52:51.994Z</lastmod>
@@ -23,13 +37,6 @@
   </url>
   
   <url>
-    <loc>http://www.wuxubj.cn/mylove/index.html</loc>
-    
-    <lastmod>2016-08-31T02:07:41.950Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.wuxubj.cn/2016/08/Hexo-nexT-build-personal-blog/</loc>
     
     <lastmod>2016-08-30T11:22:58.450Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>http://www.wuxubj.cn/css/mycss/mylove.css</loc>
     
     <lastmod>2016-08-19T08:38:42.118Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wuxubj.cn/js/myscript/mylove.js</loc>
-    
-    <lastmod>2016-08-19T07:24:54.073Z</lastmod>
     
   </url>
   
