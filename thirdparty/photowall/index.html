@@ -33,19 +33,19 @@ function getCookie(cname){
 	return "";
 }
 function checkCookie(){
-	var user=getCookie("usernamelqw");
+	var user=getCookie("wuxubjmylove");
 	if (user!=""){
 		//alert("Welcome again " + user);
 	}
 	else {
 		user = prompt("该页面仅限熟人访问，请输入我女神的姓名（验证当天有效）：","");
   		if (user=="雷巧文"){
-    		setCookie("usernamelqw",user,1);
+    		setCookie("wuxubjmylove","lqw",1);
     	}else
 		{
 		alert("抱歉你无访问权限,即将转至首页..."); 
 		window.opener=null;
-		window.open('http://www.wuxubj.cn/mylove/','_self');
+		window.open('/mylove/','_self');
 		}
 	}
 }
