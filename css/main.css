@@ -1438,6 +1438,52 @@ pre .javascript .function {
 .fancybox-close:hover {
   border: none;
 }
+.post_copyright {
+  width: 85%;
+  max-width: 45em;
+  margin: 1.2em auto 0;
+  padding: 0.5em 1em;
+  border: 1px solid #d3d3d3;
+  font-size: 0.93rem;
+  line-height: 1.6em;
+  word-break: break-all;
+  background: rgba(255,255,255,0.4);
+}
+.post_copyright p {
+  margin: 0;
+}
+.post_copyright span {
+  display: inline-block;
+  width: 5.2em;
+  color: #b5b5b5;
+  font-weight: bold;
+}
+.post_copyright .raw {
+  margin-left: 1em;
+  width: 5em;
+}
+.post_copyright a {
+  color: #808080;
+  border-bottom: 0;
+}
+.post_copyright a:hover {
+  color: #a3d2a3;
+  text-decoration: underline;
+}
+.post_copyright:hover .fa-clipboard {
+  color: #000;
+}
+.post_copyright .post-url:hover {
+  font-weight: normal;
+}
+.post_copyright .copy-path {
+  margin-left: 1em;
+  width: 1em;
+}
+.post_copyright .copy-path:hover {
+  color: #808080;
+  cursor: pointer;
+}
 .sidebar {
   position: fixed;
   right: 0;
@@ -1595,7 +1641,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fcf;
+  background: #d68529;
 }
 .links-of-author-item {
   text-align: center;
