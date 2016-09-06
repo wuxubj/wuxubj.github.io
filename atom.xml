@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.wuxubj.cn/"/>
-  <updated>2016-08-21T14:30:17.699Z</updated>
+  <updated>2016-09-06T13:25:23.873Z</updated>
   <id>http://www.wuxubj.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.wuxubj.cn/2016/08/expression-evaluation/"/>
     <id>http://www.wuxubj.cn/2016/08/expression-evaluation/</id>
     <published>2016-08-21T12:52:26.000Z</published>
-    <updated>2016-08-21T14:30:17.699Z</updated>
+    <updated>2016-09-06T13:25:23.873Z</updated>
     
     <content type="html"><![CDATA[<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><p>编写一个程序可以完成基本的带括号的四则运算。其中除法(/)是整除，并且在负数除法时向0取整。(C/C++/Java默认的除法就是向0取整，python默认的是向负无穷取整)。<br>例如计算 <code>100 * ( 2 + 12 ) - (20 / 3) * 2</code>, 结果是<code>1388</code>。<br><strong>样例输入：</strong><br><code>100*(2+12)-(20/3)*2</code><br><strong>样例输出：</strong><br><code>1388</code><br><a id="more"></a></p>
 <h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>中缀表达式将二元运算符放在两个操作数之间，而后缀表达式的每个运算符都出现在相应操作数之后。后缀表达式去掉了括号，因此在计算机中，用后缀表达式求值更为简单。<br><code>100*(2+12)-(20/3)*2</code>为中缀表达式，其对应的后缀表达式(逆波兰式)为<code>100&amp;2&amp;12+*20&amp;3/2*-</code>。<br>用用后缀表达式求值是栈的典型应用，其步骤分为两步：</p>
