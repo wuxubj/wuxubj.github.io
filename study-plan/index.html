@@ -390,25 +390,34 @@ OJ平台LeetCode Online JudgehihoCoder华为OJ平">
   <p><span>发布时间:</span>2016年08月10日 - 19时08分</p>
   <p><span>最后更新:</span>2016年08月11日 - 11时08分</p>
   <p><span>原始链接:</span><a href="/study-plan/index.html" title="学习计划">http://www.wuxubj.cn/study-plan/index.html</a>
-    <span class="copy-path" data-clipboard-text="http://www.wuxubj.cn/study-plan/index.html"  aria-label="复制成功！" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-    <script> 
-	  var clipboard = new Clipboard('.copy-path'); 
-	  clipboard.on('success', $(function(e){
-	    $(".fa-clipboard").click(function(){
-		  swal({   
-			title: "",   
-			text: '复制成功',   
-			html: false,
-			timer: 500,   
-			showConfirmButton: false
-		  });
-	    });
-}));
-	  
-	</script>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.wuxubj.cn/study-plan/index.html"  aria-label="复制成功！"></i></span>
   </p>
-         <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)">Attribution-NonCommercial 4.0</a> 转载请保留原文链接及作者。</p>  
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" title="Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)">Attribution-NonCommercial 4.0</a> 转载请保留原文链接及作者。</p>  
 </div>
+
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', function(e) {
+//	  var msg = e.trigger.getAttribute('aria-label');
+//	  alert(msg);
+//    console.info('Action:', e.action);
+//    console.info('Text:', e.text);
+//    console.info('Trigger:', e.trigger);
+      e.clearSelection();
+      });
+	  
+	clipboard.on('success', $(function(){
+	  $(".fa-clipboard").click(function(){
+		swal({   
+		  title: "",   
+		  text: '复制成功',   
+		  html: false,
+		  timer: 500,   
+		  showConfirmButton: false
+	    });
+	  });
+    }));  
+</script>
 
       
     </div>

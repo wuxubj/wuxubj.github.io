@@ -537,7 +537,7 @@ pre code {
   font-size: 1em;
   color: #4d4d4c;
   line-height: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 .highlight figcaption:before,
 .highlight figcaption:after {
@@ -553,6 +553,11 @@ pre code {
 }
 .highlight figcaption a:hover {
   border-bottom-color: #4d4d4c;
+}
+@media (max-width: 767px) {
+  .highlight figcaption {
+    display: none;
+  }
 }
 .highlight .gutter pre {
   color: #666;
@@ -624,6 +629,16 @@ pre .coffeescript .title {
 pre .keyword,
 pre .javascript .function {
   color: #8959a8;
+}
+.codecopy {
+  margin: 0;
+  padding: 0;
+}
+.codecopy br {
+  display: none;
+}
+.codecopy figure br {
+  display: block;
 }
 .full-image.full-image.full-image {
   border: none;
@@ -1646,7 +1661,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f258ff;
+  background: #c1c8e3;
 }
 .links-of-author-item {
   text-align: center;
@@ -2810,6 +2825,16 @@ body {
   background-color: #669fdd;
 }
 .mobile_code:hover .code_img {
+  display: block;
+}
+.codecopy {
+  margin: 0;
+  padding: 0;
+}
+.codecopy br {
+  display: none;
+}
+.codecopy figure br {
   display: block;
 }
 @-moz-keyframes cycle {
