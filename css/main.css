@@ -1480,6 +1480,11 @@ pre .javascript .function {
   margin-left: 1em;
   width: 1em;
 }
+@media (max-width: 767px) {
+  .post_copyright .copy-path {
+    display: none;
+  }
+}
 .post_copyright .copy-path:hover {
   color: #808080;
   cursor: pointer;
@@ -1641,7 +1646,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d68529;
+  background: #f258ff;
 }
 .links-of-author-item {
   text-align: center;
