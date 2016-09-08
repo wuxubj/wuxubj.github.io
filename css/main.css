@@ -1661,7 +1661,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c1c8e3;
+  background: #33ff4b;
 }
 .links-of-author-item {
   text-align: center;
@@ -2825,16 +2825,6 @@ body {
   background-color: #669fdd;
 }
 .mobile_code:hover .code_img {
-  display: block;
-}
-.codecopy {
-  margin: 0;
-  padding: 0;
-}
-.codecopy br {
-  display: none;
-}
-.codecopy figure br {
   display: block;
 }
 @-moz-keyframes cycle {

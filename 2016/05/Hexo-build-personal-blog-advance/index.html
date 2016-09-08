@@ -59,7 +59,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="NexT,Hexo," />
+  <meta name="keywords" content="Hexo,NexT," />
 
 
 
@@ -92,7 +92,7 @@
 <meta property="og:image" content="http://o9w8f1xrl.bkt.clouddn.com/images/201605/25.jpg">
 <meta property="og:image" content="http://o9w8f1xrl.bkt.clouddn.com/images/201605/26.jpg">
 <meta property="og:image" content="http://o9w8f1xrl.bkt.clouddn.com/images/201605/27.jpg">
-<meta property="og:updated_time" content="2016-08-17T01:40:24.699Z">
+<meta property="og:updated_time" content="2016-09-08T06:43:59.996Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo搭建个人博客(进阶篇)">
 <meta name="twitter:description" content="本文为建站初期小结，查看完整建站教程：Hexo+nexT主题搭建个人博客
@@ -363,15 +363,18 @@
 <p><img src="http://o9w8f1xrl.bkt.clouddn.com/images/201605/21.jpg" alt="fig21"></p>
 <p>2.添加搜索框。我们希望搜索界面是这样的：</p>
 <p><img src="http://o9w8f1xrl.bkt.clouddn.com/images/201605/22.jpg" alt="fig22"></p>
-<p>具体操作如下：<br>编辑路径<code>\themes\next\source\css\_schemes\Mist</code>下的<code>_search.styl</code>文件，添加如下样式：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">.site-search &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  float: right;</span><br><span class="line">  margin-top: 8px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.site-search form &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  margin-top: 0em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.site-search input &#123;</span><br><span class="line">    padding: 3px;</span><br><span class="line">    border: none;</span><br><span class="line">    padding-left: 18px;</span><br><span class="line">    border-radius: 0;</span><br><span class="line">    width: 140px;</span><br><span class="line">    background:url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iMTZweCIgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE2IDE2OyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMTYgMTYiIHdpZHRoPSIxNnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNMTUuNywxNC4zbC0zLjEwNS0zLjEwNUMxMy40NzMsMTAuMDI0LDE0LDguNTc2LDE0LDdjMC0zLjg2Ni0zLjEzNC03LTctN1MwLDMuMTM0LDAsN3MzLjEzNCw3LDcsNyAgYzEuNTc2LDAsMy4wMjQtMC41MjcsNC4xOTQtMS40MDVMMTQuMywxNS43YzAuMTg0LDAuMTg0LDAuMzgsMC4zLDAuNywwLjNjMC41NTMsMCwxLTAuNDQ3LDEtMUMxNiwxNC43ODEsMTUuOTQ2LDE0LjU0NiwxNS43LDE0LjN6ICAgTTIsN2MwLTIuNzYyLDIuMjM4LTUsNS01czUsMi4yMzgsNSw1cy0yLjIzOCw1LTUsNVMyLDkuNzYyLDIsN3oiLz48L3N2Zz4=") no-repeat 0 50%;</span><br><span class="line">    background-size: 12px 12px;</span><br><span class="line">    outline: none;</span><br><span class="line">    border-bottom: 1px solid #999;</span><br><span class="line">    opacity: 0.5;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>编辑路径<code>\themes\next\source\css\_schemes\Mist</code>下的<code>_menu.styl</code>文件，添加如下样式：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.menu &#123;</span><br><span class="line">  float: left;</span><br><span class="line">  margin: 8px 0 0 20px;</span><br><span class="line">  padding: 0 20px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>具体操作如下：<br>编辑路径<code>\themes\next\source\css\_schemes\Mist</code>下的<code>_search.styl</code>文件，添加如下样式：</p>
+<p><div class="codecopy codecopy1"> <figure class="highlight html"><figcaption><span><i class="fa fa-clipboard" data-clipboard-target=".codecopy1 .code pre" aria-label="复制成功！" title="点击复制代码"></i></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">.site-search &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  float: right;</span><br><span class="line">  margin-top: 8px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.site-search form &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  margin-top: 0em;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.site-search input &#123;</span><br><span class="line">    padding: 3px;</span><br><span class="line">    border: none;</span><br><span class="line">    padding-left: 18px;</span><br><span class="line">    border-radius: 0;</span><br><span class="line">    width: 140px;</span><br><span class="line">    background:url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iMTZweCIgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE2IDE2OyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMTYgMTYiIHdpZHRoPSIxNnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNMTUuNywxNC4zbC0zLjEwNS0zLjEwNUMxMy40NzMsMTAuMDI0LDE0LDguNTc2LDE0LDdjMC0zLjg2Ni0zLjEzNC03LTctN1MwLDMuMTM0LDAsN3MzLjEzNCw3LDcsNyAgYzEuNTc2LDAsMy4wMjQtMC41MjcsNC4xOTQtMS40MDVMMTQuMywxNS43YzAuMTg0LDAuMTg0LDAuMzgsMC4zLDAuNywwLjNjMC41NTMsMCwxLTAuNDQ3LDEtMUMxNiwxNC43ODEsMTUuOTQ2LDE0LjU0NiwxNS43LDE0LjN6ICAgTTIsN2MwLTIuNzYyLDIuMjM4LTUsNS01czUsMi4yMzgsNSw1cy0yLjIzOCw1LTUsNVMyLDkuNzYyLDIsN3oiLz48L3N2Zz4=") no-repeat 0 50%;</span><br><span class="line">    background-size: 12px 12px;</span><br><span class="line">    outline: none;</span><br><span class="line">    border-bottom: 1px solid #999;</span><br><span class="line">    opacity: 0.5;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
+<p>编辑路径<code>\themes\next\source\css\_schemes\Mist</code>下的<code>_menu.styl</code>文件，添加如下样式：</p>
+<p><div class="codecopy codecopy2"> <figure class="highlight cpp"><figcaption><span><i class="fa fa-clipboard" data-clipboard-target=".codecopy2 .code pre" aria-label="复制成功！" title="点击复制代码"></i></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.menu &#123;</span><br><span class="line">  <span class="keyword">float</span>: left;</span><br><span class="line">  margin: <span class="number">8</span>px <span class="number">0</span> <span class="number">0</span> <span class="number">20</span>px;</span><br><span class="line">  padding: <span class="number">0</span> <span class="number">20</span>px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
 <p>效果如下图所示：</p>
 <p><img src="http://o9w8f1xrl.bkt.clouddn.com/images/201605/23.jpg" alt="fig23"></p>
 <p>3.去掉导航栏搜索按钮<br>编辑路径<code>\themes\next\layout\_partials</code>下的<code>header.swig</code>文件，去掉红色框内的代码，如图：</p>
 <p><img src="http://o9w8f1xrl.bkt.clouddn.com/images/201605/24.jpg" alt="fig24"></p>
 <p>最终效果为：</p>
 <p><img src="http://o9w8f1xrl.bkt.clouddn.com/images/201605/25.jpg" alt="fig25"></p>
-<h3 id="增大导航栏高度"><a href="#增大导航栏高度" class="headerlink" title="增大导航栏高度"></a>增大导航栏高度</h3><p>编辑路径<code>\themes\next\source\css\_schemes\Mist</code>下的<code>_header.styl</code>文件，修改样式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.header-inner &#123;</span><br><span class="line">  padding: 40px 0;</span><br><span class="line">  margin-bottom: 80px;</span><br><span class="line">  clearfix();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="增大导航栏高度"><a href="#增大导航栏高度" class="headerlink" title="增大导航栏高度"></a>增大导航栏高度</h3><p>编辑路径<code>\themes\next\source\css\_schemes\Mist</code>下的<code>_header.styl</code>文件，修改样式：</p>
+<p><div class="codecopy codecopy3"> <figure class="highlight cpp"><figcaption><span><i class="fa fa-clipboard" data-clipboard-target=".codecopy3 .code pre" aria-label="复制成功！" title="点击复制代码"></i></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.header-inner &#123;</span><br><span class="line">  padding: <span class="number">40</span>px <span class="number">0</span>;</span><br><span class="line">  margin-bottom: <span class="number">80</span>px;</span><br><span class="line">  clearfix();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
 <p>效果如图：</p>
 <p><img src="http://o9w8f1xrl.bkt.clouddn.com/images/201605/26.jpg" alt="fig26"></p>
 <h3 id="添加留言页面及最近访客"><a href="#添加留言页面及最近访客" class="headerlink" title="添加留言页面及最近访客"></a>添加留言页面及最近访客</h3><p>1.参考：<a href="http://theme-next.iissnan.com/getting-started.html#comment-system-duoshuo" target="_blank" rel="external">多说评论</a>完成基本配置实现多说评论。<br>2.新建留言页面guestbook: <code>hexo new page guestbook</code> ,在主题配置文件<code>_config.yml</code>的<code>menu</code>项中添加<code>guestbook: /guestbook</code>,即：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  categories: /categories</span><br><span class="line">  #about: /about</span><br><span class="line">  archives: /archives</span><br><span class="line">  tags: /tags</span><br><span class="line">  guestbook: /guestbook</span><br><span class="line">  #commonweal: /404.html</span><br></pre></td></tr></table></figure></p>
@@ -420,7 +423,7 @@
   <p><span>本文标题:</span><a href="/2016/05/Hexo-build-personal-blog-advance/">Hexo搭建个人博客(进阶篇)</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 wuxubj 的个人博客">wuxubj</a></p>
   <p><span>发布时间:</span>2016年05月21日 - 16时05分</p>
-  <p><span>最后更新:</span>2016年08月17日 - 09时08分</p>
+  <p><span>最后更新:</span>2016年09月08日 - 14时09分</p>
   <p><span>原始链接:</span><a href="/2016/05/Hexo-build-personal-blog-advance/" title="Hexo搭建个人博客(进阶篇)">http://www.wuxubj.cn/2016/05/Hexo-build-personal-blog-advance/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.wuxubj.cn/2016/05/Hexo-build-personal-blog-advance/"  aria-label="复制成功！"></i></span>
   </p>
@@ -458,9 +461,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/NexT/" rel="tag">#NexT</a>
-          
             <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+          
+            <a href="/tags/NexT/" rel="tag">#NexT</a>
           
         </div>
       
@@ -866,12 +869,12 @@ function shake() {
     </footer>
     
 	  <div class="mobile_code">
-    <i class="fa fa-mobile-phone fa-2x"></i>
+    <i class="fa fa-mobile-phone fa-2x" title="手机访问"></i>
 	<div class="code_img"><img src="/images/wuxubj.png" alt="扫一扫，用手机访问本站"></div>
 </div>
 	
     <div class="back-to-top">
-      <i class="fa fa-arrow-up fa-2x"></i>
+      <i class="fa fa-arrow-up fa-2x" title="回到顶部"></i>
     </div>
   </div>
 
