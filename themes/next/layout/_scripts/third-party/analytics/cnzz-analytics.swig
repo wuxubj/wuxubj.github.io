@@ -1,7 +1,5 @@
 {% if theme.aaa %}
-
   <div style="display: none;">
-    <script src="http://s6.cnzz.com/stat.php?id={{ theme.cnzz_siteid }}&web_id={{ theme.cnzz_siteid }}" type="text/javascript"></script>
+    <script src="https://s11.cnzz.com/z_stat.php?id={{ theme.cnzz_siteid }}&web_id={{ theme.cnzz_siteid }}" language="javascript"></script>
   </div>
-
 {% endif %}

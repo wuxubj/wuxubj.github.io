@@ -201,6 +201,12 @@
         {% include 'reward.swig' %}
       {% endif %}
     </div>
+	
+	<div>
+      {% if not is_index %}
+        {% include 'copyright.swig' %}
+      {% endif %}
+    </div>
 
     <footer class="post-footer">
       {% if post.tags and post.tags.length and not is_index %}

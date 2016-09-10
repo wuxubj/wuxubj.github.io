@@ -111,11 +111,12 @@ social:
   Weibo: http://weibo.com/wuxubj
 ```
 本博客将侧栏社交链接设置居中显示，修改``themes\next\source\css\_common\components\sidebar\sidebar-author-links.styl``文件，添加如下样式：
-```css
+<div class="codecopy codecopy0"> ```css <i class="fa fa-clipboard" data-clipboard-target=".codecopy0 .code pre" aria-label="复制成功！" title="点击复制代码"></i>
 .links-of-author-item {
   text-align: center;
   }
 ```
+</div>
 **2.&nbsp;&nbsp;添加侧栏友情链接**
 在<font color=#f00>主题配置文件</font> ``_config.yml``中`` Sidebar Settings``部分添加字段：
 ```yml
@@ -128,7 +129,7 @@ links:
 ```
 本博客侧栏友情链接使用了与侧栏社交链接相同的css样式，但文本左对齐。实现方法为：
 修改``themes\next\layout\_macro\sidebar.swig``，将如下内容
-```html
+<div class="codecopy codecopy1"> ```html <i class="fa fa-clipboard" data-clipboard-target=".codecopy1 .code pre" aria-label="复制成功！" title="点击复制代码"></i>
 <ul class="links-of-blogroll-list">
   {% for name, link in theme.links %}
     <li class="links-of-blogroll-item">
@@ -139,8 +140,8 @@ links:
   {% endfor %}
 </ul>
 ```
-修改为：
-```html
+</div>修改为：
+<div class="codecopy codecopy2"> ```cpp <i class="fa fa-clipboard" data-clipboard-target=".codecopy2 .code pre" aria-label="复制成功！" title="点击复制代码"></i>
 {% for name, link in theme.links %}
   <span class="links-of-author-item" style="text-align:left">
     <a href="{{ link }}" title="{{ name }}" target="_blank">
@@ -149,6 +150,7 @@ links:
   </span>
 {% endfor %}
 ```
+</div>
 ### 添加并美化本地搜索
 很多 NexT 主题的博主都使用 Swiftype 搜索，但是 Swiftype 文章同步更新缓慢，且只有15天的试用期，用户体验很是不好。NexT 主题内置了本地站内搜索，但是其显示界面太过粗糙，本文对其进行了一些美化。下面是添加并美化本地搜索的具体方法。
 
@@ -171,7 +173,7 @@ search:
 
 **2.&nbsp;&nbsp;弹窗界面美化**
 本地搜索的样式文件路径为``themes\next\source\css\_common\components\third-party\localsearch.styl``。本地搜索弹窗界面美化主要包括搜索输入显示、搜索结果关键字显示和搜索结果段落排版的美化，相关css样式为：
-```css
+<div class="codecopy codecopy3"> ```css <i class="fa fa-clipboard" data-clipboard-target=".codecopy3 .code pre" aria-label="复制成功！" title="点击复制代码"></i>
 #local-search-input {
   margin-bottom: 10px;
   padding: 10px;
@@ -198,7 +200,7 @@ p.search-result {
   overflow: auto;
 }
 ```
-如果觉得输入框search图标太小，可以将其放大。修改``themes\next\layout\_partials\search\localsearch.swig``文件，将第二行的``<span class="search-icon fa fa-search"></span>``修改为：
+</div>如果觉得输入框search图标太小，可以将其放大。修改``themes\next\layout\_partials\search\localsearch.swig``文件，将第二行的``<span class="search-icon fa fa-search"></span>``修改为：
 ```html
 <span class="search-icon fa fa-search fa-lg"></span>
 ```
@@ -235,7 +237,7 @@ duoshuo_share: true
 <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
 ```
 然后到多说后台管理->设置->基本设置->自定义css中添加如下css样式：
-```css
+<div class="codecopy codecopy4"> ```css <i class="fa fa-clipboard" data-clipboard-target=".codecopy4 .code pre" aria-label="复制成功！" title="点击复制代码"></i>
 #ds-reset .ds-avatar img,
 #ds-recent-visitors .ds-avatar img {
 width: 54px;
@@ -275,7 +277,7 @@ float: left
 display: none;
 }
 ```
-效果如图：
+</div>效果如图：
 
 ![多说最近访客](/images/201608/009.jpg)
 
@@ -296,20 +298,20 @@ cnzz_siteid: 1259784696
 
 **2.&nbsp;&nbsp;页脚添加“站长统计”链接**
 修改``\themes\next\layout\_partials\footer.swig``文件，在``<span class="author" itemprop="copyrightHolder">{{ config.author }}</span>``后面添加如下代码：
-```html
+<div class="codecopy codecopy5"> ```html <i class="fa fa-clipboard" data-clipboard-target=".codecopy5 .code pre" aria-label="复制成功！" title="点击复制代码"></i>
 {% if theme.cnzz_siteid %}
    <span style="margin-left:8px;">
    <script src="http://s6.cnzz.com/stat.php?id={{ theme.cnzz_siteid }}&web_id={{ theme.cnzz_siteid }}" type="text/javascript"></script>
    </span>
 {% endif %}
 ```
-最终效果如图：
+</div>最终效果如图：
 
 ![cnzz](/images/201608/010.jpg)
 
 ### 设置404页面
 刚开始使用腾讯404公益页面，但是移动端适配不好，遂弃之。我现在的[404页面](/404.html)对应的markdown文件内容为：
-```markdown
+<div class="codecopy codecopy6"> ```markdown <i class="fa fa-clipboard" data-clipboard-target=".codecopy6 .code pre" aria-label="复制成功！" title="点击复制代码"></i>
 ---
 title: 404-找不到页面
 date: 2016-05-21 18:53:59
@@ -325,7 +327,7 @@ permalink: /404
 你也可以<a href="#" class="popup-trigger">**点击此处**</a>重新搜索结果。</center>
 ![网站二维码](/images/wuxubj_mini.png)<center>扫一扫，用手机访问本站<center>
 ```
-效果如下图所示：
+</div>效果如下图所示：
 
 ![404页面](/images/201608/011.jpg)
 
@@ -362,7 +364,7 @@ menu_icons:
 ### 修改文章内链接文本样式
 将链接文本设置为蓝色，鼠标划过时文字颜色加深，并显示下划线。
 修改文件``themes\next\source\css\_common\components\post\post.styl``，添加如下css样式，：
-```css
+<div class="codecopy codecopy7"> ```html <i class="fa fa-clipboard" data-clipboard-target=".codecopy7 .code pre" aria-label="复制成功！" title="点击复制代码"></i>
 .post-body p a{
   color: #0593d3;
   border-bottom: none;
@@ -374,27 +376,27 @@ menu_icons:
 }
 
 ```
-选择``.post-body``是为了不影响标题，选择``p``是为了不影响首页“阅读全文”的显示样式。
+</div>选择``.post-body``是为了不影响标题，选择``p``是为了不影响首页“阅读全文”的显示样式。
 ### 文章末尾添加“本文结束”标记
 ![本文结束标记](/images/201608/012.jpg)
 **1.&nbsp;&nbsp;新建 passage-end-tag.swig 文件**
 在路径``\themes\next\layout\_macro``中添加``passage-end-tag.swig``文件，其内容为：
-```html
+<div class="codecopy codecopy8"> ```html <i class="fa fa-clipboard" data-clipboard-target=".codecopy8 .code pre" aria-label="复制成功！" title="点击复制代码"></i>
 {% if theme.passage_end_tag.enabled %}
 <div style="text-align:center;color: #ccc;font-size:14px;">
 ------ 本文结束 ------</div>
 {% endif %}
 ```
-**2.&nbsp;&nbsp;修改 post.swig 文件**
+</div>**2.&nbsp;&nbsp;修改 post.swig 文件**
 在``\themes\next\layout\_macro\post.swig``中，``post-body``之后，``post-footer``之前添加如下代码：
-```html
+<div class="codecopy codecopy9"> ```yml <i class="fa fa-clipboard" data-clipboard-target=".codecopy9 .code pre" aria-label="复制成功！" title="点击复制代码"></i>
 <div>
   {% if not is_index %}
     {% include 'passage-end-tag.swig' %}
   {% endif %}
 </div>
 ```
-**3.&nbsp;&nbsp;在主题配置文件中添加字段**
+</div>**3.&nbsp;&nbsp;在主题配置文件中添加字段**
 在<font color=#f00>主题配置文件</font> ``_config.yml``中添加以下字段开启此功能：
 ```yml
 # 文章末尾添加“本文结束”标记
@@ -427,15 +429,15 @@ wechat_subscriber:
 <nav class="site-nav" id="site-nav">
 ```
 设置手机端默认不显示网站副标题。在``themes\next\source\css\_common\components\header\site-meta.styl``中添加如下样式：
-```css
+<div class="codecopy codecopy11"> ```html <i class="fa fa-clipboard" data-clipboard-target=".codecopy11 .code pre" aria-label="复制成功！" title="点击复制代码"></i>
 .site-subtitle{
 +mobile() {
     display: none;
   }
 }
 ```
-**2.&nbsp;&nbsp;编写JavaScript函数**
-```javascript
+</div>**2.&nbsp;&nbsp;编写JavaScript函数**
+<div class="codecopy codecopy10"> ```html <i class="fa fa-clipboard" data-clipboard-target=".codecopy10 .code pre" aria-label="复制成功！" title="点击复制代码"></i>
 </script>
 <script type="text/JavaScript">
 function showSubtitle()
@@ -455,7 +457,7 @@ function showSubtitle()
 </script>
 
 ```
-将其放到任意一个``*.swig``文件中，在``_layout.swig``中引入即可。我的处理方法是，在``themes\next\layout\_scripts\``文件夹中新建``myscript``文件夹，专门用于存放自己添加的JavaScript代码。在里面创建一个``myscript.swig``文件，将上述代码copy到里面，再在``themes\next\layout\_layout.swig``中添加如下代码引入：
+</div>将其放到任意一个``*.swig``文件中，在``_layout.swig``中引入即可。我的处理方法是，在``themes\next\layout\_scripts\``文件夹中新建``myscript``文件夹，专门用于存放自己添加的JavaScript代码。在里面创建一个``myscript.swig``文件，将上述代码copy到里面，再在``themes\next\layout\_layout.swig``中添加如下代码引入：
 ```yml
 {% include '_scripts/myscript/myscript.swig' %}
 ```
@@ -463,14 +465,14 @@ function showSubtitle()
 
 **3.&nbsp;&nbsp;点击网站标题旁边的按钮时触发JavaScript函数**
 在``themes\next\layout\_partials\header.swig``中给``<button></button>``添加 onclick 事件：
-```html
+<div class="codecopy codecopy12"> ```html <i class="fa fa-clipboard" data-clipboard-target=".codecopy12 .code pre" aria-label="复制成功！" title="点击复制代码"></i>
 <button onclick="showSubtitle()">
   <span class="btn-bar"></span>
   <span class="btn-bar"></span>
   <span class="btn-bar"></span>
 </button>
 ```
-[点击](https://github.com/wuxubj/wuxubj.github.io/blob/hexo/themes/next/layout/_partials/header.swig)查看我的``header.swig``文件。
+</div>[点击](https://github.com/wuxubj/wuxubj.github.io/blob/hexo/themes/next/layout/_partials/header.swig)查看我的``header.swig``文件。
 
 ### 其他美化
 1.标签云页面鼠标划过字体加粗
@@ -495,7 +497,7 @@ path: sitemap.xml
 
 ### 添加 robots.txt
 网站通过Robots协议告诉搜索引擎哪些页面可以抓取，哪些页面不能抓取。robots.txt 通常存放于网站根目录。我的 robots.txt 内容为：
-```txt
+<div class="codecopy codecopy13"> ```txt <i class="fa fa-clipboard" data-clipboard-target=".codecopy13 .code pre" aria-label="复制成功！" title="点击复制代码"></i>
 User-agent: *
 Allow: /
 Allow: /archives/
@@ -516,6 +518,7 @@ Disallow: /fancybox/
 
 Sitemap: http://wuxubj.cn/sitemap.xml
 ```
+</div>
 ### 开启百度自动推送
 在<font color=#f00>主题配置文件</font> ``_config.yml``中添加如下字段：
 ```yml

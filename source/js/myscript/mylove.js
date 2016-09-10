@@ -33,6 +33,19 @@ function loveTime(startDate){
 
 setInterval("loveTime('2014/02/6 19:46:00')",1000);
 
+function imgStop(strid){
+var a = document.getElementById(strid);
+a.style["animation"]="cycle 0s 0s infinite";
+a.style["border-radius"]="0";
+}
+
+function imgStart(strid){
+var a = document.getElementById(strid);
+a.style["border-radius"]="100%";
+a.style["animation"]="cycle 2s 0.5s infinite";
+a.style["transition"]="border-radius 2s";
+}
+
 var ap3 = new APlayer({
             element: document.getElementById('player3'),
             narrow: false,

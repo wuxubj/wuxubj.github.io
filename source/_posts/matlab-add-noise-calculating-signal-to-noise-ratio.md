@@ -34,7 +34,7 @@ SNR(dB)=10*log10(Ps/Pn)
 ``y = awgn(x,SNR,SIGPOWER,STATE)`` 重置RANDN的状态。
 ``y = awgn(…,POWERTYPE)`` 指定SNR和SIGPOWER的单位。POWERTYPE可以是'dB'或'linear'。如果POWERTYPE是'dB'，那么SNR以dB为单位，而SIGPOWER以dBW为单位。如果POWERTYPE是'linear'，那么SNR作为比值来度量，而SIGPOWER以瓦特为单位。
 示例：
-```matlab
+<div class="codecopy codecopy1"> ```matlab <i class="fa fa-clipboard" data-clipboard-target=".codecopy1 .code pre" aria-label="复制成功！" title="点击复制代码"></i>
 close all;clear all;clc
 f=100;
 fs=1000;
@@ -63,9 +63,8 @@ plot(t,y1);
 xlabel('t');
 title('加入高斯白噪声后的信号(SNR=5)');
 ```
-加入的高斯白噪声是随机的，所以``snr_out1``和``snr_out2``在``snr=5``上下波动。波形如图：
+</div>加入的高斯白噪声是随机的，所以``snr_out1``和``snr_out2``在``snr=5``上下波动。波形如图：
 ![fig31](http://o9w8f1xrl.bkt.clouddn.com/images/201605/31.jpg)
-</br>
 参考文献：
 [1] [matlab中的信噪比](http://blog.sina.com.cn/s/blog_758ebadc0100qchy.html)
 [2] [Matlab信号上叠加噪声和信噪比的计算](http://www.ilovematlab.cn/thread-54155-1-1.html)

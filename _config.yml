@@ -71,7 +71,7 @@ deploy:
   type: git
   repo: 
     github: git@github.com:wuxubj/wuxubj.github.io.git
-#    coding: git@git.coding.net:wuxubj/wuxubj.git
+    coding: git@git.coding.net:wuxubj/wuxubj.git
   branch: master
 
 #add by wuxubj

@@ -48,7 +48,7 @@ menu:
 
 具体操作如下：
 编辑路径``\themes\next\source\css\_schemes\Mist``下的``_search.styl``文件，添加如下样式：
-```html
+<div class="codecopy codecopy1"> ```html <i class="fa fa-clipboard" data-clipboard-target=".codecopy1 .code pre" aria-label="复制成功！" title="点击复制代码"></i>
 .site-search {
   display: block;
   float: right;
@@ -73,15 +73,15 @@ menu:
     opacity: 0.5;
 }
 ```
-编辑路径``\themes\next\source\css\_schemes\Mist``下的``_menu.styl``文件，添加如下样式：
-```html
+</div>编辑路径``\themes\next\source\css\_schemes\Mist``下的``_menu.styl``文件，添加如下样式：
+<div class="codecopy codecopy2"> ```cpp <i class="fa fa-clipboard" data-clipboard-target=".codecopy2 .code pre" aria-label="复制成功！" title="点击复制代码"></i>
 .menu {
   float: left;
   margin: 8px 0 0 20px;
   padding: 0 20px;
 }
 ```
-效果如下图所示：
+</div>效果如下图所示：
 
 ![fig23](http://o9w8f1xrl.bkt.clouddn.com/images/201605/23.jpg)
 
@@ -96,14 +96,14 @@ menu:
 
 ### 增大导航栏高度
 编辑路径``\themes\next\source\css\_schemes\Mist``下的``_header.styl``文件，修改样式：
-```
+<div class="codecopy codecopy3"> ```cpp <i class="fa fa-clipboard" data-clipboard-target=".codecopy3 .code pre" aria-label="复制成功！" title="点击复制代码"></i>
 .header-inner {
   padding: 40px 0;
   margin-bottom: 80px;
   clearfix();
 }
 ```
-效果如图：
+</div>效果如图：
 
 ![fig26](http://o9w8f1xrl.bkt.clouddn.com/images/201605/26.jpg)
 

@@ -23,6 +23,5 @@ function showSubtitle()
    var subTitle=document.getElementById("site-subtitle");
    subTitle.style.display="block";
   }
-
 }
 </script>

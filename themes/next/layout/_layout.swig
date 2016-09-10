@@ -53,7 +53,7 @@
 	  {% include '_macro/mobile-code.swig' %}
 	{% endif %}
     <div class="back-to-top">
-      <i class="fa fa-arrow-up fa-2x"></i>
+      <i class="fa fa-arrow-up fa-2x" title="回到顶部"></i>
     </div>
   </div>
 

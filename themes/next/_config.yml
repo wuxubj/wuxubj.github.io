@@ -35,7 +35,16 @@ menu:
   #weblog: /weblog
   #commonweal: /404.html
 
-
+#themes\next\layout\_partials\header.swig  
+menu_show:
+  home: /
+  categories: /categories
+  #about: /about
+  archives: /archives
+  #tags: /tags
+  guestbook: /guestbook
+  mylove: /mylove
+  
 # Enable/Disable menu icons.
 # Icon Mapping:
 #   Map a menu item to a specific FontAwesome icon name.
@@ -222,7 +231,7 @@ auto_excerpt:
 
 # Wechat Subscriber
 wechat_subscriber:
-  enabled: true
+  enabled: false
   qcode: /images/wuxubj.png
   description: 扫一扫，用手机访问本站
 
@@ -395,6 +404,8 @@ js: js
 images: images
 
 # 文章末尾添加“本文结束”标记
+copyright: 
+  enabled: true
 passage_end_tag:
   enabled: true
 highqilai: 
