@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.wuxubj.cn/guestbook/index.html</loc>
+    
+    <lastmod>2016-09-11T12:06:38.609Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.wuxubj.cn/mylove/index.html</loc>
+    
+    <lastmod>2016-09-10T15:32:19.972Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.wuxubj.cn/2016/09/install-ssl-apache2-ubuntu/</loc>
     
     <lastmod>2016-09-10T12:58:45.497Z</lastmod>
@@ -72,23 +86,9 @@
   </url>
   
   <url>
-    <loc>http://www.wuxubj.cn/mylove/index.html</loc>
-    
-    <lastmod>2016-09-06T04:34:56.222Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.wuxubj.cn/js/myscript/mylove.js</loc>
     
     <lastmod>2016-09-06T04:32:28.851Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.wuxubj.cn/guestbook/index.html</loc>
-    
-    <lastmod>2016-09-05T15:33:02.451Z</lastmod>
     
   </url>
   

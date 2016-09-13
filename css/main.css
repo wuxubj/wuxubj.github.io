@@ -1663,7 +1663,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9d391b;
+  background: #cdc6ff;
 }
 .links-of-author-item {
   text-align: center;
@@ -2789,6 +2789,9 @@ body {
     transform: rotate(360deg);
   }
 }
+.mobile_code {
+  padding: 2px 3px 0 3px;
+}
 @media (max-width: 767px) {
   .mobile_code {
     display: none;
@@ -2825,7 +2828,6 @@ body {
   left: 0;
   width: 100%;
   height: 36px;
-  padding: 2px 3px 0 3px;
   margin-bottom: 1px;
   background: #ccc;
   font-size: 16px;
@@ -2839,7 +2841,7 @@ body {
 .side-buttons .side-buttons-box:hover {
   background-color: #669fdd;
 }
-.mobile_code:hover .bt-left {
+.side-buttons-box:hover .bt-left {
   display: none;
 }
 .side-buttons .side-buttons-box p {
@@ -2849,6 +2851,20 @@ body {
   margin: 0;
   padding: 0;
   padding-top: 5px;
+}
+.mail_box {
+  padding: 1px 3px 0 3px;
+}
+@media (max-width: 767px) {
+  .mail_box {
+    display: none;
+  }
+}
+.mail_box a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 0;
+  word-wrap: normal;
 }
 @-moz-keyframes cycle {
   from {
