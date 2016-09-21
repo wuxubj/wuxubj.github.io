@@ -5,12 +5,13 @@
 // Placeholder: $code-block
 $code-block {
   overflow: auto;
-  margin: 20px 0;
-  padding: 15px;
+  margin: 0 0 15px 0;
+  padding: 10px;
   font-size $code-font-size;
   color: $highlight-foreground;
   background: $highlight-background;
   line-height: $line-height-code-block;
+  +mobile(){background:#eee;}
 }
 
 pre, code { font-family: $code-font-family; }

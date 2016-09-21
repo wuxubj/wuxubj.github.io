@@ -7,11 +7,12 @@ tags:
 - SCI
 - EI
 permalink: find-sci-or-ei-index
+copyright: true
 ---
 如果查文章是不是被SCI检索：进入[ISI Web of Knowledge](http://apps.webofknowledge.com/WOS_GeneralSearch_input.do?product=WOS&SID=1CMUelst9VWhjRHfzIS&search_mode=GeneralSearch),选择``Web of Science`` 数据库，进行查询；
 如果查文章是不是被EI检索：进入[EI Village](https://www.engineeringvillage.com/search/quick.url), 选择``Compendex`` 数据库，进行查询。
 <!--more-->
-### 查找论文是否被SCI,EI检索
+## 1. 查找论文是否被SCI,EI检索
 
 ``SCI(Science Citation Index)``是美国科学信息研究所(ISI)建立的科技期刊文献检索系统，被SCI收录的期刊分为核心与外围两个范围。核心部分包括期刊3000多种，涵盖了全世界范围内各学科领域内的最优秀的科技期刊；外围部分包括核心部分在内，有期刊5000多种。外围部分的期刊虽然也是非常优秀的科技期刊，但与核心部分相比，学术水平相对低一些。
 
@@ -25,10 +26,11 @@ permalink: find-sci-or-ei-index
 1，如果查文章是不是被SCI检索：进入[ISI Web of Knowledge](http://apps.webofknowledge.com/WOS_GeneralSearch_input.do?product=WOS&SID=1CMUelst9VWhjRHfzIS&search_mode=GeneralSearch),选择``Web of Science`` 数据库，进行查询；
 2，如果查文章是不是被EI检索：进入[EI Village](https://www.engineeringvillage.com/search/quick.url), 选择``Compendex`` 数据库，进行查询。
 
-### 查找论文检索号
+## 2. 查找论文检索号
 SCI收录有个``IDS号``,在文章详情的“其他信息”模块，如图：
 ![SCI IDS号](http://o9w8f1xrl.bkt.clouddn.com/images/201607/03.jpg)
 EI收录号查询：在“Search Results”里点击“Detailed”，“Accession number”就是文章收录号，如图：
 ![EI Accession number](http://o9w8f1xrl.bkt.clouddn.com/images/201607/04.jpg)
 
-参考文献:[http://blog.sciencenet.cn/blog-722391-608704.html](http://blog.sciencenet.cn/blog-722391-608704.html)
+**参考文献**
+[如何查找论文是否被SCI,EI检索](http://blog.sciencenet.cn/blog-722391-608704.html)

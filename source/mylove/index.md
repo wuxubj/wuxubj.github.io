@@ -2,7 +2,8 @@
 title: 爱的纪念
 date: 2016-07-02 22:53:32
 ---
-## 爱的纪念
+>## 爱的纪念
+
 <div id="headouter"><div id="headinner1">{% gp 1-3 %}<img id="mylove_tess" src="/images/lqw.jpg" width="120" height="120" onmouseover="imgStop('mylove_wuxubj');imgStop('mylove_tess')" onmouseout="imgStart('mylove_wuxubj');imgStart('mylove_tess')" />{% endgp %}</div><div id="headinner2">{% gp 1-3 %}<img id="mylove_wuxubj" src="/images/avatar.jpg" width="120" height="120" onmouseover="imgStop('mylove_wuxubj');imgStop('mylove_tess')" onmouseout="imgStart('mylove_wuxubj');imgStart('mylove_tess')" />{% endgp %}</div></div>
 <blockquote class="blockquote-center" id="clear"><div id="lovelqw">李小二和雷宝宝牵手走过了：
     <span id="t_d">00</span>天<span id="t_h">00</span>时<span id="t_m">00</span>分<span id="t_s">00</span>秒

@@ -1,3 +1,4 @@
+{% if page.copyright %}
 {% if theme.copyright.enabled %}
 <div class="post_copyright">
   <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -37,4 +38,5 @@
 	  });
     }));  
 </script>
+{% endif %}
 {% endif %}

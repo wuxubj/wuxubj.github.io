@@ -7,6 +7,7 @@ tags:
 - Hexo
 - NexT
 permalink: Hexo-build-personal-blog-advance 
+copyright: true
 ---
 <font color=#f00>本文为建站初期小结，查看完整建站教程：</font>[Hexo+nexT主题搭建个人博客](/2016/08/Hexo-nexT-build-personal-blog/)
 

@@ -7,19 +7,23 @@ tags:
 - matlab
 - 数据处理
 permalink: matlab-add-noise-calculating-signal-to-noise-ratio
+copyright: true
 ---
 本文讲述Matlab中计算信号信噪比以及在信号中添加高斯白噪声的方法。
 <!--more-->
-### 计算信噪比(SNR)
-1.计算信号功率
+## 1. 计算信噪比(SNR)
+>**计算信号功率**
+
 ```matlab
 sigPower = sum(abs(sig(:)).^2)/length(sig(:))
 ```
-2.计算信噪比（SNR）
+>**计算信噪比（SNR）**
+
 ```matlab
 SNR(dB)=10*log10(Ps/Pn)
 ```
-3.相关单位
+>**相关单位**
+
 **分贝(decibel, dB)：**分贝（dB）是表示相对功率或幅度电平的标准单位，换句话说，就是我们用来表示两个能量之间的差别的一种表示单位，它不是一个绝对单位。例如，电子系统中将电压、电流、功率等物理量的强弱通称为电平，电平的单位通常就以分贝表示，即事先取一个电压或电流作为参考值（0dB），用待表示的量与参考值之比取对数，再乘以20作为电平的分贝数（功率的电平值改乘10）。
 **分贝瓦(dBW, dB Watt)：**指以1W的输出功率为基准时，用分贝来测量的功率放大器的功率值。
 **dBm (dB-milliWatt)：**即与1milliWatt（毫瓦）作比较得出的数字。
@@ -28,7 +32,7 @@ SNR(dB)=10*log10(Ps/Pn)
 10 dBm = 10 mW
 20 dBm = 100 mW
 ```
-### AWGN：在某一信号中加入高斯白噪声
+## 2. AWGN：在某一信号中加入高斯白噪声
 ``y = awgn(x,SNR)`` 在信号x中加入高斯白噪声。信噪比SNR以dB为单位。x的强度假定为0dBW。如果x是复数，就加入复噪声。
 ``y = awgn(x,SNR,SIGPOWER)`` 如果SIGPOWER是数值，则其代表以dBW为单位的信号强度；如果SIGPOWER为'measured'，则函数将在加入噪声之前测定信号强度。
 ``y = awgn(x,SNR,SIGPOWER,STATE)`` 重置RANDN的状态。
@@ -65,6 +69,6 @@ title('加入高斯白噪声后的信号(SNR=5)');
 ```
 </div>加入的高斯白噪声是随机的，所以``snr_out1``和``snr_out2``在``snr=5``上下波动。波形如图：
 ![fig31](http://o9w8f1xrl.bkt.clouddn.com/images/201605/31.jpg)
-参考文献：
+**参考文献：**
 [1] [matlab中的信噪比](http://blog.sina.com.cn/s/blog_758ebadc0100qchy.html)
 [2] [Matlab信号上叠加噪声和信噪比的计算](http://www.ilovematlab.cn/thread-54155-1-1.html)
