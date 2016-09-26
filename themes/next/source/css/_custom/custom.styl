@@ -6,6 +6,18 @@ display: block;
     display: none;
   }
 }
+.post_block {
+  width: 95%;
+  max-width: 45em;
+  margin: 1.2em auto 0;
+  padding: 0.5em 0.5em;
+  border: 1px solid #d3d3d3;
+  font-size: 0.93rem;
+  line-height: 1.6em;
+  word-break: break-all;
+  background: rgba(255,255,255,0.4);
+}
+.post_block p{margin:0;}
 
 .feed-link a{display: inline-block;}
 
@@ -177,6 +189,7 @@ margin-bottom: 30px;
 	color: #fff;
     border-radius: 0px;
 	overflow:hidden;
+	line-height: 2;
 }
 
 .side-buttons .side-buttons-box:hover {
@@ -202,88 +215,4 @@ margin-bottom: 30px;
     text-decoration: none;
     border-bottom: 0;
     word-wrap: normal;
-}
-
-.toc-article {
-  background: #eee;
-  margin: 1.6em 0 0 2em;
-  padding: 1em;
-  -webkit-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-}
-.toc-article strong {
-  padding: 0.3em 0;
-}
-.toc-article ul li {
-  list-style: disc;
-  text-align: match-parent;
-  margin: 0.5em 0;
-}
-.toc-article ol li {
-  list-style-type: decimal;
-  margin: 0.5em 0;
-}
-#toc {
-  line-height: 1.3em;
-  font-size: 0.8em;
-  float: right;
-}
-#toc .toc {
-  padding: 0;
-}
-#toc .toc li {
-  list-style-type: none;
-}
-#toc .toc-child {
-  padding-left: 1.5em;
-  padding-top: 0;
-}
-#toc.toc-aside {
-  display: none;
-  width: 13%;
-  position: fixed;
-  right: 2%;
-  top: 320px;
-  overflow: hidden;
-  line-height: 1.5em;
-  font-size: 1em;
-  color: #333;
-  opacity: 0.6;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-  -webkit-transition: opacity 1s ease-out;
-  -moz-transition: opacity 1s ease-out;
-  -o-transition: opacity 1s ease-out;
-  -ms-transition: opacity 1s ease-out;
-  transition: opacity 1s ease-out;
-}
-#toc.toc-aside strong {
-  padding: 0.3em 0;
-  color: #817c7c;
-}
-#toc.toc-aside:hover {
-  -webkit-transition: opacity 0.3s ease-out;
-  -moz-transition: opacity 0.3s ease-out;
-  -o-transition: opacity 0.3s ease-out;
-  -ms-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
-  opacity: 1;
-  -ms-filter: none;
-  filter: none;
-}
-#toc.toc-aside a {
-  -webkit-transition: color 1s ease-out;
-  -moz-transition: color 1s ease-out;
-  -o-transition: color 1s ease-out;
-  -ms-transition: color 1s ease-out;
-  transition: color 1s ease-out;
-}
-#toc.toc-aside a:hover {
-  color: #2ca6cb;
-  -webkit-transition: color 0.3s ease-out;
-  -moz-transition: color 0.3s ease-out;
-  -o-transition: color 0.3s ease-out;
-  -ms-transition: color 0.3s ease-out;
-  transition: color 0.3s ease-out;
 }

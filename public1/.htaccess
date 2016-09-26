@@ -1,0 +1,4 @@
+Options +FollowSymLinks 
+RewriteEngine On 
+RewriteCond %{HTTP_HOST} ^wuxubj.cn [NC] 
+RewriteRule (.*) http://www.wuxubj.cn%{REQUEST_URI} [L,R=301]

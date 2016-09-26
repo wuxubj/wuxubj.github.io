@@ -56,3 +56,6 @@ text-decoration: underline;
 @import "post-reward" if hexo-config('alipay') or hexo-config('wechatpay');
 
 @import "post-copyright" if hexo-config('copyright.enabled');
+@import "post-toc";
+
+section .post-type-normal .topc-article {display: none;}

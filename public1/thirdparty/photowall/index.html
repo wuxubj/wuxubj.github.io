@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">           
+
+<link href="http://o9w8f1xrl.bkt.clouddn.com/photowall/style.css" type="text/css" rel="stylesheet">
+<!-- <link href="css/css.css"  rel="stylesheet" type="text/css" /> -->
+<!--给我最爱的你 -->
+<title>you are my shushine</title>
+<style>
+body {
+  background: #060e1b;
+  overflow: hidden;
+}
+
+canvas {
+  opacity: 1.0;
+}
+
+</style>
+<script>
+function setCookie(cname,cvalue,exdays){
+	var d = new Date();
+	d.setTime(d.getTime()+(exdays*24*60*60*1000));
+	var expires = "expires="+d.toGMTString();
+	document.cookie = cname+"="+cvalue+"; "+expires;
+}
+function getCookie(cname){
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i<ca.length; i++) {
+		var c = ca[i].trim();
+		if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+	}
+	return "";
+}
+function checkCookie(){
+	var user=getCookie("wuxubjmylove");
+	if (user!=""){
+		//alert("Welcome again " + user);
+	}
+	else {
+		user = prompt("该页面仅限熟人访问，请输入我女神的姓名（验证当天有效）：","");
+  		if (user=="雷巧文"){
+    		setCookie("wuxubjmylove","lqw",1);
+    	}else
+		{
+		alert("抱歉你无访问权限,即将转至首页..."); 
+		window.opener=null;
+		window.open('/mylove/','_self');
+		}
+	}
+}
+checkCookie();
+</script>
+</head>
+<body>
+
+<audio autoplay="autoplay" loop="">
+      <source src="http://o9w8f1xrl.bkt.clouddn.com/photowall/images/twinkle.mp3" type="audio/mp3">
+</audio>
+
+<div class="container" id="jin" style="visibility: visible; left: 112.5px; top: 89.5px;">
+  <img src="http://o9w8f1xrl.bkt.clouddn.com/photowall/images/1.jpg" title="杭州西湖边" class="pic1" onclick="javascript:void(0)" >
+  <img src="http://o9w8f1xrl.bkt.clouddn.com/photowall/images/2.JPG" title="上海一日游" class="pic2" onclick="javascript:void(0)">
+  <img src="http://o9w8f1xrl.bkt.clouddn.com/photowall/images/3.jpg" title="若不是你
+那天的东湖怎么会这么美" class="pic3" onclick="javascript:void(0)">
+  <img src="http://o9w8f1xrl.bkt.clouddn.com/photowall/images/4.jpg" title="得意的笑" class="pic4" onclick="javascript:void(0)">
+  <img src="http://o9w8f1xrl.bkt.clouddn.com/photowall/images/5.jpg" title="武汉欢乐谷，夫妻相！！" class="pic5" onclick="javascript:void(0)">
+  <img src="http://o9w8f1xrl.bkt.clouddn.com/photowall/images/11.jpg" title="我们一起晒太阳" class="pic11" onclick="javascript:void(0)">
+  <img src="http://o9w8f1xrl.bkt.clouddn.com/photowall/images/6.jpg" title="我还是觉得你二的时候最美怎么办！！" class="pic6" onclick="javascript:void(0)">
+  <img src="http://o9w8f1xrl.bkt.clouddn.com/photowall/images/7.jpg" title="中华山，you are my shushine" class="pic7" onclick="javascript:void(0)">
+  <img src="http://o9w8f1xrl.bkt.clouddn.com/photowall/images/8.jpg" title="笑靥如花，容颜似水" class="pic8" onclick="javascript:void(0)">
+  <img src="http://o9w8f1xrl.bkt.clouddn.com/photowall/images/9.jpg" title="黑社会一姐" class="pic9" onclick="javascript:void(0)">
+  <img src="http://o9w8f1xrl.bkt.clouddn.com/photowall/images/10.jpg" title="万达电影乐园" class="pic10" onclick="javascript:void(0)">
+  <img src="http://o9w8f1xrl.bkt.clouddn.com/photowall/images/12.jpg" title="胖嘟嘟的，可爱^_^" class="pic12" onclick="javascript:void(0)">
+</div>
+
+<canvas id="canvas" width="1335" height="599"></canvas>
+<script>
+"use strict";
+var canvas = document.getElementById('canvas'),
+  ctx = canvas.getContext('2d'),
+  w = canvas.width = window.innerWidth+10,
+  h = canvas.height = window.innerHeight+20,
+
+  hue = 217,
+  stars = [],
+  count = 0,
+  maxStars = 1600;
+
+var canvas2 = document.createElement('canvas'),
+  ctx2 = canvas2.getContext('2d');
+canvas2.width = 100;
+canvas2.height = 100;
+var half = canvas2.width / 2,
+  gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
+gradient2.addColorStop(0.025, '#fff');
+gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
+gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
+gradient2.addColorStop(1, 'transparent');
+
+ctx2.fillStyle = gradient2;
+ctx2.beginPath();
+ctx2.arc(half, half, half, 0, Math.PI * 2);
+ctx2.fill();
+
+function random(min, max) {
+  if (arguments.length < 2) {
+    max = min;
+    min = 0;
+  }
+
+  if (min > max) {
+    var hold = max;
+    max = min;
+    min = hold;
+  }
+
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function maxOrbit(x, y) {
+  var max = Math.max(x, y),
+    diameter = Math.round(Math.sqrt(max * max + max * max));
+  return diameter / 2;
+}
+
+var Star = function() {
+
+  this.orbitRadius = random(maxOrbit(w, h));
+  this.radius = random(60, this.orbitRadius) / 12;
+  this.orbitX = w / 2;
+  this.orbitY = h / 2;
+  this.timePassed = random(0, maxStars);
+  this.speed = random(this.orbitRadius) / 900000;
+  this.alpha = random(2, 10) / 10;
+
+  count++;
+  stars[count] = this;
+}
+
+Star.prototype.draw = function() {
+  var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX,
+    y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY,
+    twinkle = random(10);
+
+  if (twinkle === 1 && this.alpha > 0) {
+    this.alpha -= 0.05;
+  } else if (twinkle === 2 && this.alpha < 1) {
+    this.alpha += 0.05;
+  }
+
+  ctx.globalAlpha = this.alpha;
+  ctx.drawImage(canvas2, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
+  this.timePassed += this.speed;
+}
+
+for (var i = 0; i < maxStars; i++) {
+  new Star();
+}
+
+function animation() {
+  ctx.globalCompositeOperation = 'source-over';
+  ctx.globalAlpha = 0.8;
+  ctx.fillStyle = 'hsla(' + hue + ', 64%, 6%, 1)';
+  ctx.fillRect(0, 0, w, h)
+
+  ctx.globalCompositeOperation = 'lighter';
+  for (var i = 1, l = stars.length; i < l; i++) {
+    stars[i].draw();
+  };
+
+  window.requestAnimationFrame(animation);
+}
+animation();
+animation();
+</script>
+<script type="text/javascript">
+    var winWidth = 0;
+    var winHeight = 0;
+    function findDimensions() 
+    {
+    if (window.innerWidth)
+      winWidth = window.innerWidth;
+    else if ((document.body) && (document.body.clientWidth))
+      winWidth = document.body.clientWidth;
+
+    if (window.innerHeight)
+      winHeight = window.innerHeight;
+    else if ((document.body) && (document.body.clientHeight))
+      winHeight = document.body.clientHeight;
+
+    if (document.documentElement  && document.documentElement.clientHeight && document.documentElement.clientWidth)
+    {
+      winHeight = document.documentElement.clientHeight;
+      winWidth = document.documentElement.clientWidth;
+    }
+    var pd=document.getElementById('jin');  
+      pd.style.visibility="visible";
+      pd.style.left = winWidth/2 - 550 + 'px';
+      pd.style.top = winHeight/2 - 200 + 'px';    
+  }
+ // window.onresize = function(){location.reload(true);}
+  
+  <!--window.onresize = function (){document.jin.location.reload(false);}-->
+  <!--window.onresize = function (){document.container.location.reload(false);}-->
+
+    findDimensions();
+</script>
+
+</body></html>
