@@ -59,7 +59,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="https,SSL," />
+  <meta name="keywords" content="Apache2,https,SSL," />
 
 
 
@@ -83,7 +83,7 @@
 <meta property="og:url" content="http://www.wuxubj.cn/2016/09/install-ssl-apache2-ubuntu/index.html">
 <meta property="og:site_name" content="务虚笔记">
 <meta property="og:description" content="Ubuntu Server 14.04.1 LTS 32位环境下，为Apache 2安装SSL证书，使网站支持https访问，并将http网址重定向到https。">
-<meta property="og:updated_time" content="2016-09-10T12:58:45.497Z">
+<meta property="og:updated_time" content="2016-09-20T13:06:12.111Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu Server上为Apache 2安装SSL证书">
 <meta name="twitter:description" content="Ubuntu Server 14.04.1 LTS 32位环境下，为Apache 2安装SSL证书，使网站支持https访问，并将http网址重定向到https。">
@@ -342,19 +342,36 @@
       
 
       
-        <p>Ubuntu Server 14.04.1 LTS 32位环境下，为Apache 2安装SSL证书，使网站支持https访问，并将http网址重定向到https。<br><a id="more"></a></p>
-<h2 id="安装SSL证书"><a href="#安装SSL证书" class="headerlink" title="安装SSL证书"></a>安装SSL证书</h2><p><strong>1.获取SSL证书</strong><br>我是在域名注册商腾讯云上申请的SSL证书，下载到 Windows 本地，再上传到 Linux 上的。参考：<a href="https://www.qcloud.com/doc/product/400/4142" target="_blank" rel="external">腾讯云：SSL证书管理</a><br>网上教程很多，此处不再赘述。</p>
-<p><strong>2.加载SSL模块到Apache2</strong><br>执行以下命令确保 SSL模块已经加载进 Apache2 中：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># a2enmod ssl</span></span><br></pre></td></tr></table></figure></p>
+        <blockquote>
+<p>Ubuntu Server 14.04.1 LTS 32位环境下，为Apache 2安装SSL证书，使网站支持https访问，并将http网址重定向到https。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="1-安装SSL证书"><a href="#1-安装SSL证书" class="headerlink" title="1. 安装SSL证书"></a>1. 安装SSL证书</h2><blockquote>
+<p><strong>获取SSL证书</strong></p>
+</blockquote>
+<p>我是在域名注册商腾讯云上申请的SSL证书，下载到 Windows 本地，再上传到 Linux 上的。参考：<a href="https://www.qcloud.com/doc/product/400/4142" target="_blank" rel="external">腾讯云：SSL证书管理</a><br>网上教程很多，此处不再赘述。</p>
+<blockquote>
+<p><strong>加载SSL模块到Apache2</strong></p>
+</blockquote>
+<p>执行以下命令确保 SSL模块已经加载进 Apache2 中：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># a2enmod ssl</span></span><br></pre></td></tr></table></figure></p>
 <p>如果出现“Module ssl already enabled”这样的信息就说明 SSL 模块已经加载到 Apache2 中，如果出现“Enabling module ssl”，那么还需要手动重启 Apache2：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># service apache2 restart</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>3.修改Apache2配置文件</strong><br>编辑<code>/etc/apache2/sites-available/000-default.conf</code>文件，添加如下内容：</p>
+<blockquote>
+<p><strong>修改Apache2配置文件</strong></p>
+</blockquote>
+<p>编辑<code>/etc/apache2/sites-available/000-default.conf</code>文件，添加如下内容：</p>
 <p><div class="codecopy codecopy1"> <figure class="highlight bash"><figcaption><span><i class="fa fa-clipboard" data-clipboard-target=".codecopy1 .code pre" aria-label="复制成功！" title="点击复制代码"></i></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:443&gt;</span><br><span class="line">        ServerAdmin webmaster@localhost</span><br><span class="line">        DocumentRoot /var/www/public/</span><br><span class="line">        ServerName www.wuxubj.cn</span><br><span class="line">        SSLEngine on</span><br><span class="line">        SSLCertificateFile /var/ssl/wuxubj.crt</span><br><span class="line">        SSLCertificateKeyFile /var/ssl/2_www.wuxubj.cn.key</span><br><span class="line">        SSLCertificateChainFile /var/ssl/ca.crt</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure></div></p>
 <p>注意把网站根目录和各证书文件路径更换为你自己相应的文件存储路径。https 默认 443 端口，所以注意把 VirtualHost 端口该为 443 。<br>配置完成之后重启 Apache2 就可以用<code>https://yourdomain/</code>访问网站了。此时<code>http://yourdomain</code>无法访问，网站所有内容都必须指向 https。</p>
-<h2 id="重定向http请求到https"><a href="#重定向http请求到https" class="headerlink" title="重定向http请求到https"></a>重定向http请求到https</h2><p>编辑<code>/etc/apache2/apache2.conf</code>文件,添加如下内容：</p>
+<h2 id="2-重定向http请求到https"><a href="#2-重定向http请求到https" class="headerlink" title="2. 重定向http请求到https"></a>2. 重定向http请求到https</h2><p>编辑<code>/etc/apache2/apache2.conf</code>文件,添加如下内容：</p>
 <p><div class="codecopy codecopy2"> <figure class="highlight bash"><figcaption><span><i class="fa fa-clipboard" data-clipboard-target=".codecopy2 .code pre" aria-label="复制成功！" title="点击复制代码"></i></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Load rewrite_module</span></span><br><span class="line">LoadModule rewrite_module /usr/lib/apache2/modules/mod_rewrite.so</span><br><span class="line"></span><br><span class="line">RewriteEngine On</span><br><span class="line">RewriteCond %&#123;HTTPS&#125; off</span><br><span class="line">RewriteRule (.*) https://%&#123;HTTP_HOST&#125;%&#123;REQUEST_URI&#125;</span><br></pre></td></tr></table></figure></div></p>
 <p>再将 apache2.conf 中所有的<code>AllowOverride:None</code>修改为<code>AllowOverride:All</code>。<br>修改之后重启Apache2，http请求都将重定向到https。</p>
-<h2 id="一些坑"><a href="#一些坑" class="headerlink" title="一些坑"></a>一些坑</h2><p>1.按照网上绝大多数教程配置之后，显示错误信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Invalid command &apos;RewriteEngine&apos;, perhaps misspelled or defined by a module </span><br><span class="line">not included in the server configuration</span><br><span class="line">Action &apos;configtest&apos; failed.</span><br></pre></td></tr></table></figure></p>
+<h2 id="3-一些坑"><a href="#3-一些坑" class="headerlink" title="3. 一些坑"></a>3. 一些坑</h2><p>按照网上绝大多数教程配置之后，显示错误信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Invalid command &apos;RewriteEngine&apos;, perhaps misspelled or defined by a module </span><br><span class="line">not included in the server configuration</span><br><span class="line">Action &apos;configtest&apos; failed.</span><br></pre></td></tr></table></figure></p>
 <p>折腾半天，终于发现，apache2有许多modules存储在<code>/usr/lib/apache2/modules</code>目录下，开启重定向需要手动加载<code>mod_rewrite.so</code>，即在<code>/etc/apache2/apache2.conf</code>文件中添加：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LoadModule rewrite_module /usr/lib/apache2/modules/mod_rewrite.so</span><br></pre></td></tr></table></figure></p>
-<p><strong>参考资料：</strong><br><a href="https://www.qcloud.com/doc/product/400/证书安装指引#2.-apache-2.x.E8.AF.81.E4.B9.A6.E9.83.A8.E7.BD.B2" target="_blank" rel="external">腾讯云：SSL证书安装指引</a><br><a href="https://linux.cn/article-4901-1.html" target="_blank" rel="external">如何在Ubuntu 14.04 上为Apache 2.4 安装SSL支持</a><br><a href="http://unix.stackexchange.com/questions/31378/apache2-invalid-command-sslengine" target="_blank" rel="external">apache2 Invalid command ‘SSLEngine’</a></p>
+<p>也可直接在终端依次执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># sudo a2enmod rewrite</span><br><span class="line"># service apache2 restart</span><br></pre></td></tr></table></figure></p>
+<p>开启Rewrite模块。</p>
+<blockquote>
+<p><strong>参考资料：</strong></p>
+</blockquote>
+<p><a href="https://www.qcloud.com/doc/product/400/证书安装指引#2.-apache-2.x.E8.AF.81.E4.B9.A6.E9.83.A8.E7.BD.B2" target="_blank" rel="external">腾讯云：SSL证书安装指引</a><br><a href="https://linux.cn/article-4901-1.html" target="_blank" rel="external">如何在Ubuntu 14.04 上为Apache 2.4 安装SSL支持</a><br><a href="http://unix.stackexchange.com/questions/31378/apache2-invalid-command-sslengine" target="_blank" rel="external">apache2 Invalid command ‘SSLEngine’</a></p>
 
       
     </div>
@@ -383,6 +400,7 @@
 	<div>
       
         
+
 <div class="post_copyright">
   <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
   <script type="text/javascript" src="http://od390waa7.bkt.clouddn.com/sweetalert_mini/jquery-1.7.1.min.js"></script>
@@ -390,8 +408,8 @@
   <link rel="stylesheet" type="text/css" href="/thirdparty/sweetalert/sweetalert.css">
   <p><span>本文标题:</span><a href="/2016/09/install-ssl-apache2-ubuntu/">Ubuntu Server上为Apache 2安装SSL证书</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 wuxubj 的个人博客">wuxubj</a></p>
-  <p><span>发布时间:</span>2016年09月10日 - 19时09分</p>
-  <p><span>最后更新:</span>2016年09月10日 - 20时09分</p>
+  <p><span>发布时间:</span>2016年09月10日 - 19:09</p>
+  <p><span>最后更新:</span>2016年09月20日 - 21:09</p>
   <p><span>原始链接:</span><a href="/2016/09/install-ssl-apache2-ubuntu/" title="Ubuntu Server上为Apache 2安装SSL证书">http://www.wuxubj.cn/2016/09/install-ssl-apache2-ubuntu/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.wuxubj.cn/2016/09/install-ssl-apache2-ubuntu/"  aria-label="复制成功！"></i></span>
   </p>
@@ -422,12 +440,15 @@
     }));  
 </script>
 
+
       
     </div>
 
     <footer class="post-footer">
       
         <div class="post-tags">
+          
+            <a href="/tags/Apache2/" rel="tag">#Apache2</a>
           
             <a href="/tags/https/" rel="tag">#https</a>
           
@@ -439,6 +460,10 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/apache-operating-guide/" class="post-nav-title-link" rel="prev" title="Apache服务器搭建经验">
+                <i class="fa fa-chevron-left"></i> Apache服务器搭建经验 
+              </a>
             
           </div>
 		  
@@ -537,7 +562,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">18</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -545,7 +570,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -554,7 +579,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -784,7 +809,7 @@ function shake() {
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装SSL证书"><span class="nav-number">1.</span> <span class="nav-text">安装SSL证书</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重定向http请求到https"><span class="nav-number">2.</span> <span class="nav-text">重定向http请求到https</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些坑"><span class="nav-number">3.</span> <span class="nav-text">一些坑</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装SSL证书"><span class="nav-text">1. 安装SSL证书</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-重定向http请求到https"><span class="nav-text">2. 重定向http请求到https</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-一些坑"><span class="nav-text">3. 一些坑</span></a></li></ol></div>
             
           </div>
         </section>
