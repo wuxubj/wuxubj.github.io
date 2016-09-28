@@ -76,10 +76,7 @@
   {% if theme.particle.enabled %}
 	  {% include '_scripts/myscript/particle.swig' %}
 	{% endif %}
-  {% if page.title === "爱的纪念" %}
-    {% include '_scripts/myscript/love.swig' %}
-  {% endif %}
-  {% if page.title === "留言" %}
+  {% if page.heart %}
     {% include '_scripts/myscript/love.swig' %}
   {% endif %}
 

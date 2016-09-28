@@ -3,6 +3,7 @@ title: 建站日志
 date: 2016-07-18 15:29:58
 ---
 ### 建站日志
+**2016-09-28：**备案获批 - 鄂ICP备16017973号 
 **2016-08-20：**花了几天时间对``NexT.Pisces``主题进行了一些美化，参考博文[Hexo+nexT主题搭建个人博客](http://www.wuxubj.cn/2016/08/Hexo-nexT-build-personal-blog/)。至此网站外观已经定型，不打算再作任何改变。后期专注于写博文。
 **2016-07-28：**将网站主题更换为[NexT.Pisces](https://github.com/iissnan/hexo-theme-next)
 **2016-07-27：**添加本地搜索功能，不再使用swiftype搜索。

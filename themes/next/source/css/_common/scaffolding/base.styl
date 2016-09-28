@@ -12,7 +12,7 @@ body {
   color: $text-color;
   background: $body-bg-color;
 
-  +mobile() { padding-right: 0 !important; }
+  +mobile() { padding-right: 0 !important; line-height: 1.6; color: $black-dim;}
   +tablet() { padding-right: 0 !important; }
   +desktop-large() { font-size: $font-size-large; }
 }
@@ -39,7 +39,7 @@ for headline in (1..6) {
   }
 }
 
-p { margin: 0 0 10px 0; }
+p { margin: 0 0 15px 0; }
 
 a {
   color: $link-color;

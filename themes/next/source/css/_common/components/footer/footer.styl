@@ -1,28 +1,30 @@
 .footer {
   font-size: 14px;
-  color: $grey-dark;
+  color: $grey-dim;
 
   img { border: none; }
 }
-
+.footer a{color: $black-light;border-bottom:1px solid #999;}
+.footer a:hover{color: $black-dim;border-bottom:1px solid #555;}
 .footer-inner { text-align: center; }
 
 .with-love {
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 1px;
 }
 
 .powered-by,
 .theme-info { display: inline-block; }
 
 .powered-by {
-  margin-right: 10px;
+  margin-right: 5px;
 
   &::after {
     content: "|";
-    padding-left: 10px;
+    padding-left: 5px;
   }
 }
+
 
 .cc-license {
   margin-top: 10px;

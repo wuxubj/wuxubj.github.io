@@ -23,3 +23,7 @@
     NexT.{{ theme.scheme }}
   </a>
 </div>
+
+<div>
+ <span>鄂ICP备16017973号</span>
+</div>
