@@ -9,13 +9,13 @@ heart: true
 <blockquote class="blockquote-center" id="clear"><div id="lovelqw">李小二和雷宝宝牵手走过了：
     <span id="t_d">00</span>天<span id="t_h">00</span>时<span id="t_m">00</span>分<span id="t_s">00</span>秒
 <span id="loveYear">今天是第<span id="t_month">00</span>个月，第<span id="t_year">00</span>年 ！</span></div></blockquote><form><!--当点击相应按钮，执行相应操作，为按钮添加相应事件--><input type="button" id="bthidden" onclick="hideElement('music');showElement('btshow');hideElement('bthidden')" value="隐藏音乐" > <input type="button" id="btshow" class="hidden" onclick="showElement('music');showElement('bthidden');hideElement('btshow')" value="显示音乐" ></form><div class="demo" id="music"><div id="player3" class="aplayer"></div></div>
-<span>[小游戏](http://o9w8f1xrl.bkt.clouddn.com/game/index.html)</span>
+<span>[小游戏](http://thirdparty.wuxubj.cn/fruitslice/index.html)</span>
 <a title="小high一下~" rel="alternate" class="mw-harlem_shake_slow wobble shake" href="javascript:shake()">High起来</a>
 ### 照片墙
-<div class="imageborder">[![photowall](http://oc53d5yq6.bkt.clouddn.com/photowall/images/0.jpeg)](/thirdparty/photowall/)</div>
+<div class="imageborder">[![photowall](http://thirdparty.wuxubj.cn/photowall/images/0.jpeg)](/thirdparty/photowall/)</div>
 <link rel="stylesheet" href="/css/mycss/underline.css">
-<link rel="stylesheet" href="http://o9w8f1xrl.bkt.clouddn.com/APlayer/APlayer.min.css">
+<link rel="stylesheet" href="http://jslibs.wuxubj.cn/APlayer/APlayer.min.css">
 <link rel="stylesheet" href="/css/mycss/mylove.css">
-<script src="http://o9w8f1xrl.bkt.clouddn.com/APlayer/APlayer.min.js"></script>
+<script src="http://jslibs.wuxubj.cn/APlayer/APlayer.min.js"></script>
 <script src="/js/myscript/mylove.js"></script>
 

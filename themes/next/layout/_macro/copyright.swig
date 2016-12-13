@@ -2,9 +2,9 @@
 {% if theme.copyright.enabled %}
 <div class="post_copyright">
   <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  <script type="text/javascript" src="http://od390waa7.bkt.clouddn.com/sweetalert_mini/jquery-1.7.1.min.js"></script>
-  <script src="http://od390waa7.bkt.clouddn.com/sweetalert_mini/sweetalert.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/thirdparty/sweetalert/sweetalert.css">
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
   <p><span>本文标题:</span><a href="{{ url_for(page.path) }}">{{ page.title }}</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 {{ theme.author }} 的个人博客">{{ theme.author }}</a></p>
   <p><span>发布时间:</span>{{ page.date.format("YYYY年MM月DD日 - HH:MM") }}</p>

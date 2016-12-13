@@ -35,7 +35,7 @@ copyright: true
   {% endif %}
 ```
 如图：
-![添加代码](http://o9w8f1xrl.bkt.clouddn.com/images/201607/01.jpg)
+![添加代码](http://images.wuxubj.cn/images/201607/01.jpg)
 
 ## 3. 最终效果
-![最终效果](http://o9w8f1xrl.bkt.clouddn.com/images/201607/02.jpg)
+![最终效果](http://images.wuxubj.cn/images/201607/02.jpg)

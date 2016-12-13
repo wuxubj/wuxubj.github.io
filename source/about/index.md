@@ -11,11 +11,10 @@ heart: true
 
 <center><div style="width:200px;height:200px;padding-bottom:20px;">![网站二维码](/images/wuxubj_mini.png)扫一扫，用手机访问本站</div></center>
 >&nbsp;<span class="dsrv_flag">最近访客</span><span id="dsrv_putaway" class="dsrv_flag hidden"><a href="javascript:void(0);" onclick="hideElement('ds-recent-visitors');showElement('dsrv_spread');hideElement('dsrv_putaway');hideElement('dsrv_putaway2');">收起</a></span><span id="dsrv_spread" class="dsrv_flag"><a href="javascript:void(0);" onclick="showElement('ds-recent-visitors');showElement('dsrv_putaway');showElement('dsrv_putaway2');hideElement('dsrv_spread')">展开</a></span>
-
 <div class="ds-recent-visitors hidden" data-num-items="1000" data-avatar-size="24" id="ds-recent-visitors">加载中...</div><span id="dsrv_putaway2" class="dsrv_flag hidden"><a href="javascript:void(0);" onclick="hideElement('ds-recent-visitors');showElement('dsrv_spread');hideElement('dsrv_putaway');hideElement('dsrv_putaway2');">收起</a></span>
 
 <link rel="stylesheet" href="/css/mycss/underline.css">
-<link rel="stylesheet" href="http://o9w8f1xrl.bkt.clouddn.com/APlayer/APlayer.min.css">
+<link rel="stylesheet" href="http://jslibs.wuxubj.cn/APlayer/APlayer.min.css">
 <link rel="stylesheet" href="/css/mycss/guestbook.css">
-<script src="http://o9w8f1xrl.bkt.clouddn.com/APlayer/APlayer.min.js"></script>
+<script src="http://jslibs.wuxubj.cn/APlayer/APlayer.min.js"></script>
 <script src="/js/myscript/guestbook.js"></script>

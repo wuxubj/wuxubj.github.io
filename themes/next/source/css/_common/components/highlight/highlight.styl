@@ -23,6 +23,10 @@ code {
   background: $code-background;
   border-radius: $code-border-radius;
   font-size $code-font-size;
+  color: #c7254e;
+  background: #f9f2f4;
+  border: 1px solid #d6d6d6;
+  margin: 2px;
 }
 
 pre {
@@ -30,6 +34,7 @@ pre {
 
   code {
     padding: 0;
+	padding-left:10px;
     color: $highlight-foreground;
     background: none;
     text-shadow: none;
@@ -38,11 +43,15 @@ pre {
 
 .highlight {
   @extend $code-block;
+  border: 1px solid #d6d6d6;
+  background-color: #f7f7f7;
 
   pre {
     border: none;
     margin: 0;
     padding: 1px;
+	background-color: #f7f7f7;
+	
   }
 
   table {
@@ -75,8 +84,10 @@ figcaption {
 }
   .gutter pre {
     color: $grey-dim;
-    text-align: right;
-    padding-right: 20px;
+    text-align: center;
+    padding: 0 8px;
+	background-color: #eff2f3;
+	margin: 0;
   }
 
   .line { height: 20px; }
@@ -154,9 +165,27 @@ pre {
   }
 
 }
+.highlight .code pre {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #f7f7f7;
+}
+
 
 .codecopy{margin:0;
 padding:0;
 }
 .codecopy br{display:none;}
 .codecopy figure br{display:block;}
+.codecopy figure figcaption{text-align:left;position:absolute;right:10px;font-size:16px;}
+.codecopy figure figcaption .fa-clipboard {
+  color: #aaa;
+}
+.codecopy figure figcaption span {
+  color: #808080;
+  cursor: pointer;
+}
+.codecopy figure:hover .fa-clipboard {
+  color: #000;
+}
+.codecopy  {position: relative;background-color:#000;}

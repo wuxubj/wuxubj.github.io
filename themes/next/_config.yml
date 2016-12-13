@@ -403,17 +403,21 @@ css: css
 js: js
 images: images
 
-# 文章末尾添加“本文结束”标记
+#文章末尾版权信息
 copyright: 
   enabled: true
-passage_end_tag:
+#本文结束标记
+passage_end_tag:  
   enabled: false
+# high晃动功能
 highqilai: 
   enabled: true
+# 右侧悬浮二维码
 mobile_code:
   enabled: true
   qcode: /images/wuxubj.png
   description: 扫一扫，用手机访问本站
+# 鼠标点击产生心形
 particle: 
   enabled: false
 feed:

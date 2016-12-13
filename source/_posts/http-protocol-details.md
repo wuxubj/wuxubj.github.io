@@ -25,7 +25,7 @@ HTTP是一个应用层协议，由请求和响应构成，是一个标准的客�
 
 在Internet中所有的传输都是通过TCP/IP进行的。HTTP协议作为TCP/IP模型中应用层的协议也不例外。HTTP协议通常承载于TCP协议之上，有时也承载于TLS或SSL协议层之上，这个时候，就成了我们常说的HTTPS。如下图所示：
 
-![http协议](/images/201609/2501.png)
+![http协议](http://images.wuxubj.cn/201609/2501.png)
 HTTP默认的端口号为80，HTTPS的端口号为443。
 
 浏览网页是HTTP的主要应用，但是这并不代表HTTP就只能应用于网页的浏览。HTTP是一种协议，只要通信的双方都遵守这个协议，HTTP就能有用武之地。比如咱们常用的QQ，迅雷这些软件，都会使用HTTP协议(还包括其他的协议)。
@@ -69,23 +69,23 @@ HTTP协议永远都是客户端发起请求，服务器回送响应。这样就�
 
 如果在以上过程中的某一步出现错误，那么产生错误的信息将返回到客户端，有显示屏输出。对于用户来说，这些过程是由HTTP自己完成的，用户只要用鼠标点击，等待信息显示就可以了。
 
-![c/s](/images/201609/2502.png)
+![c/s](http://images.wuxubj.cn/201609/2502.png)
 HTTP是基于传输层的TCP协议，而TCP是一个端到端的面向连接的协议。所谓的端到端可以理解为进程到进程之间的通信。所以HTTP在开始传输之前，首先需要建立TCP连接，而TCP连接的过程需要所谓的“三次握手”。下图所示TCP连接的三次握手。
 
 在TCP三次握手之后，建立了TCP连接，此时HTTP就可以进行传输了。一个重要的概念是面向连接，既HTTP在传输完成之间并不断开TCP连接。在HTTP1.1中(通过Connection头设置)这是默认行为。
 
-![tcp](/images/201609/2503.png)
+![tcp](http://images.wuxubj.cn/201609/2503.png)
 
 ## 五、使用Wireshark抓TCP、http包
 
 打开Wireshark，选择工具栏上的"Capture"->"Options"
 
-![Wireshark](/images/201609/2504.png)
-![Wireshark](/images/201609/2505.png)
+![Wireshark](http://images.wuxubj.cn/201609/2504.png)
+![Wireshark](http://images.wuxubj.cn/201609/2505.png)
 点击"Capture Filter"，此处选择的是"HTTP TCP port（80）"，选择后点击上图的"Start"开始抓包。
 然后在浏览器中打开 http://image.baidu.com/ ，抓包结果如下图所示：
 
-![Wireshark](/images/201609/2506.png)
+![Wireshark](http://images.wuxubj.cn/201609/2506.png)
 在上图中，可清晰的看到客户端浏览器（ip为192.168.1.6）与服务器（115.239.210.36）的交互过程：
 1. No1：浏览器（192.168.1.6）向服务器（115.239.210.36）发出连接请求。此为TCP三次握手第一步，此时从图中可以看出，为SYN，seq:X （x=0）；
 2. No2：服务器（115.239.210.36）回应了浏览器（192.168.1.6）的请求，并要求确认，此时为：SYN，ACK，此时seq：y（y为0），ACK：x+1（为1）。此为三次握手的第二步；
@@ -97,7 +97,7 @@ HTTP是基于传输层的TCP协议，而TCP是一个端到端的面向连接的�
 8. No81：客户端（192.168.1.6）发出一个图片HTTP请求；
 9. No202：服务器（115.239.210.36）发送状态响应码200 OK。
 
-![Wireshark](/images/201609/2507.png)
+![Wireshark](http://images.wuxubj.cn/201609/2507.png)
 
 ## 六、头域
 每个头域由一个域名，冒号（:）和域值三部分组成。域名是大小写无关的，域值前可以添加任何数量的空格符，头域可以被扩展为多行，在每行开始处，使用至少一个空格或制表符。
@@ -108,7 +108,7 @@ HTTP是基于传输层的TCP协议，而TCP是一个端到端的面向连接的�
 - 空行
 - 可选的消息体　请求行和标题必须以<CR><LF>作为结尾（也就是，回车然后换行）。空行内必须只有<CR><LF>而无其他空格。在HTTP/1.1协议中，所有的请求头，除post外，都是可选的。
 
-![2508](/images/201609/2508.png)
+![2508](http://images.wuxubj.cn/201609/2508.png)
 三个部分分别是：请求行、消息报头、请求正文。
 ### 6.2、请求方法
 HTTP/1.1协议中共定义了八种方法（有时也叫“动作”）来表明Request-URI指定的资源的不同操作方式：
@@ -146,28 +146,28 @@ HTTP-Version 空格 Status-Code 空格 Reason-Phrase CRLF
 
 Status-Code用于机器自动识别，Reason-Phrase用于人工理解。Status-Code的第一个数字代表响应类别，可能取5个不同的值。后两个数字没有分类作用。Status-Code的第一个数字代表响应的类别，后续两位描述在该类响应下发生的具体状况，具体请参见：[HTTP状态码](#十四、http的状态响应码) 。
 
-![2509](/images/201609/2509.png)
+![2509](http://images.wuxubj.cn/201609/2509.png)
 响应消息的结构：
 
-![2510](/images/201609/2510.png)
-![2511](/images/201609/2511.png)
+![2510](http://images.wuxubj.cn/201609/2510.png)
+![2511](http://images.wuxubj.cn/201609/2511.png)
 三个部分分别是：状态行、消息报头、响应正文。
 
 无论你何时浏览一个网页，你的电脑都会通过一个使用HTTP协议的服务器来获取所请求的数据。在你请求的网页显示在浏览器之前，支配网页的网站服务器会返回一个包含有状态码的HTTP头文件。这个状态码提供了有关所请求网页的相关条件信息。如果一切正常，一个标准网页会收到一条诸如200的状态码。当然我们的目的不是去研究200响应码，而是去探讨那些代表出现错误信息的服务器头文件响应码，例如表示“未找到指定网页”的404码。
 ### 6.4、响应头域
 服务器需要传递许多附加信息，这些信息不能全放在状态行里。因此，需要另行定义响应头域，用来描述这些附加信息。响应头域主要描述服务器的信息和Request-URI的信息。
 
-![2512](/images/201609/2512.png)
+![2512](http://images.wuxubj.cn/201609/2512.png)
 ### 6.5、HTTP常见的请求头
 在HTTP/1.1 协议中，所有的请求头，除 Host 外，都是可选的。
 
 **If-Modified-Since**：把浏览器端缓存页面的最后修改时间发送到服务器去，服务器会把这个时间与服务器上实际文件的最后修改时间进行对比。如果时间一致，那么返回304，客户端就直接使用本地缓存文件。如果时间不一致，就会返回200和新的文件内容。客户端接到之后，会丢弃旧文件，把新文件缓存起来，并显示在浏览器中。
 例如：If-Modified-Since: Thu, 09 Feb 2012 09:07:57 GMT
 
-![2513](/images/201609/2513.png)
+![2513](http://images.wuxubj.cn/201609/2513.png)
 **If-None-Match**：If-None-Match和ETag一起工作，工作原理是在HTTP Response中添加ETag信息。 当用户再次请求该资源时，将在HTTP Request 中加入If-None-Match信息(ETag的值)。如果服务器验证资源的ETag没有改变（该资源没有更新），将返回一个304状态告诉客户端使用本地缓存文件。否则将返回200状态和新的资源和Etag.  使用这样的机制将提高网站的性能。例如: If-None-Match: "03f2b33c0bfcc1:0"。
 
-![2514](/images/201609/2514.png)
+![2514](http://images.wuxubj.cn/201609/2514.png)
 **Pragma**：指定“no-cache”值表示服务器必须返回一个刷新后的文档，即使它是代理服务器而且已经有了页面的本地拷贝；在HTTP/1.1版本中，它和Cache-Control:no-cache作用一模一样。Pargma只有一个用法， 例如： Pragma: no-cache
 注意: 在HTTP/1.0版本中，只实现了Pragema:no-cache, 没有实现Cache-Control
 
@@ -299,7 +299,7 @@ WWW-Authenticate:Basic realm="Basic Auth Test!"
 ### 7.1、通过Cookies保存状态信息
 通过Cookies，服务器就可以清楚的知道请求2和请求1来自同一个客户端。
 
-![2515](/images/201609/2515.png)
+![2515](http://images.wuxubj.cn/201609/2515.png)
 ### 7.2、通过Session保存状态信息
 
 Session机制是一种服务器端的机制，服务器使用一种类似于散列表的结构（也可能就是使用散列表）来保存信息。
@@ -311,7 +311,7 @@ Session机制是一种服务器端的机制，服务器使用一种类似于散�
 服务器给每个Session分配一个唯一的JSESSIONID，并通过Cookie发送给客户端。
 当客户端发起新的请求的时候，将在Cookie头中携带这个JSESSIONID。这样服务器能够找到这个客户端对应的Session。
 
-![2516](/images/201609/2516.png)
+![2516](http://images.wuxubj.cn/201609/2516.png)
 2、使用URL回写来实现
 URL回写是指服务器在发送给浏览器页面的所有链接中都携带JSESSIONID的参数，这样客户端点击任何一个链接都会把JSESSIONID带会服务器。如果直接在浏览器输入服务端资源的url来请求该资源，那么Session是匹配不到的。
 Tomcat对Session的实现，是一开始同时使用Cookie和URL回写机制，如果发现客户端支持Cookie，就继续使用Cookie，停止使用URL回写。如果发现Cookie被禁用，就一直使用URL回写。jsp开发处理到Session的时候，对页面中的链接记得使用response.encodeURL() 。
@@ -339,7 +339,7 @@ telnet www.baidu.com 80
 GET /index.html HTTP/1.1
 注意：copy如上的消息到命令窗口后需要按两个回车换行才能得到响应的消息，第一个回车换行是在命令后键入回车换行，是HTTP协议要求的。第二个是确认输入，发送请求。
 
-![2517](/images/201609/2517.png)
+![2517](http://images.wuxubj.cn/201609/2517.png)
 可看到，当采用HTTP/1.1时，连接不是在请求结束后就断开的。若采用HTTP1.0，在命令窗口键入：
 GET /index.html HTTP/1.0
 此时可以看到请求结束之后马上断开。
@@ -449,7 +449,7 @@ HTTPS（全称：Hypertext Transfer Protocol over Secure Socket Layer），是�
 非对称加密：密钥成对出现（且根据公钥无法推知私钥，根据私钥也无法推知公钥），加密解密使用不同密钥（公钥加密需要私钥解密，私钥加密需要公钥解密），相对对称加密速度较慢，典型的非对称加密算法有RSA、DSA等。
 ### 13.2、HTTPS通信过程
 
-![2518](/images/201609/2518.png)
+![2518](http://images.wuxubj.cn/201609/2518.png)
 ### 13.3、HTTPS通信的优点
 客户端产生的密钥只有客户端和服务器端能得到；
 加密的数据只有客户端和服务器端才能得到明文；

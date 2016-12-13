@@ -54,8 +54,8 @@ var ap3 = new APlayer({
             music: {
                 title: '漂洋过海来看你',
                 author: '李行亮',
-                url: 'http://o9w8f1xrl.bkt.clouddn.com/APlayer/audio/%E6%BC%82%E6%B4%8B%E8%BF%87%E6%B5%B7%E6%9D%A5%E7%9C%8B%E4%BD%A0.mp3',
-                pic: 'http://o9w8f1xrl.bkt.clouddn.com/APlayer/audio/5757042883105946.jpg'
+                url: 'http://media.wuxubj.cn/%E6%BC%82%E6%B4%8B%E8%BF%87%E6%B5%B7%E6%9D%A5%E7%9C%8B%E4%BD%A0.mp3',
+                pic: 'http://media.wuxubj.cn/5757042883105946.jpg'
             }
         }); 
 		ap3.init();

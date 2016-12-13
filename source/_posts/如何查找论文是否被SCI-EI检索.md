@@ -28,9 +28,9 @@ copyright: true
 
 ## 2. 查找论文检索号
 SCI收录有个``IDS号``,在文章详情的“其他信息”模块，如图：
-![SCI IDS号](http://o9w8f1xrl.bkt.clouddn.com/images/201607/03.jpg)
+![SCI IDS号](http://images.wuxubj.cn/images/201607/03.jpg)
 EI收录号查询：在“Search Results”里点击“Detailed”，“Accession number”就是文章收录号，如图：
-![EI Accession number](http://o9w8f1xrl.bkt.clouddn.com/images/201607/04.jpg)
+![EI Accession number](http://images.wuxubj.cn/images/201607/04.jpg)
 
 **参考文献**
 [如何查找论文是否被SCI,EI检索](http://blog.sciencenet.cn/blog-722391-608704.html)

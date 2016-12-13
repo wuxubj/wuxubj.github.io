@@ -9,7 +9,7 @@ tags:
 permalink: Hexo-nexT-build-personal-blog
 copyright: true
 ---
-![Hexo](/images/201608/001.jpg)
+![Hexo](http://images.wuxubj.cn/201608/001.jpg)
 ## 1. Hexo简介
 Hexo 是一款基于 Node.js 的静态博客框架。Hexo 使用 Markdown 解析文章，用户在本地安装Hexo并进行写作，通过一条命令，Hexo即可利用靓丽的主题自动生成静态网页。
 参考：[Hexo Github地址](https://github.com/hexojs/hexo)                &nbsp;&nbsp;&nbsp;&nbsp;[Hexo帮助文档](https://hexo.io/zh-cn/docs/)<!--more-->
@@ -61,7 +61,7 @@ $ hexo s
 Hexo将``source``文件夹中的Markdown 和 HTML 文件会被解析并放到``public``文件夹中，``public``文件夹用于存放静态博客文件，相当于网站根目录。
 至此博客雏形基本完成，在浏览器中访问``http://localhost:4000/``，如图所示：
 
-![002](/images/201608/002.jpg)
+![002](http://images.wuxubj.cn/201608/002.jpg)
 
 ### 2.4 使用nexT主题
 >**下载nexT主题**
@@ -80,14 +80,14 @@ theme: next
 ```
 在``Git Bash``终端执行命令``hexo s``，在浏览器中访问``http://localhost:4000/``，当你看到站点的外观与下图所示类似时即说明你已成功安装 NexT 主题。这是 NexT 默认的 Scheme —— Muse。
 
-![003](/images/201608/003.jpg)
+![003](http://images.wuxubj.cn/201608/003.jpg)
 本博客使用的是``NexT.Pisces``主题，修改<font color=#f00>主题配置文件</font> ``_config.yml``的 Schemes 字段的值为：
 ```yml
 scheme: Pisces
 ```
 博客预览如图：
 
-![004](/images/201608/004.jpg)
+![004](http://images.wuxubj.cn/201608/004.jpg)
 
 ## 3. NexT主题配置
 ### 3.1 主题基本设定
@@ -181,7 +181,7 @@ search:
 更多配置说明可到插件页面查看：[hexo-generator-search](https://github.com/PaicHyperionDev/hexo-generator-search)
 至此，本地搜索功能已经完成，如图：
 
-![localsearch](/images/201608/005.jpg)
+![localsearch](http://images.wuxubj.cn/201608/005.jpg)
 可以看到，搜索弹窗界面比较粗糙，下面进行简单美化。
 
 >**弹窗界面美化**
@@ -223,12 +223,12 @@ p.search-result {
 
 最终效果如图：
 
-![localsearch](/images/201608/006.jpg)
+![localsearch](http://images.wuxubj.cn/201608/006.jpg)
 
 ### 3.4 使用多说
 使用多说需要先到其[官网](http://duoshuo.com/)注册账户，并创建一个站点，获取你的``duoshuo_shortname``，如图：
 
-![duoshuo_shortname](/images/201608/007.png)
+![duoshuo_shortname](http://images.wuxubj.cn/201608/007.png)
 
 >**添加多说评论**
 
@@ -245,7 +245,7 @@ duoshuo_share: true
 多说分享有个小bug，当点击“分享到”会出现“缺少service参数”提示，而且下拉分享按钮有些是undefined，这个bug可以通过在 duoshuo.swig 中引用多说开发版js ：embed.unstable.js来修复。修改后的[duoshuo.swig](https://github.com/wuxubj/hexo-theme-next/commit/96c2d5d9938fb233d9a64292e0f729b446c1af0f)。当然也可以通过删除部分代码，取消更多分享的功能来修复这个bug（我就是这么干的）。
 最终效果如图：
 
-![多说分享和多说评论](/images/201608/008.jpg)
+![多说分享和多说评论](http://images.wuxubj.cn/201608/008.jpg)
 >**添加多说最近访客**
 
 在需要添加最近访客的网页对应的 markdown 文件中添加如下代码：
@@ -296,7 +296,7 @@ display: none;
 ```
 </div>效果如图：
 
-![多说最近访客](/images/201608/009.jpg)
+![多说最近访客](http://images.wuxubj.cn/201608/009.jpg)
 
 ### 3.5 添加cnzz站长统计
 >**添加站长统计**
@@ -326,7 +326,7 @@ cnzz_siteid: 1259784696
 ```
 </div>最终效果如图：
 
-![cnzz](/images/201608/010.jpg)
+![cnzz](http://images.wuxubj.cn/201608/010.jpg)
 
 ### 3.6 设置404页面
 刚开始使用腾讯404公益页面，但是移动端适配不好，遂弃之。我现在的[404页面](/404.html)对应的markdown文件内容为：
@@ -348,7 +348,7 @@ permalink: /404
 ```
 </div>效果如下图所示：
 
-![404页面](/images/201608/011.jpg)
+![404页面](http://images.wuxubj.cn/201608/011.jpg)
 
 ## 4. 网站发布
 ### 4.1 云主机
@@ -397,7 +397,7 @@ menu_icons:
 ```
 </div>选择``.post-body``是为了不影响标题，选择``p``是为了不影响首页“阅读全文”的显示样式。
 ### 5.3 文章末尾添加“本文结束”标记
-![本文结束标记](/images/201608/012.jpg)
+![本文结束标记](http://images.wuxubj.cn/201608/012.jpg)
 >**新建 passage-end-tag.swig 文件**
 
 在路径``\themes\next\layout\_macro``中添加``passage-end-tag.swig``文件，其内容为：
@@ -444,7 +444,7 @@ wechat_subscriber:
 
 ### 5.5 手机端site-subtitle显示优化
 手机端默认显示副标题，个人觉得不太美观，现修改为：默认不显示副标题，显示导航栏的同时显示副标题。效果如图：
-![site-subtitle](/images/201608/013.gif)
+![site-subtitle](http://images.wuxubj.cn/201608/013.gif)
 原理：编写JavaScript函数，根据导航栏的``display``属性来决定是否显示副标题，实现方法如下：
 
 >**给导航栏添加id并隐藏site-subtitle**
