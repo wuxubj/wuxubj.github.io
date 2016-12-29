@@ -1,17 +1,16 @@
 .posts-expand {
   .post-eof {
-    display: block;
-    margin: $post-eof-margin-top auto $post-eof-margin-bottom;
-    width: 8%;
-    height: 1px;
-    background: $grey-light;
-    text-align: center;
+    margin: 40px 0;
+    height: 3px;
+    border: none;
+    background-color: #ddd;
+    background-image: repeating-linear-gradient(-45deg, #fff, #fff 4px, transparent 4px, transparent 8px);
   }
 }
 
 
 .post:last-child {
-  .post-eof.post-eof.post-eof {
+  .post-eof.post-eof.post-eof{
     display: none;
   }
 }
