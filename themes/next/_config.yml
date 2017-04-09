@@ -31,7 +31,7 @@ menu:
   tags: /tags
   #guestbook: /guestbook
   about: /about
-  mylove: /mylove
+  #mylove: /mylove
   #weblog: /weblog
   #commonweal: /404.html
 
@@ -43,7 +43,7 @@ menu_show:
   #tags: /tags
   #guestbook: /guestbook
   about: /about
-  mylove: /mylove
+  #mylove: /mylove
   
 # Enable/Disable menu icons.
 # Icon Mapping:
