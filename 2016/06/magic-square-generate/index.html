@@ -78,12 +78,13 @@
 
 
 <meta name="description" content="《数据结构(C语言版)》学习笔记：魔方构造算法(p23)">
+<meta name="keywords" content="算法,魔方构造">
 <meta property="og:type" content="article">
 <meta property="og:title" content="魔方构造问题">
 <meta property="og:url" content="http://www.wuxubj.cn/2016/06/magic-square-generate/index.html">
 <meta property="og:site_name" content="务虚笔记">
 <meta property="og:description" content="《数据结构(C语言版)》学习笔记：魔方构造算法(p23)">
-<meta property="og:updated_time" content="2016-09-20T13:06:38.283Z">
+<meta property="og:updated_time" content="2017-05-03T02:55:37.182Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="魔方构造问题">
 <meta name="twitter:description" content="《数据结构(C语言版)》学习笔记：魔方构造算法(p23)">
@@ -187,22 +188,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-guestbook">
-          <a href="/guestbook" rel="section">
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-commenting"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            留言
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-mylove">
-          <a href="/mylove" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />
-            
-            爱的纪念
+            关于
           </a>
         </li>
       
@@ -344,17 +335,15 @@
       
         <p><a href="https://book.douban.com/subject/1886174/" target="_blank" rel="external">《数据结构(C语言版)》</a>学习笔记：<a href="http://wuxubj.cn/2016/06/30/magic-square-generate/" target="_blank" rel="external">魔方构造算法</a>(p23)<br><a id="more"></a></p>
 <h2 id="1-魔方产生法则"><a href="#1-魔方产生法则" class="headerlink" title="1. 魔方产生法则"></a>1. 魔方产生法则</h2><p>把1放入第一行最中间的方格中，向左上方移动，并按照数字的递增顺序，把数字填入空方格。如果移出了魔方（即越过了魔方边界），则进入魔方对边的对应方格，继续填写方格。如果一个方格已被填入数字，则向下继续填入方格。</p>
-<h2 id="2-魔方构造算法C语言实现"><a href="#2-魔方构造算法C语言实现" class="headerlink" title="2. 魔方构造算法C语言实现"></a>2. 魔方构造算法C语言实现</h2><div class="codecopy codecopy1"> <figure class="highlight cpp"><figcaption><span><i class="fa fa-clipboard" data-clipboard-target=".codecopy1 .code pre" aria-label="复制成功！" title="点击复制代码"></i></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">magic_square</span><span class="params">(<span class="keyword">int</span> square[][MAX_SIZE], <span class="keyword">int</span> size)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> row, col;</span><br><span class="line">	<span class="keyword">int</span> i, j, count;</span><br><span class="line">	<span class="keyword">if</span> (size&lt;<span class="number">1</span> || size&gt;MAX_SIZE)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span> (size % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; size; i++) <span class="comment">//魔方每个元素初始化为0</span></span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; size; j++)</span><br><span class="line">			square[i][j] = <span class="number">0</span>;</span><br><span class="line">	i = <span class="number">0</span>; j = (size - <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">	square[i][j] = <span class="number">1</span>;<span class="comment">//将1放入第一行最中间的方格中</span></span><br><span class="line">	<span class="keyword">for</span> (count = <span class="number">2</span>; count &lt;= size*size; count++)<span class="comment">//依次放入2，3，...，size*size</span></span><br><span class="line">	&#123;</span><br><span class="line">		row = (i - <span class="number">1</span> &gt;= <span class="number">0</span>) ? (i - <span class="number">1</span>) : (size - <span class="number">1</span>);<span class="comment">//寻找下一个位置</span></span><br><span class="line">		col = (j - <span class="number">1</span> &gt;= <span class="number">0</span>) ? (j - <span class="number">1</span>) : (size - <span class="number">1</span>);</span><br><span class="line">		<span class="keyword">if</span> (square[row][col])<span class="comment">//下一个位置已被填入数字</span></span><br><span class="line">			i = (++i) % size;<span class="comment">//数字填写到下一个位置之前一个位置的正下方</span></span><br><span class="line">		<span class="keyword">else</span> <span class="comment">//下一个位置没有被填入数字</span></span><br><span class="line">		&#123;</span><br><span class="line">			i = row; <span class="comment">//数字填写到下一个位置</span></span><br><span class="line">			j = col;</span><br><span class="line">		&#125;</span><br><span class="line">		square[i][j] = count;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><br></div>
+<h2 id="2-魔方构造算法C语言实现"><a href="#2-魔方构造算法C语言实现" class="headerlink" title="2. 魔方构造算法C语言实现"></a>2. 魔方构造算法C语言实现</h2><div class="codecopy codecopy1"> <figure class="highlight cpp"><figcaption><span><i class="fa fa-clipboard" data-clipboard-target=".codecopy1 .code pre" aria-label="复制成功！" title="点击复制代码"></i></span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">magic_square</span><span class="params">(<span class="keyword">int</span> square[][MAX_SIZE], <span class="keyword">int</span> size)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> row, col;</div><div class="line">	<span class="keyword">int</span> i, j, count;</div><div class="line">	<span class="keyword">if</span> (size&lt;<span class="number">1</span> || size&gt;MAX_SIZE)</div><div class="line">		<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">	<span class="keyword">if</span> (size % <span class="number">2</span> == <span class="number">0</span>)</div><div class="line">		<span class="keyword">return</span> <span class="number">2</span>;</div><div class="line"></div><div class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; size; i++) <span class="comment">//魔方每个元素初始化为0</span></div><div class="line">		<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; size; j++)</div><div class="line">			square[i][j] = <span class="number">0</span>;</div><div class="line">	i = <span class="number">0</span>; j = (size - <span class="number">1</span>) / <span class="number">2</span>;</div><div class="line">	square[i][j] = <span class="number">1</span>;<span class="comment">//将1放入第一行最中间的方格中</span></div><div class="line">	<span class="keyword">for</span> (count = <span class="number">2</span>; count &lt;= size*size; count++)<span class="comment">//依次放入2，3，...，size*size</span></div><div class="line">	&#123;</div><div class="line">		row = (i - <span class="number">1</span> &gt;= <span class="number">0</span>) ? (i - <span class="number">1</span>) : (size - <span class="number">1</span>);<span class="comment">//寻找下一个位置</span></div><div class="line">		col = (j - <span class="number">1</span> &gt;= <span class="number">0</span>) ? (j - <span class="number">1</span>) : (size - <span class="number">1</span>);</div><div class="line">		<span class="keyword">if</span> (square[row][col])<span class="comment">//下一个位置已被填入数字</span></div><div class="line">			i = (++i) % size;<span class="comment">//数字填写到下一个位置之前一个位置的正下方</span></div><div class="line">		<span class="keyword">else</span> <span class="comment">//下一个位置没有被填入数字</span></div><div class="line">		&#123;</div><div class="line">			i = row; <span class="comment">//数字填写到下一个位置</span></div><div class="line">			j = col;</div><div class="line">		&#125;</div><div class="line">		square[i][j] = count;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br></div>
 
-<h2 id="3-i，j与row，col的作用分析"><a href="#3-i，j与row，col的作用分析" class="headerlink" title="3. i，j与row，col的作用分析"></a>3. <code>i，j</code>与<code>row，col</code>的作用分析</h2><h2 id="4-测试主函数"><a href="#4-测试主函数" class="headerlink" title="4. 测试主函数"></a>4. 测试主函数</h2><div class="codecopy codecopy2"> <figure class="highlight cpp"><figcaption><span><i class="fa fa-clipboard" data-clipboard-target=".codecopy2 .code pre" aria-label="复制成功！" title="点击复制代码"></i></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_SIZE 15</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">magic_square</span><span class="params">(<span class="keyword">int</span> square[][MAX_SIZE], <span class="keyword">int</span> size)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_square</span><span class="params">(<span class="keyword">int</span> square[][MAX_SIZE], <span class="keyword">int</span> size)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> square[MAX_SIZE][MAX_SIZE];</span><br><span class="line">	<span class="keyword">int</span> size;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Enter the size of the square:"</span>);</span><br><span class="line">	scanf_s(<span class="string">"%d"</span>, &amp;size);</span><br><span class="line">	<span class="keyword">int</span> flag=magic_square(square, size);</span><br><span class="line">	<span class="keyword">if</span> (flag == <span class="number">1</span>)</span><br><span class="line">		<span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"Error! Size is out of range.\n"</span>);</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (flag==<span class="number">2</span>)</span><br><span class="line">		<span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"Error! Size is even.\n"</span>);</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Magic Square of size %d :\n\n"</span>, size);</span><br><span class="line">		print_square(square, size);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_square</span><span class="params">(<span class="keyword">int</span> square[][MAX_SIZE], <span class="keyword">int</span> size)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; size; j++)</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%5d"</span>, square[i][j]);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><br></div>
+<h2 id="3-i，j与row，col的作用分析"><a href="#3-i，j与row，col的作用分析" class="headerlink" title="3. i，j与row，col的作用分析"></a>3. <code>i，j</code>与<code>row，col</code>的作用分析</h2><h2 id="4-测试主函数"><a href="#4-测试主函数" class="headerlink" title="4. 测试主函数"></a>4. 测试主函数</h2><div class="codecopy codecopy2"> <figure class="highlight cpp"><figcaption><span><i class="fa fa-clipboard" data-clipboard-target=".codecopy2 .code pre" aria-label="复制成功！" title="点击复制代码"></i></span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_SIZE 15</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">magic_square</span><span class="params">(<span class="keyword">int</span> square[][MAX_SIZE], <span class="keyword">int</span> size)</span></span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_square</span><span class="params">(<span class="keyword">int</span> square[][MAX_SIZE], <span class="keyword">int</span> size)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> square[MAX_SIZE][MAX_SIZE];</div><div class="line">	<span class="keyword">int</span> size;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"Enter the size of the square:"</span>);</div><div class="line">	scanf_s(<span class="string">"%d"</span>, &amp;size);</div><div class="line">	<span class="keyword">int</span> flag=magic_square(square, size);</div><div class="line">	<span class="keyword">if</span> (flag == <span class="number">1</span>)</div><div class="line">		<span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"Error! Size is out of range.\n"</span>);</div><div class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (flag==<span class="number">2</span>)</div><div class="line">		<span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"Error! Size is even.\n"</span>);</div><div class="line">	<span class="keyword">else</span>&#123;</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"Magic Square of size %d :\n\n"</span>, size);</div><div class="line">		print_square(square, size);</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">	system(<span class="string">"pause"</span>);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_square</span><span class="params">(<span class="keyword">int</span> square[][MAX_SIZE], <span class="keyword">int</span> size)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; size; j++)</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%5d"</span>, square[i][j]);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br></div>
       
     </div>
 
 	<div>
       
         
-<div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束 ------</div>
-
       
     </div>
 	
@@ -377,13 +366,13 @@
 
 <div class="post_copyright">
   <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  <script type="text/javascript" src="http://od390waa7.bkt.clouddn.com/sweetalert_mini/jquery-1.7.1.min.js"></script>
-  <script src="http://od390waa7.bkt.clouddn.com/sweetalert_mini/sweetalert.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/thirdparty/sweetalert/sweetalert.css">
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
   <p><span>本文标题:</span><a href="/2016/06/magic-square-generate/">魔方构造问题</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 wuxubj 的个人博客">wuxubj</a></p>
   <p><span>发布时间:</span>2016年06月30日 - 12:06</p>
-  <p><span>最后更新:</span>2016年09月20日 - 21:09</p>
+  <p><span>最后更新:</span>2017年05月03日 - 10:05</p>
   <p><span>原始链接:</span><a href="/2016/06/magic-square-generate/" title="魔方构造问题">http://www.wuxubj.cn/2016/06/magic-square-generate/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.wuxubj.cn/2016/06/magic-square-generate/"  aria-label="复制成功！"></i></span>
   </p>
@@ -534,7 +523,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -542,7 +531,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -551,7 +540,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -799,8 +788,8 @@ function shake() {
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -823,6 +812,9 @@ function shake() {
   </a>
 </div>
 
+<div style="padding-top:1px;">
+ <span>鄂ICP备16017973号</span>
+</div>
         
 
         
@@ -835,7 +827,7 @@ function shake() {
 	<div class="code_img"><i></i><img src="/images/wuxubj.png" alt="扫一扫，用手机访问本站"><p>扫一扫，用手机访问本站</p></div>
   </div>
   <div class="side-buttons-box mail_box">
-    <a href="mailto:742745426@qq.com"><span class="bt-left"><i class="fa fa-envelope-o fa-lg" title="发送邮件"></i></span><span style="font-size:1px;display:inline-block;line-height:16px;clear:both;">发送邮件</span></a>
+    <a href="mailto:wuxubj@qq.com"><span class="bt-left"><i class="fa fa-envelope-o fa-lg" title="发送邮件"></i></span><span style="font-size:1px;display:inline-block;line-height:16px;clear:both;">发送邮件</span></a>
   </div>
 </div>
 	
@@ -1204,7 +1196,6 @@ function showSubtitle()
 }
 </script>
 
-  
   
   
 

@@ -38,9 +38,6 @@
   
 
   
-    
-    
-  
 
   
 
@@ -50,10 +47,6 @@
 
   
 
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -72,32 +65,27 @@
 
 
 
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
-
+  <link rel="alternate" href="/atom.xml" title="务虚笔记" type="application/atom+xml" />
 
 
 
 
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.1" />
 
-<meta name="description" content="网站http://airav.cc/http://59iav.nethttp://www.btwalk.net88ybyb.comhttp://www.nidipa.com/一本道91pornxvideos
-上原亚衣1.031515-828-carib
-大桥未久苍井空">
+
+
+
+
+
+<meta name="description" content="wuxubj,个人博客">
 <meta property="og:type" content="website">
-<meta property="og:title" content="av">
-<meta property="og:url" content="http://www.wuxubj.cn/guestbook/av.html">
+<meta property="og:title" content="务虚笔记">
+<meta property="og:url" content="http://www.wuxubj.cn/categories/编程语言语法/index.html">
 <meta property="og:site_name" content="务虚笔记">
-<meta property="og:description" content="网站http://airav.cc/http://59iav.nethttp://www.btwalk.net88ybyb.comhttp://www.nidipa.com/一本道91pornxvideos
-上原亚衣1.031515-828-carib
-大桥未久苍井空">
-<meta property="og:updated_time" content="2016-07-13T14:01:31.875Z">
+<meta property="og:description" content="wuxubj,个人博客">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="av">
-<meta name="twitter:description" content="网站http://airav.cc/http://59iav.nethttp://www.btwalk.net88ybyb.comhttp://www.nidipa.com/一本道91pornxvideos
-上原亚衣1.031515-828-carib
-大桥未久苍井空">
+<meta name="twitter:title" content="务虚笔记">
+<meta name="twitter:description" content="wuxubj,个人博客">
 
 
 
@@ -115,13 +103,7 @@
   };
 </script>
 
-  <title>
-  
-
-  
-    av | 务虚笔记
-  
-</title>
+  <title> 分类: 编程语言语法 | 务虚笔记  - wuxubj,个人博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -132,12 +114,6 @@
 
 
 
-
-
-
-  <div style="display: none;">
-    <script src="http://s6.cnzz.com/stat.php?id=1259784696&web_id=1259784696" type="text/javascript"></script>
-  </div>
 
 
 
@@ -162,18 +138,18 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle"></p>
+  <p class="site-subtitle" id="site-subtitle">Li Xiaowei's blog</p>
 </div>
 
 <div class="site-nav-toggle">
-  <button>
+  <button onclick="showSubtitle()">
     <span class="btn-bar"></span>
     <span class="btn-bar"></span>
     <span class="btn-bar"></span>
   </button>
 </div>
 
-<nav class="site-nav">
+<nav class="site-nav" id="site-nav">
   
 
   
@@ -183,6 +159,8 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
             首页
           </a>
         </li>
@@ -190,6 +168,8 @@
         
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
           </a>
@@ -199,31 +179,19 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
+              <i class="menu-item-icon fa fa-fw fa-calendar-check-o"></i> <br />
+            
             归档
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
             
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-guestbook">
-          <a href="/guestbook" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            留言
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-mylove">
-          <a href="/mylove" rel="section">
-            
-            爱的纪念
+            关于
           </a>
         </li>
       
@@ -233,6 +201,8 @@
           
             <a href="#" class="popup-trigger">
           
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
             搜索
           </a>
@@ -245,11 +215,11 @@
     <div class="site-search">
       
   <div class="popup">
+ <span class="search-icon fa fa-search fa-lg"></span>
  <input type="text" id="local-search-input">
  <div id="local-search-result"></div>
  <span class="popup-btn-close">close</span>
 </div>
-
 
 
     </div>
@@ -265,14 +235,47 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        编程语言语法
+        <small>分类</small>
+      </h2>
+    </div>
+
     
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/2016/12/const-in-cpp/" itemprop="url">
+              
+                <span itemprop="name">C++中的const</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-12-20T19:37:26+08:00"
+              content="2016-12-20" >
+          12-20
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
     
-      <h3 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h3><p><a href="http://airav.cc/" target="_blank" rel="external">http://airav.cc/</a><br><a href="http://59iav.net/?s=上原" target="_blank" rel="external">http://59iav.net</a><br><a href="http://www.btwalk.net" target="_blank" rel="external">http://www.btwalk.net</a><br><a href="http://88ybyb.com" target="_blank" rel="external">88ybyb.com</a><br><a href="http://www.nidipa.com/" target="_blank" rel="external">http://www.nidipa.com/</a><br><a href="http://www.1pondo.tv/" target="_blank" rel="external">一本道</a><br><a href="http://www.91porn.com/" target="_blank" rel="external">91porn</a><br><a href="http://www.xvideos.com/" target="_blank" rel="external">xvideos</a></p>
-<h3 id="上原亚衣"><a href="#上原亚衣" class="headerlink" title="上原亚衣"></a>上原亚衣</h3><p>1.031515-828-carib</p>
-<h3 id="大桥未久"><a href="#大桥未久" class="headerlink" title="大桥未久"></a>大桥未久</h3><h3 id="苍井空"><a href="#苍井空" class="headerlink" title="苍井空"></a>苍井空</h3>
-    
-  </div>
+  </section>
+
+  
+
 
 
           </div>
@@ -280,14 +283,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="guestbook/av.html"
-           data-title="av" data-url="http://www.wuxubj.cn/guestbook/av.html">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -314,12 +309,12 @@
                src="/images/avatar.jpg"
                alt="wuxubj" />
           <p class="site-author-name" itemprop="name">wuxubj</p>
-          <p class="site-description motion-element" itemprop="description">wuxubj,个人技术博客</p>
+          <p class="site-description motion-element" itemprop="description">记录敲过的代码、走过的人生</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -327,7 +322,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -336,7 +331,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -344,6 +339,169 @@
 
         </nav>
 
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" target="_blank" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+			
+			<a title="小high一下~" rel="alternate" class="mw-harlem_shake_slow wobble shake" href="javascript:shake()"><i class="fa fa-music"></i> High</a>
+
+<script type="text/JavaScript">
+function shake() {
+    function c() {
+        var e = document.createElement("link");
+        e.setAttribute("type", "text/css");
+        e.setAttribute("rel", "stylesheet");
+        e.setAttribute("href", f);
+        e.setAttribute("class", l);
+        document.body.appendChild(e)
+    }
+ 
+    function h() {
+        var e = document.getElementsByClassName(l);
+        for (var t = 0; t < e.length; t++) {
+            document.body.removeChild(e[t])
+        }
+    }
+ 
+    function p() {
+        var e = document.createElement("div");
+        e.setAttribute("class", a);
+        document.body.appendChild(e);
+        setTimeout(function() {
+            document.body.removeChild(e)
+        }, 100)
+    }
+ 
+    function d(e) {
+        return {
+            height : e.offsetHeight,
+            width : e.offsetWidth
+        }
+    }
+ 
+    function v(i) {
+        var s = d(i);
+        return s.height > e && s.height < n && s.width > t && s.width < r
+    }
+ 
+    function m(e) {
+        var t = e;
+        var n = 0;
+        while (!!t) {
+            n += t.offsetTop;
+            t = t.offsetParent
+        }
+        return n
+    }
+ 
+    function g() {
+        var e = document.documentElement;
+        if (!!window.innerWidth) {
+            return window.innerHeight
+        } else if (e && !isNaN(e.clientHeight)) {
+            return e.clientHeight
+        }
+        return 0
+    }
+ 
+    function y() {
+        if (window.pageYOffset) {
+            return window.pageYOffset
+        }
+        return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+    }
+ 
+    function E(e) {
+        var t = m(e);
+        return t >= w && t <= b + w
+    }
+ 
+    function S() {
+        var e = document.createElement("audio");
+        e.setAttribute("class", l);
+        e.src = i;
+        e.loop = false;
+        e.addEventListener("canplay", function() {
+            setTimeout(function() {
+                x(k)
+            }, 500);
+            setTimeout(function() {
+                N();
+                p();
+                for (var e = 0; e < O.length; e++) {
+                    T(O[e])
+                }
+            }, 15500)
+        }, true);
+        e.addEventListener("ended", function() {
+            N();
+            h()
+        }, true);
+        e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+        document.body.appendChild(e);
+        e.play()
+    }
+ 
+    function x(e) {
+        e.className += " " + s + " " + o
+    }
+ 
+    function T(e) {
+        e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+    }
+ 
+    function N() {
+        var e = document.getElementsByClassName(s);
+        var t = new RegExp("\\b" + s + "\\b");
+        for (var n = 0; n < e.length; ) {
+            e[n].className = e[n].className.replace(t, "")
+        }
+    }
+ 
+    var e = 30;
+    var t = 30;
+    var n = 350;
+    var r = 350;
+    var i = "http://o9w8f1xrl.bkt.clouddn.com/highqilai/harlem-shake.mp3";
+    var s = "mw-harlem_shake_me";
+    var o = "im_first";
+    var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+    var a = "mw-strobe_light";
+    var f = "http://o9w8f1xrl.bkt.clouddn.com/highqilai/harlem-shake-style.css";
+    var l = "mw_added_css";
+    var b = g();
+    var w = y();
+    var C = document.getElementsByTagName("*");
+    var k = null;
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            if (E(A)) {
+                k = A;
+                break
+            }
+        }
+    }
+    if (A === null) {
+        console.warn("Could not find a node of the right size. Please try a different page.");
+        return
+    }
+    c();
+    S();
+    var O = [];
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            O.push(A)
+        }
+    }
+}
+</script>
+			
+          </div>
         
 
         <div class="links-of-author motion-element">
@@ -377,19 +535,23 @@
         
           <div class="links-of-blogroll motion-element links-of-blogroll-inline">
             <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              Links
+              <i class="fa  fa-fw fa-link"></i>
+              友情链接
             </div>
-            <ul class="links-of-blogroll-list">
+           
               
-                <li class="links-of-blogroll-item">
-                  <a href="http://www.wuxubj.cn/weblog" title="建站日志" target="_blank">建站日志</a>
-                </li>
+                <span class="links-of-author-item" style="text-align:left">
+                  <a href="/weblog" title="建站日志" target="_blank">建站日志</a>
+                </span>
               
-            </ul>
+                <span class="links-of-author-item" style="text-align:left">
+                  <a href="/study-plan" title="学习计划" target="_blank">学习计划</a>
+                </span>
+              
+            
           </div>
         
-	
+
       </section>
 
       
@@ -406,53 +568,51 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">wuxubj &nbsp;&nbsp;</span>
+  <span class="author" itemprop="copyrightHolder">wuxubj</span>
   
-  <span class="site-pv">
-    <script src="http://s6.cnzz.com/stat.php?id=1259784696&web_id=1259784696" type="text/javascript"></script>
-	</span>
+   <span style="margin-left:8px;">
+   <script src="http://s6.cnzz.com/stat.php?id=1259784696&web_id=1259784696" type="text/javascript"></script>
+   </span>
   
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="http://hexo.io" target="_blank">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank">
     NexT.Pisces
   </a>
 </div>
 
-        
-
-<div class="busuanzi-count">
-
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-
-  
-  
- 
-
-
+<div style="padding-top:1px;">
+ <span>鄂ICP备16017973号</span>
 </div>
-
-
+        
 
         
       </div>
     </footer>
-
+    
+	  <div class="side-buttons">
+  <div class="side-buttons-box mobile_code">
+    <span class="bt-left"><i class="fa fa-mobile-phone fa-2x" title="手机访问"></i></span><span style="font-size:1px;display:inline-block;line-height:16px;clear:both;">扫二维码</span>
+	<div class="code_img"><i></i><img src="/images/wuxubj.png" alt="扫一扫，用手机访问本站"><p>扫一扫，用手机访问本站</p></div>
+  </div>
+  <div class="side-buttons-box mail_box">
+    <a href="mailto:wuxubj@qq.com"><span class="bt-left"><i class="fa fa-envelope-o fa-lg" title="发送邮件"></i></span><span style="font-size:1px;display:inline-block;line-height:16px;clear:both;">发送邮件</span></a>
+  </div>
+</div>
+	
     <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
+      <i class="fa fa-arrow-up fa-2x" title="回到顶部"></i>
     </div>
   </div>
 
@@ -595,7 +755,7 @@
                 if (this.value.trim().length > 1) {
                 // perform local searching
                 datas.forEach(function(data) {
-                    var isMatch = true;
+                    var isMatch = false;
                     var content_index = [];
                     var data_title = data.title.trim().toLowerCase();
                     var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
@@ -604,20 +764,17 @@
                     var index_content = -1;
                     var first_occur = -1;
                     // only match artiles with not empty titles and contents
-                    if(data_title != '' && data_content != '') {
+                    if(data_title != '') {
                         keywords.forEach(function(keyword, i) {
                             index_title = data_title.indexOf(keyword);
                             index_content = data_content.indexOf(keyword);
-                            if( index_title < 0 && index_content < 0 ){
-                                isMatch = false;
-                            } else {
-                                if (index_content < 0) {
-                                    index_content = 0;
-                                }
-                                if (i == 0) {
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
                                     first_occur = index_content;
                                 }
-                            }
+                            } 
+							
                         });
                     }
                     // show search results
@@ -660,24 +817,14 @@
     });}
 
     // handle and trigger popup window;
-	 $('.popup-trigger').click(function(e) {
+    $('.popup-trigger').mousedown(function(e) {
       e.stopPropagation();
       if (isfetched == false) {
         searchFunc(path, 'local-search-input', 'local-search-result');
       } else {
         proceedsearch();
       };
-    });
-	
-    $('.popup-trigger-input').bind('keypress',function(e) {
-	if(event.keyCode == "13"){
-      e.stopPropagation();
-      if (isfetched == false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-	}
+
     });
 
     $('.popup-btn-close').click(function(e){
@@ -695,28 +842,107 @@
   
 
   
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("zPFLpkVuL8bNpqMl24W0E86i-gzGzoHsz", "YhJrGjyDpGD6a8V2BvhDU0X9");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
     }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
     }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
-
-  <div style="display: none;">
-    <script src="http://s6.cnzz.com/stat.php?id=1259784696&web_id=1259784696" type="text/javascript"></script>
-	</div>
-
-
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
 
   <script type="text/JavaScript">
 function hideElement(elementID)
@@ -731,27 +957,23 @@ function showElement(elementID)
 	myele.style.display="block";
 }
 
-function loveTime(startDate){
-     //   var EndTime= new Date('2014/02/6 19:46:00'); //��ֹʱ�� ǰ��·�� http://www.51xuediannao.com/qd63/
-        var EndTime= new Date(startDate); 
-		var NowTime = new Date();
-        var t =NowTime.getTime() - EndTime.getTime();
-
-        var d=Math.floor(t/1000/60/60/24);
-        var h=Math.floor(t/1000/60/60%24);
-        var m=Math.floor(t/1000/60%60);
-        var s=Math.floor(t/1000%60);
-		var month=Math.ceil(d/30);
-		var year=Math.ceil(d/365);
-        document.getElementById("t_d").innerHTML = d ;
-        document.getElementById("t_h").innerHTML = h ;
-        document.getElementById("t_m").innerHTML = m ;
-        document.getElementById("t_s").innerHTML = s ;
-		
-		document.getElementById("t_month").innerHTML = month ;
-		document.getElementById("t_year").innerHTML = year ;
-    }
+function showSubtitle()
+{
+  var siteNav=document.getElementById("site-nav");
+  if(siteNav.style.display=="block")
+  {
+   var subTitle=document.getElementById("site-subtitle");
+   subTitle.style.display="none";
+  }else
+  {
+   var subTitle=document.getElementById("site-subtitle");
+   subTitle.style.display="block";
+  }
+}
 </script>
+
   
+  
+
 </body>
 </html>

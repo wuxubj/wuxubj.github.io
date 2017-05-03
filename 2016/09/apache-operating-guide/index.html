@@ -78,12 +78,13 @@
 
 
 <meta name="description" content="Apache/2.4.7 (Ubuntu)下的一些操作经验。">
+<meta name="keywords" content="Apache2,服务器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Apache服务器搭建经验">
 <meta property="og:url" content="http://www.wuxubj.cn/2016/09/apache-operating-guide/index.html">
 <meta property="og:site_name" content="务虚笔记">
 <meta property="og:description" content="Apache/2.4.7 (Ubuntu)下的一些操作经验。">
-<meta property="og:updated_time" content="2016-09-20T13:04:26.057Z">
+<meta property="og:updated_time" content="2017-05-03T02:55:37.175Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Apache服务器搭建经验">
 <meta name="twitter:description" content="Apache/2.4.7 (Ubuntu)下的一些操作经验。">
@@ -187,22 +188,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-guestbook">
-          <a href="/guestbook" rel="section">
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-commenting"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            留言
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-mylove">
-          <a href="/mylove" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />
-            
-            爱的纪念
+            关于
           </a>
         </li>
       
@@ -349,25 +340,25 @@
 <h2 id="1-设置301跳转"><a href="#1-设置301跳转" class="headerlink" title="1. 设置301跳转"></a>1. 设置301跳转</h2><blockquote>
 <p><strong>开启Rewrite模块</strong></p>
 </blockquote>
-<p>在终端依次执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># sudo a2enmod rewrite</span><br><span class="line"># service apache2 restart</span><br></pre></td></tr></table></figure></p>
+<p>在终端依次执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># sudo a2enmod rewrite</div><div class="line"># service apache2 restart</div></pre></td></tr></table></figure></p>
 <p>停用使用<code>a2dismod</code>命令。</p>
 <blockquote>
 <p><strong>修改配置文件</strong></p>
 </blockquote>
-<p>在配置文件<code>apache2.conf</code>中，将所有的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AllowOverride None</span><br></pre></td></tr></table></figure></p>
-<p>修改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AllowOverride All</span><br></pre></td></tr></table></figure></p>
-<p>然后核对配置文件中是否包含如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AccessFileName .htaccess</span><br></pre></td></tr></table></figure></p>
+<p>在配置文件<code>apache2.conf</code>中，将所有的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">AllowOverride None</div></pre></td></tr></table></figure></p>
+<p>修改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">AllowOverride All</div></pre></td></tr></table></figure></p>
+<p>然后核对配置文件中是否包含如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">AccessFileName .htaccess</div></pre></td></tr></table></figure></p>
 <p>重启Apache2。</p>
 <blockquote>
 <p><strong>网站目录下面新建.htaccess文件</strong></p>
 </blockquote>
-<p>新建.htaccess文件，添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Options +FollowSymLinks </span><br><span class="line">RewriteEngine On </span><br><span class="line">RewriteCond %&#123;HTTP_HOST&#125; ^wuxubj.cn [NC] </span><br><span class="line">RewriteRule (.*) http://www.wuxubj.cn%&#123;REQUEST_URI&#125; [L,R=301]</span><br></pre></td></tr></table></figure></p>
+<p>新建.htaccess文件，添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Options +FollowSymLinks </div><div class="line">RewriteEngine On </div><div class="line">RewriteCond %&#123;HTTP_HOST&#125; ^wuxubj.cn [NC] </div><div class="line">RewriteRule (.*) http://www.wuxubj.cn%&#123;REQUEST_URI&#125; [L,R=301]</div></pre></td></tr></table></figure></p>
 <p>完成之后便将<a href="http://wuxubj.cn/" target="_blank" rel="external">wuxubj.cn</a>设置为301跳转到<a href="http://www.wuxubj.cn/">www.wuxubj.cn</a>。</p>
-<h2 id="2-设置目录禁止访问"><a href="#2-设置目录禁止访问" class="headerlink" title="2. 设置目录禁止访问"></a>2. 设置目录禁止访问</h2><p>当目录下没有 index.html 文件时，禁止显示目录。<br>在配置文件<code>apache2.conf</code>中，将<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Options Indexes FollowSymLinks</span><br></pre></td></tr></table></figure></p>
-<p>修改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Options FollowSymLinks</span><br></pre></td></tr></table></figure></p>
+<h2 id="2-设置目录禁止访问"><a href="#2-设置目录禁止访问" class="headerlink" title="2. 设置目录禁止访问"></a>2. 设置目录禁止访问</h2><p>当目录下没有 index.html 文件时，禁止显示目录。<br>在配置文件<code>apache2.conf</code>中，将<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Options Indexes FollowSymLinks</div></pre></td></tr></table></figure></p>
+<p>修改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Options FollowSymLinks</div></pre></td></tr></table></figure></p>
 <p>其实就是将<code>Indexes</code>去掉，<code>Indexes</code>表示若当前目录没有 index.html 就会显示目录结构。<br>相反，如果需要显示目录结构，则加上<code>Indexes</code>即可。</p>
-<h2 id="3-一个IP绑定多个域名"><a href="#3-一个IP绑定多个域名" class="headerlink" title="3. 一个IP绑定多个域名"></a>3. 一个IP绑定多个域名</h2><p>通过虚拟主机实现一个IP绑定多个域名。找到在Apache安装路径下找到<code>apache2/sites-enabled/000-default.conf</code>文件，添加多个<code>&lt;VirtualHost *:80&gt;...&lt;VirtualHost&gt;</code>对：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"># /etc/apache2/sites-enabled/000-default.conf</span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    ServerAdmin 742745426@qq.com</span><br><span class="line">    #指定网站根目录</span><br><span class="line">    DocumentRoot /var/www/public/</span><br><span class="line">    #设置可用index文件</span><br><span class="line">    DirectoryIndex index.html index.htm index.php</span><br><span class="line">    # 指定域名</span><br><span class="line">    ServerName www.wuxubj.cn</span><br><span class="line">    ServerName wuxubj.cn</span><br><span class="line">    &lt;Directory /&gt;</span><br><span class="line">      Options FollowSymLinks</span><br><span class="line">      AllowOverride None</span><br><span class="line">    &lt;/Directory&gt;</span><br><span class="line">     #设置权限目录</span><br><span class="line">    &lt;Directory /var/www/public/&gt;</span><br><span class="line">      Options FollowSymLinks</span><br><span class="line">      AllowOverride All</span><br><span class="line">      Require all granted</span><br><span class="line">     &lt;/Directory&gt;</span><br><span class="line">&lt;VirtualHost&gt;</span><br><span class="line"></span><br><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    ServerAdmin 742745426@qq.com</span><br><span class="line">    #指定网站根目录</span><br><span class="line">    DocumentRoot /var/www/public2/</span><br><span class="line">    #设置可用index文件</span><br><span class="line">    DirectoryIndex index.html index.htm index.php</span><br><span class="line">    # 指定域名</span><br><span class="line">    ServerName test.wuxubj.cn</span><br><span class="line">    &lt;Directory /&gt;</span><br><span class="line">      Options FollowSymLinks</span><br><span class="line">      AllowOverride None</span><br><span class="line">    &lt;/Directory&gt;</span><br><span class="line">    #设置权限目录</span><br><span class="line">    &lt;Directory /var/www/public2/&gt;</span><br><span class="line">      Options FollowSymLinks</span><br><span class="line">      AllowOverride All</span><br><span class="line">      Require all granted </span><br><span class="line">    &lt;/Directory&gt;</span><br><span class="line">&lt;VirtualHost&gt;</span><br></pre></td></tr></table></figure></p>
-<p>如果要设置301跳转，则将<code>AllowOverride None</code>修改为<code>AllowOverride All</code>。<br>注意只需要开启一个端口即80端口，如果是https，则将以上80端口修改为443端口。端口监听配置如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># /etc/apache2/ports.conf</span><br><span class="line">Listen 80</span><br><span class="line">&lt;IfModule ssl_module&gt;</span><br><span class="line">    Listen 443</span><br><span class="line">&lt;/IfModule&gt;</span><br><span class="line">&lt;IfModule mod_gnutls.c&gt;</span><br><span class="line">    Listen 443</span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="3-一个IP绑定多个域名"><a href="#3-一个IP绑定多个域名" class="headerlink" title="3. 一个IP绑定多个域名"></a>3. 一个IP绑定多个域名</h2><p>通过虚拟主机实现一个IP绑定多个域名。找到在Apache安装路径下找到<code>apache2/sites-enabled/000-default.conf</code>文件，添加多个<code>&lt;VirtualHost *:80&gt;...&lt;VirtualHost&gt;</code>对：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"># /etc/apache2/sites-enabled/000-default.conf</div><div class="line">&lt;VirtualHost *:80&gt;</div><div class="line">    ServerAdmin 742745426@qq.com</div><div class="line">    #指定网站根目录</div><div class="line">    DocumentRoot /var/www/public/</div><div class="line">    #设置可用index文件</div><div class="line">    DirectoryIndex index.html index.htm index.php</div><div class="line">    # 指定域名</div><div class="line">    ServerName www.wuxubj.cn</div><div class="line">    ServerName wuxubj.cn</div><div class="line">    &lt;Directory /&gt;</div><div class="line">      Options FollowSymLinks</div><div class="line">      AllowOverride None</div><div class="line">    &lt;/Directory&gt;</div><div class="line">     #设置权限目录</div><div class="line">    &lt;Directory /var/www/public/&gt;</div><div class="line">      Options FollowSymLinks</div><div class="line">      AllowOverride All</div><div class="line">      Require all granted</div><div class="line">     &lt;/Directory&gt;</div><div class="line">&lt;VirtualHost&gt;</div><div class="line"></div><div class="line">&lt;VirtualHost *:80&gt;</div><div class="line">    ServerAdmin 742745426@qq.com</div><div class="line">    #指定网站根目录</div><div class="line">    DocumentRoot /var/www/public2/</div><div class="line">    #设置可用index文件</div><div class="line">    DirectoryIndex index.html index.htm index.php</div><div class="line">    # 指定域名</div><div class="line">    ServerName test.wuxubj.cn</div><div class="line">    &lt;Directory /&gt;</div><div class="line">      Options FollowSymLinks</div><div class="line">      AllowOverride None</div><div class="line">    &lt;/Directory&gt;</div><div class="line">    #设置权限目录</div><div class="line">    &lt;Directory /var/www/public2/&gt;</div><div class="line">      Options FollowSymLinks</div><div class="line">      AllowOverride All</div><div class="line">      Require all granted </div><div class="line">    &lt;/Directory&gt;</div><div class="line">&lt;VirtualHost&gt;</div></pre></td></tr></table></figure></p>
+<p>如果要设置301跳转，则将<code>AllowOverride None</code>修改为<code>AllowOverride All</code>。<br>注意只需要开启一个端口即80端口，如果是https，则将以上80端口修改为443端口。端口监听配置如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"># /etc/apache2/ports.conf</div><div class="line">Listen 80</div><div class="line">&lt;IfModule ssl_module&gt;</div><div class="line">    Listen 443</div><div class="line">&lt;/IfModule&gt;</div><div class="line">&lt;IfModule mod_gnutls.c&gt;</div><div class="line">    Listen 443</div><div class="line">&lt;/IfModule&gt;</div></pre></td></tr></table></figure></p>
 <p><br></p>
 <blockquote>
 <p><strong>参考文献</strong></p>
@@ -380,8 +371,6 @@
 	<div>
       
         
-<div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束 ------</div>
-
       
     </div>
 	
@@ -404,13 +393,13 @@
 
 <div class="post_copyright">
   <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  <script type="text/javascript" src="http://od390waa7.bkt.clouddn.com/sweetalert_mini/jquery-1.7.1.min.js"></script>
-  <script src="http://od390waa7.bkt.clouddn.com/sweetalert_mini/sweetalert.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/thirdparty/sweetalert/sweetalert.css">
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
   <p><span>本文标题:</span><a href="/2016/09/apache-operating-guide/">Apache服务器搭建经验</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 wuxubj 的个人博客">wuxubj</a></p>
   <p><span>发布时间:</span>2016年09月16日 - 10:09</p>
-  <p><span>最后更新:</span>2016年09月20日 - 21:09</p>
+  <p><span>最后更新:</span>2017年05月03日 - 10:05</p>
   <p><span>原始链接:</span><a href="/2016/09/apache-operating-guide/" title="Apache服务器搭建经验">http://www.wuxubj.cn/2016/09/apache-operating-guide/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.wuxubj.cn/2016/09/apache-operating-guide/"  aria-label="复制成功！"></i></span>
   </p>
@@ -561,7 +550,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -569,7 +558,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -578,7 +567,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -826,8 +815,8 @@ function shake() {
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -850,6 +839,9 @@ function shake() {
   </a>
 </div>
 
+<div style="padding-top:1px;">
+ <span>鄂ICP备16017973号</span>
+</div>
         
 
         
@@ -862,7 +854,7 @@ function shake() {
 	<div class="code_img"><i></i><img src="/images/wuxubj.png" alt="扫一扫，用手机访问本站"><p>扫一扫，用手机访问本站</p></div>
   </div>
   <div class="side-buttons-box mail_box">
-    <a href="mailto:742745426@qq.com"><span class="bt-left"><i class="fa fa-envelope-o fa-lg" title="发送邮件"></i></span><span style="font-size:1px;display:inline-block;line-height:16px;clear:both;">发送邮件</span></a>
+    <a href="mailto:wuxubj@qq.com"><span class="bt-left"><i class="fa fa-envelope-o fa-lg" title="发送邮件"></i></span><span style="font-size:1px;display:inline-block;line-height:16px;clear:both;">发送邮件</span></a>
   </div>
 </div>
 	
@@ -1231,7 +1223,6 @@ function showSubtitle()
 }
 </script>
 
-  
   
   
 

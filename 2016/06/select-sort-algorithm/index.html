@@ -78,12 +78,13 @@
 
 
 <meta name="description" content="《数据结构(C语言版)》学习笔记：选择排序算法(p4)">
+<meta name="keywords" content="算法,排序">
 <meta property="og:type" content="article">
 <meta property="og:title" content="选择排序算法">
 <meta property="og:url" content="http://www.wuxubj.cn/2016/06/select-sort-algorithm/index.html">
 <meta property="og:site_name" content="务虚笔记">
 <meta property="og:description" content="《数据结构(C语言版)》学习笔记：选择排序算法(p4)">
-<meta property="og:updated_time" content="2016-09-20T13:07:17.309Z">
+<meta property="og:updated_time" content="2017-05-03T02:55:37.181Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="选择排序算法">
 <meta name="twitter:description" content="《数据结构(C语言版)》学习笔记：选择排序算法(p4)">
@@ -187,22 +188,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-guestbook">
-          <a href="/guestbook" rel="section">
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-commenting"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            留言
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-mylove">
-          <a href="/mylove" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />
-            
-            爱的纪念
+            关于
           </a>
         </li>
       
@@ -343,17 +334,15 @@
 
       
         <p><a href="https://book.douban.com/subject/1886174/" target="_blank" rel="external">《数据结构(C语言版)》</a>学习笔记：<a href="http://wuxubj.cn/2016/06/28/select-sort-algorithm/" target="_blank" rel="external">选择排序算法</a>(p4)<br><a id="more"></a></p>
-<h2 id="1-选择排序算法C语言实现"><a href="#1-选择排序算法C语言实现" class="headerlink" title="1. 选择排序算法C语言实现"></a>1. 选择排序算法C语言实现</h2><div class="codecopy codecopy1"> <figure class="highlight cpp"><figcaption><span><i class="fa fa-clipboard" data-clipboard-target=".codecopy1 .code pre" aria-label="复制成功！" title="点击复制代码"></i></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//选择排序算法</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span> <span class="built_in">list</span>[], <span class="keyword">int</span> n)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">	<span class="comment">//	int min = i;</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; n;j++)</span><br><span class="line">		<span class="keyword">if</span> (<span class="built_in">list</span>[j] &lt; <span class="built_in">list</span>[i])</span><br><span class="line">	<span class="comment">//		min = j;</span></span><br><span class="line">		select_swap(<span class="built_in">list</span>+j, <span class="built_in">list</span>+i);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">select_swap</span><span class="params">(<span class="keyword">int</span> *a, <span class="keyword">int</span> *b)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> temp;</span><br><span class="line">	temp = *a;</span><br><span class="line">	*a = *b;</span><br><span class="line">	*b = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><br></div>
+<h2 id="1-选择排序算法C语言实现"><a href="#1-选择排序算法C语言实现" class="headerlink" title="1. 选择排序算法C语言实现"></a>1. 选择排序算法C语言实现</h2><div class="codecopy codecopy1"> <figure class="highlight cpp"><figcaption><span><i class="fa fa-clipboard" data-clipboard-target=".codecopy1 .code pre" aria-label="复制成功！" title="点击复制代码"></i></span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//选择排序算法</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span> <span class="built_in">list</span>[], <span class="keyword">int</span> n)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++)</div><div class="line">	&#123;</div><div class="line">	<span class="comment">//	int min = i;</span></div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; n;j++)</div><div class="line">		<span class="keyword">if</span> (<span class="built_in">list</span>[j] &lt; <span class="built_in">list</span>[i])</div><div class="line">	<span class="comment">//		min = j;</span></div><div class="line">		select_swap(<span class="built_in">list</span>+j, <span class="built_in">list</span>+i);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">select_swap</span><span class="params">(<span class="keyword">int</span> *a, <span class="keyword">int</span> *b)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> temp;</div><div class="line">	temp = *a;</div><div class="line">	*a = *b;</div><div class="line">	*b = temp;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br></div>
 
-<h2 id="2-测试主函数"><a href="#2-测试主函数" class="headerlink" title="2. 测试主函数"></a>2. 测试主函数</h2><div class="codecopy codecopy2"> <figure class="highlight cpp"><figcaption><span><i class="fa fa-clipboard" data-clipboard-target=".codecopy2 .code pre" aria-label="复制成功！" title="点击复制代码"></i></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//测试主函数</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_SIZE 100</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">select_swap</span><span class="params">(<span class="keyword">int</span> *a, <span class="keyword">int</span> *b)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span> <span class="built_in">list</span>[], <span class="keyword">int</span> n)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;	</span><br><span class="line">	<span class="keyword">int</span> num;</span><br><span class="line">	<span class="keyword">int</span> <span class="built_in">list</span>[MAX_SIZE];</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Enter the number of numbers to generate:"</span>);</span><br><span class="line">	scanf_s(<span class="string">"%d"</span>, &amp;num);</span><br><span class="line">	<span class="keyword">if</span> (num&lt;<span class="number">1</span> || num&gt;MAX_SIZE)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"Improper value of n.\n"</span>);</span><br><span class="line">		<span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; num; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">list</span>[i] = rand() % <span class="number">1000</span>;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, <span class="built_in">list</span>[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	sort(<span class="built_in">list</span>, num);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\nsorted array:\n"</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; num; i++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, <span class="built_in">list</span>[i]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br><br></div>
+<h2 id="2-测试主函数"><a href="#2-测试主函数" class="headerlink" title="2. 测试主函数"></a>2. 测试主函数</h2><div class="codecopy codecopy2"> <figure class="highlight cpp"><figcaption><span><i class="fa fa-clipboard" data-clipboard-target=".codecopy2 .code pre" aria-label="复制成功！" title="点击复制代码"></i></span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//测试主函数</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_SIZE 100</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">select_swap</span><span class="params">(<span class="keyword">int</span> *a, <span class="keyword">int</span> *b)</span></span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span> <span class="built_in">list</span>[], <span class="keyword">int</span> n)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;	</div><div class="line">	<span class="keyword">int</span> num;</div><div class="line">	<span class="keyword">int</span> <span class="built_in">list</span>[MAX_SIZE];</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"Enter the number of numbers to generate:"</span>);</div><div class="line">	scanf_s(<span class="string">"%d"</span>, &amp;num);</div><div class="line">	<span class="keyword">if</span> (num&lt;<span class="number">1</span> || num&gt;MAX_SIZE)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"Improper value of n.\n"</span>);</div><div class="line">		<span class="built_in">exit</span>(<span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; num; i++)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">list</span>[i] = rand() % <span class="number">1000</span>;</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, <span class="built_in">list</span>[i]);</div><div class="line">	&#125;</div><div class="line">	sort(<span class="built_in">list</span>, num);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"\nsorted array:\n"</span>);</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; num; i++)</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, <span class="built_in">list</span>[i]);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">	system(<span class="string">"pause"</span>);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure><br><br></div>
       
     </div>
 
 	<div>
       
         
-<div style="text-align:center;color: #ccc;font-size:14px;">------ 本文结束 ------</div>
-
       
     </div>
 	
@@ -376,13 +365,13 @@
 
 <div class="post_copyright">
   <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  <script type="text/javascript" src="http://od390waa7.bkt.clouddn.com/sweetalert_mini/jquery-1.7.1.min.js"></script>
-  <script src="http://od390waa7.bkt.clouddn.com/sweetalert_mini/sweetalert.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/thirdparty/sweetalert/sweetalert.css">
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
   <p><span>本文标题:</span><a href="/2016/06/select-sort-algorithm/">选择排序算法</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 wuxubj 的个人博客">wuxubj</a></p>
   <p><span>发布时间:</span>2016年06月28日 - 20:06</p>
-  <p><span>最后更新:</span>2016年09月20日 - 21:09</p>
+  <p><span>最后更新:</span>2017年05月03日 - 10:05</p>
   <p><span>原始链接:</span><a href="/2016/06/select-sort-algorithm/" title="选择排序算法">http://www.wuxubj.cn/2016/06/select-sort-algorithm/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.wuxubj.cn/2016/06/select-sort-algorithm/"  aria-label="复制成功！"></i></span>
   </p>
@@ -533,7 +522,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -541,7 +530,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -550,7 +539,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -798,8 +787,8 @@ function shake() {
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -822,6 +811,9 @@ function shake() {
   </a>
 </div>
 
+<div style="padding-top:1px;">
+ <span>鄂ICP备16017973号</span>
+</div>
         
 
         
@@ -834,7 +826,7 @@ function shake() {
 	<div class="code_img"><i></i><img src="/images/wuxubj.png" alt="扫一扫，用手机访问本站"><p>扫一扫，用手机访问本站</p></div>
   </div>
   <div class="side-buttons-box mail_box">
-    <a href="mailto:742745426@qq.com"><span class="bt-left"><i class="fa fa-envelope-o fa-lg" title="发送邮件"></i></span><span style="font-size:1px;display:inline-block;line-height:16px;clear:both;">发送邮件</span></a>
+    <a href="mailto:wuxubj@qq.com"><span class="bt-left"><i class="fa fa-envelope-o fa-lg" title="发送邮件"></i></span><span style="font-size:1px;display:inline-block;line-height:16px;clear:both;">发送邮件</span></a>
   </div>
 </div>
 	
@@ -1203,7 +1195,6 @@ function showSubtitle()
 }
 </script>
 
-  
   
   
 

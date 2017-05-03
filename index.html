@@ -188,22 +188,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-guestbook">
-          <a href="/guestbook" rel="section">
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-commenting"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            留言
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-mylove">
-          <a href="/mylove" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />
-            
-            爱的纪念
+            关于
           </a>
         </li>
       
@@ -247,6 +237,146 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/12/const-in-cpp/" itemprop="url">
+                  C++中的const
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-20T19:37:26+08:00" content="2016-12-20">
+              2016-12-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程语言语法/" itemprop="url" rel="index">
+                    <span itemprop="name">编程语言语法</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/12/const-in-cpp/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/const-in-cpp/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/const-in-cpp/" class="leancloud_visitors" data-flag-title="C++中的const" style="display:none">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1.基本概念"></a>1.基本概念</h2><p><code>const</code>限定符用于定义值不能被改变的变量。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">const int bufSize = 512;</div></pre></td></tr></table></figure></p>
+<p>把<code>bufSize</code>定义成为一个常量，定义之后不允许重新对<code>bufSize</code>赋值。<br>const 对象一旦创建之后其值就不能再改变，所以 const 对象必须初始化。初始值可以是任意复杂的表达式：</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/const-in-cpp/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+	<div>
+      
+    </div>
+	
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+	
+	<div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -347,7 +477,7 @@
 
       
         
-          <p>比较全面的HTTP协议及其相关内容介绍。<br>转载自：<a href="http://www.cnblogs.com/EricaMIN1987_IT/p/3837436.html">http://www.cnblogs.com/EricaMIN1987_IT/p/3837436.html</a><br>
+          <p>比较全面的HTTP协议及其相关内容介绍。<br>转载自：<a href="http://www.cnblogs.com/EricaMIN1987_IT/p/3837436.html" target="_blank" rel="external">http://www.cnblogs.com/EricaMIN1987_IT/p/3837436.html</a><br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/09/http-protocol-details/" rel="contents">
               阅读全文 &raquo;
@@ -909,8 +1039,8 @@
 
       
         
-          <p><img src="/images/201608/001.jpg" alt="Hexo"></p>
-<h2 id="1-Hexo简介"><a href="#1-Hexo简介" class="headerlink" title="1. Hexo简介"></a>1. Hexo简介</h2><p>Hexo 是一款基于 Node.js 的静态博客框架。Hexo 使用 Markdown 解析文章，用户在本地安装Hexo并进行写作，通过一条命令，Hexo即可利用靓丽的主题自动生成静态网页。<br>参考：<a href="https://github.com/hexojs/hexo">Hexo Github地址</a>                &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://hexo.io/zh-cn/docs/">Hexo帮助文档</a>
+          <p><img src="http://images.wuxubj.cn/201608/001.jpg" alt="Hexo"></p>
+<h2 id="1-Hexo简介"><a href="#1-Hexo简介" class="headerlink" title="1. Hexo简介"></a>1. Hexo简介</h2><p>Hexo 是一款基于 Node.js 的静态博客框架。Hexo 使用 Markdown 解析文章，用户在本地安装Hexo并进行写作，通过一条命令，Hexo即可利用靓丽的主题自动生成静态网页。<br>参考：<a href="https://github.com/hexojs/hexo" target="_blank" rel="external">Hexo Github地址</a>                &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">Hexo帮助文档</a>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/08/Hexo-nexT-build-personal-blog/" rel="contents">
               阅读全文 &raquo;
@@ -1049,7 +1179,7 @@
 
       
         
-          <p><img src="/images/201607/mysql_title.jpg" alt="mysql"><br><a href="https://book.douban.com/subject/3354490/">《MySQL必知必会》</a>是MySQL入门书籍，本文是阅读该书的一些学习笔记，主要记录相关知识要点。<br>
+          <p><img src="http://images.wuxubj.cn/201607/mysql_title.jpg" alt="mysql"><br><a href="https://book.douban.com/subject/3354490/" target="_blank" rel="external">《MySQL必知必会》</a>是MySQL入门书籍，本文是阅读该书的一些学习笔记，主要记录相关知识要点。<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/07/mysql-learning-notes/" rel="contents">
               阅读全文 &raquo;
@@ -1327,7 +1457,7 @@
 
       
         
-          <p>如果查文章是不是被SCI检索：进入<a href="http://apps.webofknowledge.com/WOS_GeneralSearch_input.do?product=WOS&amp;SID=1CMUelst9VWhjRHfzIS&amp;search_mode=GeneralSearch">ISI Web of Knowledge</a>,选择<code>Web of Science</code> 数据库，进行查询；<br>如果查文章是不是被EI检索：进入<a href="https://www.engineeringvillage.com/search/quick.url">EI Village</a>, 选择<code>Compendex</code> 数据库，进行查询。<br>
+          <p>如果查文章是不是被SCI检索：进入<a href="http://apps.webofknowledge.com/WOS_GeneralSearch_input.do?product=WOS&amp;SID=1CMUelst9VWhjRHfzIS&amp;search_mode=GeneralSearch" target="_blank" rel="external">ISI Web of Knowledge</a>,选择<code>Web of Science</code> 数据库，进行查询；<br>如果查文章是不是被EI检索：进入<a href="https://www.engineeringvillage.com/search/quick.url" target="_blank" rel="external">EI Village</a>, 选择<code>Compendex</code> 数据库，进行查询。<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/07/find-sci-or-ei-index/" rel="contents">
               阅读全文 &raquo;
@@ -1466,151 +1596,12 @@
 
       
         
-          <p><font color=#f00>本文为建站初期小结，查看完整建站教程：</font><a href="/2016/08/Hexo-nexT-build-personal-blog/">Hexo+nexT主题搭建个人博客</a></p>
+          <p><font color="#f00">本文为建站初期小结，查看完整建站教程：</font><a href="/2016/08/Hexo-nexT-build-personal-blog/">Hexo+nexT主题搭建个人博客</a></p>
 <blockquote>
 <p><code>Next</code>的<code>Mist</code>主题页脚默认<code>左对齐</code>，本文目标：<br>1.实现页脚元素<code>居中对齐</code>;<br>2.页脚添加cnzz站长统计并简单美化</p>
 </blockquote>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/07/footer-beautify-of-nexT/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-	<div>
-      
-    </div>
-	
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-	
-	<div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/feichengwurao-20160702/" itemprop="url">
-                  非诚勿扰20160702
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-03T23:20:18+08:00" content="2016-07-03">
-              2016-07-03
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/生活/" itemprop="url" rel="index">
-                    <span itemprop="name">生活</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/feichengwurao-20160702/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/feichengwurao-20160702/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/07/feichengwurao-20160702/" class="leancloud_visitors" data-flag-title="非诚勿扰20160702" style="display:none">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>非诚勿扰20160702<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/07/feichengwurao-20160702/" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1693,7 +1684,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1701,7 +1692,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1710,7 +1701,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1947,8 +1938,8 @@ function shake() {
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -1971,6 +1962,9 @@ function shake() {
   </a>
 </div>
 
+<div style="padding-top:1px;">
+ <span>鄂ICP备16017973号</span>
+</div>
         
 
         
@@ -1983,7 +1977,7 @@ function shake() {
 	<div class="code_img"><i></i><img src="/images/wuxubj.png" alt="扫一扫，用手机访问本站"><p>扫一扫，用手机访问本站</p></div>
   </div>
   <div class="side-buttons-box mail_box">
-    <a href="mailto:742745426@qq.com"><span class="bt-left"><i class="fa fa-envelope-o fa-lg" title="发送邮件"></i></span><span style="font-size:1px;display:inline-block;line-height:16px;clear:both;">发送邮件</span></a>
+    <a href="mailto:wuxubj@qq.com"><span class="bt-left"><i class="fa fa-envelope-o fa-lg" title="发送邮件"></i></span><span style="font-size:1px;display:inline-block;line-height:16px;clear:both;">发送邮件</span></a>
   </div>
 </div>
 	
@@ -2348,7 +2342,6 @@ function showSubtitle()
 }
 </script>
 
-  
   
   
 
