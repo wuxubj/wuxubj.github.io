@@ -186,9 +186,9 @@ th {
 body {
   position: relative;
   font-family: Monda, "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 14px;
-  line-height: 1.8;
-  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
   background: #fff;
 }
 @media (max-width: 767px) {
@@ -203,7 +203,7 @@ body {
 }
 @media (min-width: 1600px) {
   body {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 h1,
@@ -455,7 +455,7 @@ body {
 .header-inner {
   margin: 0 auto;
   padding: 100px 0 70px;
-  width: 700px;
+  width: 760px;
 }
 @media (min-width: 1600px) {
   .container .header-inner {
@@ -467,7 +467,7 @@ body {
 }
 .main-inner {
   margin: 0 auto;
-  width: 700px;
+  width: 760px;
 }
 @media (min-width: 1600px) {
   .container .main-inner {
@@ -484,7 +484,7 @@ body {
 .footer-inner {
   box-sizing: border-box;
   margin: 20px auto;
-  width: 700px;
+  width: 760px;
 }
 @media (min-width: 1600px) {
   .container .footer-inner {
@@ -786,7 +786,7 @@ pre .javascript .function {
   font-size: 14px;
   color: #fff;
   background: #222;
-  border: 2px solid #555;
+  border: 2px solid #666;
   text-decoration: none;
   border-radius: 0;
   transition-property: background-color;
@@ -804,7 +804,7 @@ pre .javascript .function {
   display: block;
   width: 22px;
   height: 2px;
-  background: #555;
+  background: #666;
   border-radius: 1px;
 }
 .btn-bar+.btn-bar {
@@ -902,7 +902,7 @@ pre .javascript .function {
   box-sizing: border-box;
   position: fixed;
   bottom: -100px;
-  right: 80px;
+  right: 66px;
   z-index: 1050;
   padding: 4px 3px 0 3px;
   width: 30px;
@@ -1086,7 +1086,7 @@ pre .javascript .function {
 .post-body .figure .caption {
   margin: 10px auto 15px;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   color: #999;
   font-weight: bold;
   line-height: 1;
@@ -1390,7 +1390,7 @@ pre .javascript .function {
   margin-top: 0px;
 }
 .post-more-link .btn {
-  color: #555;
+  color: #666;
   font-size: 12px;
   background: #fff;
   border-radius: 2px;
@@ -1807,7 +1807,7 @@ section .post-type-normal .topc-article {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #00b904;
+  background: #b44fc9;
 }
 .links-of-author-item {
   text-align: center;
@@ -2425,7 +2425,7 @@ body {
 .header {
   position: relative;
   margin: 0 auto;
-  width: 960px;
+  width: 1020px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .header {
@@ -2481,7 +2481,7 @@ body {
   }
 }
 .container .main-inner {
-  width: 960px;
+  width: 1020px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .container .main-inner {
@@ -2497,7 +2497,7 @@ body {
   float: right;
   box-sizing: border-box;
   padding: 30px 30px;
-  width: 700px;
+  width: 760px;
   background: #fff;
   min-height: 700px;
 }
@@ -2536,7 +2536,7 @@ body {
   display: none;
 }
 .footer-inner {
-  width: 960px;
+  width: 1020px;
 }
 .footer-inner:before {
   content: " ";
@@ -2673,7 +2673,7 @@ body {
 .sidebar-inner {
   box-sizing: border-box;
   width: 240px;
-  color: #555;
+  color: #666;
   background: #fff;
 }
 .sidebar-inner.affix {
